@@ -1,7 +1,7 @@
 +++
-title = "一次修复blog的过程"
+title = "一次修复 blog 的过程"
 date = 2020-03-25T20:52:00+08:00
-lastmod = 2020-03-25T20:52:09+08:00
+lastmod = 2020-03-25T20:57:00+08:00
 tags = ["hugo", "blog"]
 categories = ["折腾"]
 draft = false
@@ -21,7 +21,7 @@ author = "abcdlsj"
 
 {{< figure src="/ox-hugo/githubPageBuildFaild.png" caption="Figure 1: githubPageBuildFaild" >}}
 
-这也太坑了，原来 Github Page 对 hugo 的支持不好，但是我不信邪，我的是静态文档，应该无所谓是什么生成的
+这也太坑了，原来 Github Pages 对 hugo 的支持不好，但是我不信邪，我的是静态文档，应该无所谓是什么生成的
 
 于是我去查了下文档，找到了这个
 

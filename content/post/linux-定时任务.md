@@ -1,7 +1,7 @@
 +++
 title = "Linux 定时任务"
 date = 2020-01-29T19:45:00+08:00
-lastmod = 2020-03-25T20:52:08+08:00
+lastmod = 2020-03-25T20:57:00+08:00
 tags = ["Linux"]
 categories = ["learn"]
 draft = false
