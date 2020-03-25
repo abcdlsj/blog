@@ -1,7 +1,7 @@
 +++
 title = "conky 显示 todo-list"
 date = 2019-12-13T23:28:00+08:00
-lastmod = 2020-03-10T17:42:09+08:00
+lastmod = 2020-03-25T20:52:06+08:00
 tags = ["conky", "org"]
 categories = ["learn", "折腾"]
 draft = false

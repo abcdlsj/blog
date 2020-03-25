@@ -1,7 +1,7 @@
 +++
 title = "i3wm 截图"
 date = 2020-02-22T21:04:00+08:00
-lastmod = 2020-03-10T17:42:11+08:00
+lastmod = 2020-03-25T20:52:09+08:00
 tags = ["Linux"]
 categories = ["折腾"]
 draft = false

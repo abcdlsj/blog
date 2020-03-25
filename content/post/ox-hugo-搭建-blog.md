@@ -1,7 +1,7 @@
 +++
 title = "ox-hugo 搭建 blog"
 date = 2020-01-13T13:23:00+08:00
-lastmod = 2020-03-10T17:42:09+08:00
+lastmod = 2020-03-25T20:52:06+08:00
 tags = ["org", "blog", "hugo"]
 categories = ["blog"]
 draft = false
