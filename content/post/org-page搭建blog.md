@@ -1,7 +1,7 @@
 +++
 title = "org-page 搭建 blog"
 date = 2019-11-23
-lastmod = 2020-02-09T15:27:29+08:00
+lastmod = 2020-04-04T19:03:55+08:00
 tags = ["org-page", "org", "emacs"]
 categories = ["blog"]
 draft = false
@@ -55,7 +55,7 @@ draft = false
 ## 使用 {#使用}
 
 
-#### 新建仓库 {#新建仓库}
+### 新建仓库 {#新建仓库}
 
 ```nil
 M-x op/new-repository
@@ -66,7 +66,7 @@ M-x op/new-repository
 对了，记得 `git remote` 你 github上面的仓库哦！
 
 
-#### 写博客 {#写博客}
+### 写博客 {#写博客}
 
 ```nil
 M-x op/new-post
@@ -75,7 +75,7 @@ M-x op/new-post
 输入一系列配置之后，就可以了。这时候你会发现你的仓库地址分支会切换成 `source` ，这个分支就是给你写 org 文档的
 
 
-#### 提交 {#提交}
+### 提交 {#提交}
 
 如果不太看得懂下面这步的话，可以先花二十分钟熟悉一下 git 操作，保证受益匪浅
 
@@ -93,10 +93,8 @@ M-x op/do-publication
 选择 y n y y (或者我推荐 y n n n,然后你手动提交)就可以了，这个时候应该看不到博客因为 media 文件夹里面的东西是链接形式，你可以删除本地仓库中的 media 文件，然后复制源文件进去提交（我就是这样做的，所以每次 do-publication 都要操作一次，如果找到更好的办法我会写出来的）
 
 
-#### 完成上面这些步骤应该能看到博客了，至于其他的东西你可以慢慢来。 {#完成上面这些步骤应该能看到博客了-至于其他的东西你可以慢慢来}
+## 参考链接 {#参考链接}
 
-两个链接参考
+[^fn:1]
 
-[1](http://google-ebook.com/blog/2015/12/24/%E4%BD%BF%E7%94%A8org-page%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/)
-
-[2](https://dingmingxin.github.io/blog/2016/05/05/test-org-page/)
+[^fn:1]: <https://dingmingxin.github.io/blog/2016/05/05/test-org-page/>
