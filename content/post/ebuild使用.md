@@ -1,7 +1,7 @@
 +++
 title = "ebuild 初探"
 date = 2020-01-30T12:00:00+08:00
-lastmod = 2020-04-04T19:06:36+08:00
+lastmod = 2020-04-14T12:39:21+08:00
 tags = ["linux", "package"]
 categories = ["learn"]
 draft = false
@@ -83,9 +83,9 @@ STEX_P="stex-${ZLIB_PV}"
 STEX_URI="https://github.com/dybvig/stex/archive/v1.2.1.tar.gz"
 
 SRC_URI="https://github.com/cisco/ChezScheme/archive/v${PV}.tar.gz -> ${PF}.tar.gz
-	      ${ZLIB_URI} -> ${ZLIB_P}.tar.gz
-	      ${STEX_URI} -> ${STEX_P}.tar.gz
-	      ${NANOPASS_URI} -> ${NANOPASS_P}.tar.gz"
+	  ${ZLIB_URI} -> ${ZLIB_P}.tar.gz
+	  ${STEX_URI} -> ${STEX_P}.tar.gz
+	  ${NANOPASS_URI} -> ${NANOPASS_P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -93,36 +93,36 @@ KEYWORDS="~x86 ~amd64"
 IUSE="+threads"
 
 DEPEND="
-      sys-libs/ncurses "
+  sys-libs/ncurses "
 
 RDEPEND="${DEPEND}"
 
 src_configure() {
-      local para_thread
+  local para_thread
 
-      if use threads ; then
+  if use threads ; then
 	 para_thread="--threads"
-      fi
+  fi
 
-      ./configure \
-      ${para_thread} \
-      --installprefix=/usr \
-      --installbin=/usr/bin \
-      --installlib=/usr/lib \
-      --installman=/usr/share/man \
-      --temproot=${D}
+  ./configure \
+  ${para_thread} \
+  --installprefix=/usr \
+  --installbin=/usr/bin \
+  --installlib=/usr/lib \
+  --installman=/usr/share/man \
+  --temproot=${D}
 }
 
 src_install() {
-      emake install
+  emake install
 }
 
 src_unpack() {
-      unpack ${A}
-      mv ChezScheme-${PV} ${PF}
-      mv ${NANOPASS_P}/* ${PF}/nanopass
-      mv ${STEX_P}/* ${PF}/stex
-      mv ${ZLIB_P}/* ${PF}/zlib
+  unpack ${A}
+  mv ChezScheme-${PV} ${PF}
+  mv ${NANOPASS_P}/* ${PF}/nanopass
+  mv ${STEX_P}/* ${PF}/stex
+  mv ${ZLIB_P}/* ${PF}/zlib
 
 echo 'diff -ur c/Mf-a6le c2/Mf-a6le
 --- c/Mf-a6le	2019-03-22 07:05:24.000000000 +0900

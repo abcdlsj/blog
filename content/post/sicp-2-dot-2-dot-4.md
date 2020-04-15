@@ -1,7 +1,7 @@
 +++
 title = "SICP 2.2.4 一个图形语言"
 date = 2020-02-19T15:27:00+08:00
-lastmod = 2020-04-04T19:06:38+08:00
+lastmod = 2020-04-14T12:39:24+08:00
 tags = ["SICP"]
 categories = ["learn"]
 draft = false
@@ -24,9 +24,9 @@ author = "abcdlsj"
 
 (define (right-split painter n)
   (if (= n 0)
-      painter
-      (let ((smaller (right-split painter (- n 1))))
-	(beside painter (below smaller smaller)))))
+	  painter
+	  (let ((smaller (right-split painter (- n 1))))
+		(beside painter (below smaller smaller)))))
 
 (paint (right-split einstein 5))
 ```
@@ -43,9 +43,9 @@ author = "abcdlsj"
 
 (define (right-split painter n)
   (if (= n 0)
-      painter
-      (let ((smaller (right-split painter (- n 1))))
-	(beside painter (below smaller smaller)))))
+	  painter
+	  (let ((smaller (right-split painter (- n 1))))
+		(beside painter (below smaller smaller)))))
 
 (paint (right-split einstein 5))
 ```

@@ -1,7 +1,7 @@
 +++
 title = "LeetCode \"乙亥年最有趣的比赛\" 题解"
 date = 2020-01-21T01:07:00+08:00
-lastmod = 2020-04-04T19:06:37+08:00
+lastmod = 2020-04-14T12:39:24+08:00
 tags = ["OJ"]
 categories = ["learn"]
 draft = false
@@ -26,7 +26,7 @@ class Solution { public String q() { String s = "class Solution { public String 
 这道题是检测你返回的代码和你提交的代码是否一样
 [wiki Quine](https://en.wikipedia.org/wiki/Quine%5F(computing))
 
-下面是 <a id="org712fab6"></a> 中的 java 实现
+下面是 <a id="org80de31f"></a> 中的 java 实现
 
 ```java
 public class Quine { public static void main(String[] args) { char c=34; System.out.println(s+c+s+c+';'+'}'); } static String s="public class Quine { public static void main(String[] args) { char c=34; System.out.println(s+c+s+c+';'+'}'); } static String s=";}
@@ -45,7 +45,7 @@ lisp 版本
    (list x (list (quote quote) x)))
  (quote
   (lambda (x)
-    (list x (list (quote quote) x)))))
+	(list x (list (quote quote) x)))))
 ```
 
 
@@ -118,9 +118,9 @@ $ ./bomb
 Welcome to SyM's code safe!
 
 Instructions:
-    You need to solve this binary to get the key.
-    The final key is a 12-word string.
-    Once you've got it, make sure to submit it somewhere, since it should be quite valuable!
+	You need to solve this binary to get the key.
+	The final key is a 12-word string.
+	Once you've got it, make sure to submit it somewhere, since it should be quite valuable!
 
 There are two phases. Here is the first one for warmup:
 Please enter a password to get to the next stage (hint: the length of password is 8)

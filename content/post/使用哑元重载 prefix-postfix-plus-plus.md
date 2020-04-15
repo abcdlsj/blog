@@ -1,7 +1,7 @@
 +++
 title = "使用哑元重载 prefix/postfix ++"
 date = 2020-04-04T18:57:00+08:00
-lastmod = 2020-04-04T19:06:38+08:00
+lastmod = 2020-04-14T12:39:24+08:00
 tags = ["CPP"]
 categories = ["learn"]
 draft = false
@@ -16,7 +16,7 @@ author = "abcdlsj"
 哑元这个词还是开始是我查 void func(int); 这种只有参数类型的行参的作用的时候，看到别人说的。然后查查查找到了使用哑元来重载 ++
 ```
 
-[isocpp-How can I overload the prefix and postfix forms of operators ++ and --?](https://isocpp.org/wiki/faq/operator-overloading#increment-pre-post-overloading)
+[isocpp: How can I overload the prefix and postfix forms of operators ++ and --?](https://isocpp.org/wiki/faq/operator-overloading#increment-pre-post-overloading)
 
 
 ## 正文 {#正文}
@@ -39,14 +39,12 @@ private:
   int val;
 };
 
-Number& Number::operator++ ()
-{
+Number& Number::operator++ () {
   val += 1;
   return *this;
 }
 
-Number Number::operator++ (int)
-{
+Number Number::operator++ (int) {
   Number ans = *this;
   ++(*this);  // or just call operator++()
   return ans; //返回未增的值
