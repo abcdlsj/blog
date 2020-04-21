@@ -1,8 +1,8 @@
 +++
 title = "LeetCode \"乙亥年最有趣的比赛\" 题解"
 date = 2020-01-21T01:07:00+08:00
-lastmod = 2020-04-14T12:39:24+08:00
-tags = ["OJ"]
+lastmod = 2020-04-21T14:05:59+08:00
+tags = ["LeetCode"]
 categories = ["learn"]
 draft = false
 author = "abcdlsj"
@@ -26,7 +26,7 @@ class Solution { public String q() { String s = "class Solution { public String 
 这道题是检测你返回的代码和你提交的代码是否一样
 [wiki Quine](https://en.wikipedia.org/wiki/Quine%5F(computing))
 
-下面是 <a id="org80de31f"></a> 中的 java 实现
+下面是 <a id="org23e7e9b"></a> 中的 java 实现
 
 ```java
 public class Quine { public static void main(String[] args) { char c=34; System.out.println(s+c+s+c+';'+'}'); } static String s="public class Quine { public static void main(String[] args) { char c=34; System.out.println(s+c+s+c+';'+'}'); } static String s=";}

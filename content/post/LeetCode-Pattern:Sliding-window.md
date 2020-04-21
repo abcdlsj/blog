@@ -49,7 +49,13 @@ author: "abcdlsj"
 
 ### 解答
 
-这是一道单调队列求解滑动窗口的问题
+这是一道单调队列求解滑动窗口的问题，下面是笔记
+
+> 因为我们必须要`实时更新`窗口最大值，所以必须`保存索引`，这道题是需要得到窗口最大值，对于一个值来说，如果它是最大值，则它是一段范围的最大值，相当于其势力范围，只要超过这个范围，它就没“权”了，超过范围就不能保留，因为涉及到范围，这也就是保存索引的原因，那么我们就可以构造一个单调队列，其`deque.front()`是最大值，后面还有一群`小弟`，当老大`暴毙（超出范围）`的时候，小弟就是老大了，如果 `i - deque.front() + 1 > k` 代表超过`deque.front()`的势力范围了，则弹出`deque.front()`，如果当前值比`deque.back()`大，则可以把`deque.back()`弹出，直到当前值比`deque.back()`小，之所以可以弹出比当前值小的`deque.back()`是因为`deque.back()`没用了，它不会是最大值了，有一个比它靠后，还比它大的数，当`i + 1 >= k`的时候，插入最大值`nums[deque.front()]`。
+>
+> 拿小弟和大哥来形容还挺形象，老大暴毙（超过范围），小弟上位，新的小弟来篡权（插入新的值）。
+
+$时间复杂度：O(n)\quad空间复杂度：O(n)$
 
 ```cpp
 class Solution {
@@ -72,10 +78,9 @@ public:
         return res;
     }
 };
-
 ```
 
-##  [3. 无重复字符的最长子串（medium）](https://leetcode-cn.com/problems/longest-substring-wimthout-repeating-characters/)
+## [3. 无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-wimthout-repeating-characters/)（ [面试题48. 最长不含重复字符的子字符串](https://leetcode-cn.com/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof/)）
 
 ### 题目内容
 
@@ -102,15 +107,13 @@ public:
 <strong>解释: </strong>因为无重复字符的最长子串是 <code>"wke"</code>，所以其长度为 3。
      请注意，你的答案必须是 <strong>子串 </strong>的长度，<code>"pwke"</code> 是一个<em>子序列，</em>不是子串。
 </pre>
-
 ### 解答
+
+这是一道比较简单的滑动窗口，使用`map`可以更快的找到上次出现的字母的位置
 
 #### 无优化
 
-$$
-时间复杂度：O(n^2)\quad
-空间复杂度：O(1)
-$$
+$时间复杂度：O(n^2)\quad空间复杂度：O(1)$
 
 ```cpp
 class Solution {
@@ -133,10 +136,7 @@ public:
 
 #### map 优化
 
-$$
-时间复杂度：O(n)\quad
-空间复杂度：O(n)
-$$
+$时间复杂度：O(n)\quad空间复杂度：O(n)$
 
 ```cpp
 class Solution {
@@ -154,7 +154,43 @@ public:
         return ans;
     }
 };
-
 ```
 
-## [面试题59 - II. 队列的最大值](https://leetcode-cn.com/problems/dui-lie-de-zui-da-zhi-lcof/)
+## [76. 最小覆盖子串](https://leetcode-cn.com/problems/minimum-window-substring/)
+
+### 解决
+> 滑动窗口题，用两个`unordered_map`分别记录`left => right`窗口中出现的`有效值`和`T`中出现的字符，`T`中出现的字符才是`有效值`，当`window`中包含了全部`needs`值，就可以缩减`left`，当不符合时，又`right`让窗口符合条件。
+
+$M、N分别是S、T的长度，时间复杂度：O(M+N)$
+
+```cpp
+class Solution {
+public:
+    string minWindow(string s, string t) {
+        int left = 0, right = 0, match = 0, start = 0, minlen = INT_MAX;
+        unordered_map<char, int> windows, needs;
+        for(auto c : t) needs[c]++;
+        while(right < s.size()) {
+            char cright = s[right];
+            if(needs.count(cright)) {
+                windows[cright]++;
+                if(windows[cright] == needs[cright]) match++;
+            }
+            while(match == needs.size()) {
+                if(right - left + 1 < minlen) {
+                    start = left;
+                    minlen = right - left + 1;
+                }
+                char cleft = s[left];
+                if(needs.count(cleft)) {
+                    windows[cleft]--;
+                    if(windows[cleft] < needs[cleft]) match--;
+                }
+                left++;
+            }
+            right++;
+        }
+        return minlen == INT_MAX ? "" : s.substr(start, minlen);
+    }
+}
+```
