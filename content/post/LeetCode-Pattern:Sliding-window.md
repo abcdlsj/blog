@@ -110,6 +110,27 @@ public:
 
 这是一道比较简单的滑动窗口，使用`map`可以更快的找到上次出现的字母的位置
 
+#### 标准解法
+$时间复杂度：O(n)$
+```cpp
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        int left = 0, right = 0, maxlen = 0;
+        unordered_map<char, int> window;
+        while(right < s.size()) {
+            window[s[right]]++;
+            while(window[s[right]] > 1) {
+                window[s[left]]--;
+                left++;
+            }
+            maxlen = max(maxlen, right - left + 1);
+            right++;
+        }
+        return maxlen;
+    }
+};
+```
 #### 无优化
 
 $时间复杂度：O(n^2)\quad空间复杂度：O(1)$
