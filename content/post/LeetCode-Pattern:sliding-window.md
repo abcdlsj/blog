@@ -9,16 +9,17 @@ tags: ["LeetCode"]
 categories: ["learn"]
 author: "abcdlsj"
 ---
-> Leecode 刷题总结之：滑动窗口
+> LeetCode 刷题总结之：滑动窗口
 <!--more-->
 
-> LeetCode 刷了 200+ 了，题刷的很少（easy 居多），还有一些算法没涉及到，很多题可能当时思路非常清楚，但是后面再遇到的时候都有点忘了，特别是一些很巧妙的方法（我还是忘不了扔鸡蛋~~~），我之前刷题都是把比较有意思的题放在了笔记里，然后上自己的一些思路，现在按照专题整理一下，顺便再思考一遍，顺便吐槽，实习太难找了（太菜），我还是继续看基础吧。。。
+> LeetCode 刷了 200+ 了，题刷的很少（easy 居多），还有一些算法没涉及到，很多题可能当时思路非常清楚，但是后面再遇到的时候都有点忘了，特别是一些很巧妙的方法（我还是忘不了扔鸡蛋~~~），我之前刷题都是把比较有意思的题放在了笔记里，然后加上自己当时思考的一些思路，现在按照专题整理一下，顺便再思考一遍，顺便吐槽，实习太难找了（太菜），我还是继续看基础吧。。。
 
 题目的内容来自我的 `leetcode` 爬虫，欢迎 `star`
 
 [GitHub 地址](https://github.com/abcdlsj/Leetcode)
 
-## [面试题59 - I. 滑动窗口的最大值](https://leetcode-cn.com/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof/)
+## 面试题59 - I. 滑动窗口的最大值
+[面试题59 - I. 滑动窗口的最大值](https://leetcode-cn.com/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof/)
 
 ### 题目内容
 
@@ -78,8 +79,8 @@ public:
     }
 };
 ```
-
-## [3. 无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-wimthout-repeating-characters/)（ [面试题48. 最长不含重复字符的子字符串](https://leetcode-cn.com/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof/)）
+## 3. 无重复字符的最长子串
+[3. 无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-wimthout-repeating-characters/)（ [面试题48. 最长不含重复字符的子字符串](https://leetcode-cn.com/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof/)）
 
 ### 题目内容
 
@@ -89,7 +90,7 @@ public:
 
 <pre><strong>输入: </strong>"abcabcbb"
 <strong>输出: </strong>3
-<strong>解释:</strong> 因为无重复字符的最长子串是 <code>"abc"，所以其</code>长度为 3。
+<strong>解释:</strong> 因为无重复字符的最长子串是 <code>"abc"</code>，所以其长度为 3。
 </pre>
 
 <p><strong>示例 2:</strong></p>
@@ -110,7 +111,8 @@ public:
 
 这是一道比较简单的滑动窗口，使用`map`可以更快的找到上次出现的字母的位置
 
-#### 标准解法
+**标准解法**
+
 $时间复杂度：O(n)$
 ```cpp
 class Solution {
@@ -131,7 +133,7 @@ public:
     }
 };
 ```
-#### 无优化
+**无优化**
 
 $时间复杂度：O(n^2)\quad空间复杂度：O(1)$
 
@@ -154,7 +156,7 @@ public:
 };
 ```
 
-#### map 优化
+**map 优化**
 
 $时间复杂度：O(n)\quad空间复杂度：O(n)$
 
@@ -175,11 +177,11 @@ public:
     }
 };
 ```
-
-## [76. 最小覆盖子串](https://leetcode-cn.com/problems/minimum-window-substring/)
+## 二叉搜索树中第K小的元素
+[76. 最小覆盖子串](https://leetcode-cn.com/problems/minimum-window-substring/)
 
 ### 解决
-> 滑动窗口题，用两个`unordered_map`分别记录`left => right`窗口中出现的`有效值`和`T`中出现的字符，`T`中出现的字符才是`有效值`，当`window`中包含了全部`needs`值，就可以缩减`left`，当不符合时，又继续操作（`right++`）窗口符合条件。
+> 正宗的滑动窗口题，用两个`unordered_map`分别记录`left => right`窗口中出现的`有效值`和`T`中出现的字符，`T`中出现的字符才是`有效值`，当`window`中包含了全部`needs`值，就可以缩减`left`，当不符合时，又继续操作（`right++`）窗口符合条件。
 
 $M、N分别是S、T的长度，时间复杂度：O(M+N)$
 

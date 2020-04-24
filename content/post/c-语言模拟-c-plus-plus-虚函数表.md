@@ -1,6 +1,6 @@
 +++
 title = "C 语言模拟 C++ 虚函数表机制"
-lastmod = 2020-04-21T14:06:00+08:00
+lastmod = 2020-04-23T10:34:33+08:00
 tags = ["CPP"]
 categories = ["learn"]
 draft = true
