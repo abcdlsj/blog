@@ -13,7 +13,7 @@ author = "abcdlsj"
 <!--more-->
 
 ```text
-哑元这个词还是开始是我查 void func(int); 这种只有参数类型的行参的作用的时候，看到别人说的。然后查查查找到了使用哑元来重载 ++
+哑元这个词还是开始是我查 void func(int); 这种只有参数类型的形参的作用的时候，看到别人说的。然后查查查找到了使用哑元来重载 ++
 ```
 
 [isocpp: How can I overload the prefix and postfix forms of operators ++ and --?](https://isocpp.org/wiki/faq/operator-overloading#increment-pre-post-overloading)
