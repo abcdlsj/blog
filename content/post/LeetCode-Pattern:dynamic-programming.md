@@ -1,5 +1,5 @@
 ---
-title: "LeetCode Pattern:dynamic Programming"
+title: "LeetCode Pattern:Dynamic Programming"
 date: 2020-04-27T20:49:11+08:00
 lastmod: 2020-04-27T20:49:11+08:00
 draft: flase

@@ -118,16 +118,15 @@ $时间复杂度：O(n)$
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-        int left = 0, right = 0, maxlen = 0;
+        int maxlen = 0;
         unordered_map<char, int> window;
-        while(right < s.size()) {
+        for(int left = 0, right = 0; right < s.size(); right++) {
             window[s[right]]++;
             while(window[s[right]] > 1) {
                 window[s[left]]--;
                 left++;
             }
             maxlen = max(maxlen, right - left + 1);
-            right++;
         }
         return maxlen;
     }
@@ -177,7 +176,7 @@ public:
     }
 };
 ```
-## 二叉搜索树中第K小的元素
+## 76. 最小覆盖子串 
 [76. 最小覆盖子串](https://leetcode-cn.com/problems/minimum-window-substring/)
 
 ### 解决
