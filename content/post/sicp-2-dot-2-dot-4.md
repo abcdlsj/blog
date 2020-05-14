@@ -1,7 +1,7 @@
 +++
 title = "SICP 2.2.4 一个图形语言"
 date = 2020-02-19T15:27:00+08:00
-lastmod = 2020-04-23T10:34:33+08:00
+lastmod = 2020-05-14T16:19:30+08:00
 tags = ["SICP"]
 categories = ["learn"]
 draft = false
