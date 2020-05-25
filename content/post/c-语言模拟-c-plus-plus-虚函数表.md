@@ -1,6 +1,6 @@
 +++
 title = "C 语言模拟 C++ 虚函数表机制"
-lastmod = 2020-05-14T16:19:31+08:00
+lastmod = 2020-05-22T10:48:52+08:00
 tags = ["CPP"]
 categories = ["learn"]
 draft = true
@@ -14,7 +14,7 @@ author = "abcdlsj"
 <!--more-->
 
 
-## 虚函数 {#虚函数}
+## 虚函数内存布局分析 {#虚函数}
 
 关于虚函数有很多种情况
 

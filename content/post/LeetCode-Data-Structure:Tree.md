@@ -1,16 +1,16 @@
 ---
-title: "LeetCode DataStructure:Tree"
+title: "LeetCode Data-Structure: Tree"
 date: 2020-05-14T21:52:45+08:00
 lastmod: 2020-05-14T21:52:45+08:00
 draft: false
 keywords: ["Tree"]
-description: "LeetCode DataStructure Tree"
-tags: ["LeetCode", "DataStructure"]
+description: "LeetCode Data Structure Tree"
+tags: ["Tree", "LeetCode", "Data Structure"]
 categories: ["learn"]
 author: "abcdlsj"
 ---
 
-> LeetCode 刷题总结：树(WIP)
+> LeetCode 刷题总结：树(WIP) 
 
 <!--more-->
 
@@ -19,7 +19,7 @@ author: "abcdlsj"
 以 LeetCode 题目中的 `binary tree` 为代表，结构如下
 
 ```cpp
-**
+/**
  * Definition for a binary tree node.
  * struct TreeNode {
  *     int val;
@@ -101,8 +101,8 @@ public:
 ```cpp
 class Solution {
 public:
+    vector<int> res;
     vector<int> inorderTraversal(TreeNode* root) {
-        vector<int> res;
         stack<TreeNode*> stack;
         TreeNode* cur = root;
         while (!stack.empty() || cur) {
@@ -142,8 +142,6 @@ public:
 
 **非递归**
 
-> 对于树来说，其实树最大的特点就是一个节点同时是 `节点` 和 `树`  
->
 > 对于第一个栈来说，每次都是 **左 => 右** 入，**右 => 左** 出
 >
 > 对于第二个栈来说就刚好是 **右 => 左** 入，出的话就得到答案了
@@ -175,6 +173,8 @@ public:
 ```
 
 ### Morris 遍历
+
+
 
 ## 二叉搜索树相关
 
@@ -215,10 +215,10 @@ public:
 class Solution {
 public:
     TreeNode* searchBST(TreeNode* root, int val) {
-        if(root == NULL) return root;
-        while(root != NULL && root->val != val) {
-            if(val < root->val) root = root->left;
-            else if(val > root->val) root = root->right;
+        if (root == NULL) return root;
+        while (root != NULL && root->val != val) {
+            if (val < root->val) root = root->left;
+            else if (val > root->val) root = root->right;
         }
         return root;
     }
@@ -250,9 +250,9 @@ public:
 class Solution {
 public:
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
-        if(p->val < root->val && q->val < root->val) {
+        if (p->val < root->val && q->val < root->val) {
             root = lowestCommonAncestor(root->left, p, q);
-        } else if(p->val > root->val && q->val > root->val) {
+        } else if (p->val > root->val && q->val > root->val) {
             root = lowestCommonAncestor(root->right, p, q);
         }
         return root;
@@ -266,17 +266,17 @@ public:
 class Solution {
 public:
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
-        if(root == NULL || p == root || q == root) return root;
+        if (root == NULL || p == root || q == root) return root;
         TreeNode* leftAncestor = lowestCommonAncestor(root->left, p, q);
         TreeNode* rightAncestor = lowestCommonAncestor(root->right, p, q);
 
-        if(leftAncestor && rightAncestor) return root;
-        if(leftAncestor == NULL) return rightAncestor;
+        if (leftAncestor && rightAncestor) return root;
+        if (leftAncestor == NULL) return rightAncestor;
         return leftAncestor;
     }
 };
 ```
+## 浅谈树的递归
 
-#### [面试题54. 二叉搜索树的第k大节点](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof/)
+> 我单独准备总结一下`二叉树中的递归`，因为在树中的递归过程是很有意思的，因为树最主要的特点就是每一个节点也是一棵树。
 
-## 二叉树中的递归

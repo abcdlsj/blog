@@ -1,7 +1,7 @@
 +++
 title = "use dummy-parameter overload prefix/postfix ++"
 date = 2020-04-04T18:57:00+08:00
-lastmod = 2020-05-14T16:19:31+08:00
+lastmod = 2020-05-22T10:48:52+08:00
 tags = ["CPP"]
 categories = ["learn"]
 draft = false

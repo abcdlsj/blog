@@ -278,8 +278,7 @@ unsigned floatScale2(unsigned uf) {
 	else if (a == 0){
 		temp = uf << 1;
 		return temp|flag;
-	}
-	else {
+	} else {
 		temp = temp + (0x01<<23);
 		return temp|flag;
 	}
@@ -310,16 +309,12 @@ int floatFloat2Int(unsigned uf) {
 		return 0x80000000u;
 	else if (a < 0)
 		return 0;
-	else
-	{
+	else {
 		int temp = (uf | 0x800000) & 0xffffff;
-		if (a >= 23)
-		{
+		if (a >= 23) {
 			int e = a - 23;
 			temp = temp << e;
-		}
-		else
-		{
+		} else {
 			int e = 23 - a;
 			temp = temp >> e;
 		}
@@ -346,13 +341,11 @@ int floatFloat2Int(unsigned uf) {
  *   Rating: 4
  */
 unsigned floatPower2(int x) {
-	if (x > 127){
+	if (x > 127) {
 		return 0x7f800000;
-	}
-	else if (x < -127){
+	} else if (x < -127) {
 		return 0x0;
-	}
-	else{
+	} else {
 		return (x + 127) << 23;
 	}
 }

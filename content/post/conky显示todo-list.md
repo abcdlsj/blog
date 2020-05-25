@@ -1,14 +1,14 @@
 +++
 title = "conky 显示 todo-list"
 date = 2019-12-13T23:28:00+08:00
-lastmod = 2020-05-14T16:19:29+08:00
+lastmod = 2020-05-22T10:48:50+08:00
 tags = ["conky", "org"]
 categories = ["learn", "折腾"]
 draft = false
 author = "abcdlsj"
 +++
 
-> 作为一个 Emacser，使用 org-agenda 来管理日常是很正常的事情，于是想到在桌面显示自己的 todo-list，查阅资料之后发现很简单
+> 作为一个 Emacser，使用 org-agenda 来管理日常是很正常的事情，于是想到在桌面显示自己的 todo-list，查阅资料之后发现很简单。
 
 <!--more-->
 
