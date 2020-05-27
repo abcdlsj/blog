@@ -1,7 +1,7 @@
 +++
 title = "SICP 2.42 八皇后谜题"
 date = 2020-02-17T21:25:00+08:00
-lastmod = 2020-05-22T10:48:52+08:00
+lastmod = 2020-05-27T09:29:56+08:00
 tags = ["SICP"]
 categories = ["learn"]
 draft = false

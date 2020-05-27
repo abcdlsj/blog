@@ -263,7 +263,15 @@ public:
 
 #### [188. 买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/)
 
-> 这道题最多完成 k 笔交易，和前面那几道题基本一致了。
+> 这道题最多完成 k 笔交易，这个时候会感觉到可以总结出一种秒杀所有买卖股票问题的转移方程，具体的分析可以看 labuladong 的题解，在参考链接。
+
+```cpp
+
+```
+
+
+
+
 
 参考链接：
 
@@ -271,7 +279,7 @@ public:
 
 https://leetcode-cn.com/circle/article/NfHhXD/
 
-weiwei哥的 LeetCode 仓库（强烈推荐）
+weiwei哥 的 LeetCode 仓库（强烈推荐）
 
 https://github.com/liweiwei1419/LeetCode-Solution-in-Good-Style
 
