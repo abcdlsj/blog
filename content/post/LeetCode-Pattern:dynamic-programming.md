@@ -23,6 +23,10 @@ author: "abcdlsj"
 
 内容来自 [zh-wiki]([https://zh.wikipedia.org/wiki/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92)
 
+> 咕咕咕
+>
+> -\- 2020-06-01
+
 ### 单串/双串
 
 #### [300. 最长上升子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)
