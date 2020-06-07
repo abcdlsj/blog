@@ -17,6 +17,10 @@ author: "abcdlsj"
 > 十几天过去了，懒逼还没写完。。。不就是总结吗，明天一定写完（一定？）
 >
 > -\- 2020-06-01
+>
+> 尴尬，这两天考试 + 作业 + 实验报告
+>
+> -\- 2020-06-05
 
 ## 遍历二叉树
 
@@ -178,9 +182,13 @@ public:
 
 ### Morris 遍历
 
+```cpp
 
+```
 
-## 二叉搜索树相关
+## 二叉树相关
+
+> 部分是二叉搜索树，部分不是，二叉搜索树只是特殊的二叉树而已；二叉树的方法适用于二叉搜索树，反之则不可以
 
 定义
 
@@ -280,7 +288,128 @@ public:
     }
 };
 ```
+#### [面试题 04.06. 后继者](https://leetcode-cn.com/problems/successor-lcci/)
+
+> 二叉搜索树的后继者，也就是找中序遍历的后一个节点
+
+**易懂写法**
+
+```cpp
+class Solution {
+public:
+    TreeNode* inorderSuccessor(TreeNode* root, TreeNode* p) {
+        TreeNode *res = nullptr, *pre = nullptr;
+        inorderTraversal(root, pre, p, res);
+        return res;
+    }
+
+    void inorderTraversal(TreeNode* root, TreeNode*& pre, TreeNode* p, TreeNode*& res) {
+        if (root == nullptr || res != nullptr) return;
+        inorderTraversal(root->left, pre, p, res);
+        if (pre == p) res = root;
+        pre = root;
+        inorderTraversal(root->right, pre, p, res);
+    }
+};
+```
+
+**简洁写法**
+
+```cpp
+class Solution {
+public:
+    TreeNode* inorderSuccessor(TreeNode* root, TreeNode* p) {
+        if (root == nullptr) return nullptr;
+        TreeNode* res = inorderSuccessor(root->left, p);
+        if (res != nullptr) return res;
+        if (root->val > p->val) return root;
+        return inorderSuccessor(root->right, p);
+    }
+};
+```
+
+其中 `root` 节点相当于遍历了整个树的节点，所以只要找到大于 `p->val` 的节点，就返回，就有 `res != nullptr`，之后的遍历全部都会返回 `res`；
+
+这个方法非常巧妙的用了递归
+
+#### [面试题33. 二叉搜索树的后序遍历序列](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof/)
+
+> 二叉搜索树的后序遍历
+
+```cpp
+
+```
+
+#### [116. 填充每个节点的下一个右侧节点指针](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/)
+
+```cpp
+
+```
+
+#### [117. 填充每个节点的下一个右侧节点指针 II](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node-ii/)
+
+```cpp
+
+```
+
 ## 浅谈树的递归
 
 > 我单独准备总结一下`二叉树中的递归`，因为在树中的递归过程是很有意思的，因为树最主要的特点就是每一个节点也是一棵树。
+>
+> 对于二叉树的题来说，一般思路就是 **选择一个节点要做的事情（最小的事情），然后递归**
 
+> 先看这道题
+
+#### [104. 二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)
+
+> 浅显易懂
+
+```cpp
+class Solution {
+public:
+    int maxDepth(TreeNode* root) {
+        return root == nullptr? 0 : max(maxDepth(root->left), maxDepth(root->right)) + 1;
+    }
+};
+```
+
+拓展 [110. 平衡二叉树](https://leetcode-cn.com/problems/balanced-binary-tree/)
+
+> 题目中判断平衡二叉树的条件是：一个二叉树*每个节点* 的左右两个子树的高度差的绝对值不超过1
+>
+> 前面知道了怎么求树高度，那么这道题要做的`最小的事情`可以变成判断 `abs(Depth(LeftTree) - Depth(RightTree)) <= 1` ，然后呢？单独这样是不行的，因为还要依次判断每个子树
+>
+> 代码如下：
+
+```cpp
+class Solution {
+public:
+    bool isBalanced(TreeNode* root) {
+        return root == nullptr? true : abs(getDepth(root->left) - getDepth(root->right)) <= 1 && isBalanced(root->left) && isBalanced(root->right);
+    }
+    int getDepth(TreeNode* node) {
+        return node == nullptr? 0 : max(getDepth(node->left), getDepth(node->right)) + 1;
+    }
+};
+```
+
+
+
+#### [226. 翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/)
+
+> 目的是为了翻转这棵树，那么核心就是交换节点的左右子树，那么就能写出下面代码了。
+
+```cpp
+class Solution {
+public:
+    TreeNode* invertTree(TreeNode* root) {
+        if (root == nullptr) return nullptr;
+
+        swap(root->left, root->right);
+        root->left = invertTree(root->left);
+        root->right = invertTree(root->right);
+
+        return root;
+    }
+};
+```
