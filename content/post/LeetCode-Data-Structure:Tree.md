@@ -1,7 +1,7 @@
 ---
 title: "LeetCode Data-Structure: Tree"
 date: 2020-05-14T21:52:45+08:00
-lastmod: 2020-05-14T21:52:45+08:00
+lastmod: 2020-06-08T21:52:45+08:00
 draft: false
 keywords: ["Tree"]
 description: "LeetCode Data Structure Tree"
@@ -10,7 +10,7 @@ categories: ["learn"]
 author: "abcdlsj"
 ---
 
-> LeetCode 刷题总结：树(WIP) 
+> LeetCode 刷题总结：树
 
 <!--more-->
 
@@ -21,6 +21,10 @@ author: "abcdlsj"
 > 尴尬，这两天考试 + 作业 + 实验报告
 >
 > -\- 2020-06-05
+>
+> 唉，接下来还有好多实验报告和课设
+>
+> -\- 2020-06-08
 
 ## 遍历二叉树
 
@@ -180,10 +184,166 @@ public:
 };
 ```
 
-### Morris 遍历
+## 生成二叉树
+
+#### [105. 从前序与中序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
 
 ```cpp
+class Solution {
+public:
+    TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
+        return build(preorder, inorder, 0, 0, inorder.size() - 1);
+    }
+    TreeNode* build(vector<int>& preorder, vector<int>& inorder, int root, int begin, int end) {
+        if (begin > end) return NULL;
+        
+        int i = begin;
+        while (i < end && inorder[i] != preorder[root]) i++;
+        TreeNode* rootNode = new TreeNode(preorder[root]);
+        rootNode->left = build(preorder, inorder, root + 1, begin, i - 1);
+        rootNode->right = build(preorder, inorder, root + i - begin + 1, i + 1, end);
 
+        return rootNode;
+    }
+};
+```
+
+#### [106. 从中序与后序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
+
+```cpp
+class Solution {
+public:
+    TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder) {
+        return buildHelper(inorder, postorder, postorder.size() - 1, 0, inorder.size() - 1);
+    }
+    TreeNode* buildHelper(vector<int> inorder, vector<int> postorder, int root, int begin, int end) {
+        if (begin > end) return nullptr;
+
+        int i = begin;
+        while (i < inorder.size() && inorder[i] != postorder[root]) i++;
+        TreeNode* cur = new TreeNode(postorder[root]);
+        cur->right = buildHelper(inorder, postorder, root - 1, i + 1, end);
+        cur->left = buildHelper(inorder, postorder, root - (end - i) - 1, begin, i - 1);  
+        return cur;
+    } 
+};
+```
+
+#### [449. 序列化和反序列化二叉搜索树](https://leetcode-cn.com/problems/serialize-and-deserialize-bst/)
+
+> 先序遍历一遍，然后排序先序遍历，就是中序遍历了，然后就是 n105 题
+
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Codec {
+public:
+
+    // Encodes a tree to a single string.
+    string serialize(TreeNode* root) {
+        string s;
+        stack<TreeNode*> stack;
+        if (root != nullptr) stack.push(root);
+        while (!stack.empty()) {
+            TreeNode* cur = stack.top(); stack.pop();
+            s += to_string(cur->val) + " ";
+            if (cur->right) stack.push(cur->right);
+            if (cur->left) stack.push(cur->left);
+        }
+        s = s.substr(0, s.size() - 1);
+        return s;
+    }
+
+    // Decodes your encoded data to tree.
+    TreeNode* deserialize(string data) {
+        vector<int> preorder;
+        stringstream ss(data);
+        string tmp;
+        while (ss >> tmp) {
+            int t = stoi(tmp);
+            preorder.push_back(t);
+        }
+
+        vector<int> inorder(preorder);
+        sort(inorder.begin(), inorder.end());
+
+        return build(preorder, inorder, 0, 0, inorder.size() - 1);
+    }
+    
+    TreeNode* build(vector<int>& preorder, vector<int>& inorder, int root, int begin, int end) {
+        if (begin > end) return NULL;
+        int i = begin;
+        while (i < end && inorder[i] != preorder[root]) i++;
+        TreeNode* rootNode = new TreeNode(preorder[root]);
+        rootNode->left = build(preorder, inorder, root + 1, begin, i - 1);
+        rootNode->right = build(preorder, inorder, root + i - begin + 1, i + 1, end);
+        return rootNode;
+    }
+};
+
+// Your Codec object will be instantiated and called as such:
+// Codec codec;
+// codec.deserialize(codec.serialize(root));
+```
+
+#### [297. 二叉树的序列化与反序列化](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/)
+
+> 这个这样写会简单些，用先序遍历来序列化二叉树
+
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Codec {
+public:
+
+    // Encodes a tree to a single string.
+    string serialize(TreeNode* root) {
+        if (root == nullptr) return "#_";
+
+        string res = to_string(root->val) + "_";
+        res += serialize(root->left);
+        res += serialize(root->right);
+        return res;
+    }
+
+    // Decodes your encoded data to tree.
+    TreeNode* deserialize(string data) {
+        stringstream ss(data);
+        string tmp;
+        queue<string> queue;
+
+        while (getline(ss, tmp, '_')) queue.push(tmp);
+        return helper(queue);
+    }
+
+    TreeNode* helper(queue<string>& queue) {
+        string val = queue.front(); queue.pop();
+
+        if (val == "#") return nullptr;
+        TreeNode* head = new TreeNode(stoi(val));
+        head->left = helper(queue);
+        head->right = helper(queue);
+        return head;
+    }
+};
+
+// Your Codec object will be instantiated and called as such:
+// Codec codec;
+// codec.deserialize(codec.serialize(root));
 ```
 
 ## 二叉树相关
@@ -337,19 +497,119 @@ public:
 > 二叉搜索树的后序遍历
 
 ```cpp
+class Solution {
+public:
+    bool verifyPostorder(vector<int>& postorder) {
+        return isVerify(postorder, 0, postorder.size() - 1);
+    }
+    bool isVerify(vector<int>& postorder, int left, int right) {
+        if (left > right) return true;
 
+        int idx = left, rootValue = postorder[right];
+        while (idx < right && postorder[idx] < rootValue) idx++;
+
+        for (int i = idx; i < right; i++) {
+            if (postorder[i] < rootValue) {
+                return false;
+            }
+        }
+
+        if (!isVerify(postorder, left, idx - 1) || !isVerify(postorder, idx, right - 1)) {
+            return false;
+        }
+
+        return true;
+    }
+};
 ```
 
 #### [116. 填充每个节点的下一个右侧节点指针](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/)
 
-```cpp
+> 对于这道题，`最小的事情就是连接 node->left 和 node->right`，但是这样会出现中间的一部分没法连接，所以需要处理一下
 
+```cpp
+/*
+// Definition for a Node.
+class Node {
+public:
+    int val;
+    Node* left;
+    Node* right;
+    Node* next;
+
+    Node() : val(0), left(NULL), right(NULL), next(NULL) {}
+
+    Node(int _val) : val(_val), left(NULL), right(NULL), next(NULL) {}
+
+    Node(int _val, Node* _left, Node* _right, Node* _next)
+        : val(_val), left(_left), right(_right), next(_next) {}
+};
+*/
+
+class Solution {
+public:
+    Node* connect(Node* root) {
+        if (root == nullptr) return nullptr;
+        
+        Node* le = connect(root->left);
+        Node* ri = connect(root->right);
+        while (le && ri) {
+            le->next = ri;
+            le = le->right;
+            ri = ri->left;
+        }
+        
+        return root;
+    }
+};
 ```
 
 #### [117. 填充每个节点的下一个右侧节点指针 II](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node-ii/)
 
-```cpp
+> 借助层次遍历能很快的写出来
 
+```cpp
+/*
+// Definition for a Node.
+class Node {
+public:
+    int val;
+    Node* left;
+    Node* right;
+    Node* next;
+
+    Node() : val(0), left(NULL), right(NULL), next(NULL) {}
+
+    Node(int _val) : val(_val), left(NULL), right(NULL), next(NULL) {}
+
+    Node(int _val, Node* _left, Node* _right, Node* _next)
+        : val(_val), left(_left), right(_right), next(_next) {}
+};
+*/
+
+class Solution {
+public:
+    Node* connect(Node* root) {
+        queue<Node*> queue;
+        if (root != nullptr) queue.push(root);
+
+        while (!queue.empty()) {
+            int size = queue.size();
+            while (size--) {
+                Node* cur = queue.front(); queue.pop();
+                if (size) {
+                    Node* tmp = queue.front();
+                    cur->next = tmp;
+                }
+
+                if (cur->left) queue.push(cur->left);
+                if (cur->right) queue.push(cur->right);
+            }
+        }
+
+        return root;
+    }
+};
 ```
 
 ## 浅谈树的递归
@@ -393,8 +653,6 @@ public:
 };
 ```
 
-
-
 #### [226. 翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/)
 
 > 目的是为了翻转这棵树，那么核心就是交换节点的左右子树，那么就能写出下面代码了。
@@ -413,3 +671,7 @@ public:
     }
 };
 ```
+
+## 总结
+
+> 没啥好写的，希望继续努力（少拖延）！

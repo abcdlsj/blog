@@ -21,6 +21,10 @@ draft = true
 <!--more-->
 
 > xv6 Projects 的环境初始化和实现`System Call`，趁着写 xv6 Projects 的机会深入看下操作系统（看书看了就忘，我太菜了。。。）
+>
+> 裂开，没想到我又拖延了。。。
+>
+> -\- 2020-06-08
 
 ## install xv6 and tools
 
