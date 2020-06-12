@@ -8,6 +8,7 @@ description: "LeetCode Data Structure Tree"
 tags: ["Tree", "LeetCode", "Data Structure"]
 categories: ["learn"]
 author: "abcdlsj"
+toc: true
 ---
 
 > LeetCode 刷题总结：树
@@ -349,6 +350,8 @@ public:
 ## 二叉树相关
 
 > 部分是二叉搜索树，部分不是，二叉搜索树只是特殊的二叉树而已；二叉树的方法适用于二叉搜索树，反之则不可以
+>
+> 一个方法或者思路，如果它在二叉搜索树这种特定情况下不起作用，那么对于一般二叉树来说它肯定不起作用
 
 定义
 

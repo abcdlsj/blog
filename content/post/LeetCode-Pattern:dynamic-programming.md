@@ -9,7 +9,7 @@ tags: ["LeetCode", "Dynamic Programming"]
 categories: ["learn"]
 author: "abcdlsj"
 ---
-> LeetCode 刷题总结之：动态规划（WIP）
+>  LeetCode 刷题总结之：动态规划（WIP）
 
 <!--more-->
 
