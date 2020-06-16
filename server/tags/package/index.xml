@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>package on Minimo</title>
+    <link>http://www.example.com/tags/package/</link>
+    <description>Recent content in package on Minimo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 30 Jan 2020 12:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://www.example.com/tags/package/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ebuild 初探</title>
+      <link>http://www.example.com/post/ebuild%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Thu, 30 Jan 2020 12:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/ebuild%E4%BD%BF%E7%94%A8/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;ebuild是一套软件组建自动化工具程式，用来让软件套件编译与安装流程可以自动化完成，由一组bash脚本程式构成。这套软件的格式由Gentoo Linux专案研发，是软件包管理系统，Portage，的一部分。工具程式BitBake的设计理念，最早来自于ebuild。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

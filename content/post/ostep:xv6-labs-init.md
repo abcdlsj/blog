@@ -1,17 +1,10 @@
 +++
 title = "Operating Systems: Three Easy Pieces -- Initial-xv6"
-date = 2020-05-23T15:29:13+08:00
+date = 2020-06-02T15:29:13+08:00
 lastmod = 2020-05-31T15:29:13+08:00
 tags = ["OS"]
 categories = ["learn"]
-imgs = []
-cover = ""  # image show on top
-readingTime = true  # show reading time after article date
 toc = true
-comments = false
-justify = false  # text-align: justify;
-single = false  # display as a single page, hide navigation on bottom, like as about page.
-license = ""  # CC License
 draft = true
 
 +++
@@ -22,9 +15,15 @@ draft = true
 
 > xv6 Projects 的环境初始化和实现`System Call`，趁着写 xv6 Projects 的机会深入看下操作系统（看书看了就忘，我太菜了。。。）
 >
+> -\- 05-23（没想到吧，花了一个月）
+>
 > 裂开，没想到我又拖延了。。。
 >
-> -\- 2020-06-08
+> -\- 06-08
+>
+> 这两周真忙啊，啥专业这么忙！！！，没有时间管理。。。
+>
+> -\- 06-15
 
 ## install xv6 and tools
 
@@ -46,5 +45,14 @@ https://stackoverflow.com/questions/21653195/xv6-add-a-system-call-that-counts-s
 
 https://stackoverflow.com/questions/8021774/how-do-i-add-a-system-call-utility-in-xv6?rq=1
 
+## System Call
+
+
+
 ## Add System Call
 
+
+
+## 参考资料
+
+<<Operating-System Operating System Concepts>>

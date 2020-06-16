@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BigData on Minimo</title>
+    <link>http://www.example.com/tags/bigdata/</link>
+    <description>Recent content in BigData on Minimo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 13 Nov 2019 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://www.example.com/tags/bigdata/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>大数据环境搭建示例</title>
+      <link>http://www.example.com/post/bigdata_env/</link>
+      <pubDate>Wed, 13 Nov 2019 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/bigdata_env/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;上学期参加了联想杯大数据比赛的校内选拔，“领阵磨枪”的我竟然拿了第二（选拔三人），开学这几天基本上就是配置环境。感觉没啥意思，应用层面又不会，初赛我们队因为队友都有事，所以就花了半天。。最后果然没进。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

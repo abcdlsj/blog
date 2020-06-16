@@ -1,11 +1,12 @@
 +++
 title = "use dummy-parameter overload prefix/postfix ++"
 date = 2020-04-04T18:57:00+08:00
-lastmod = 2020-05-27T09:29:56+08:00
+lastmod = 2020-06-13T22:20:57+08:00
 tags = ["CPP"]
 categories = ["learn"]
 draft = false
 author = "abcdlsj"
+toc = true
 +++
 
 > 最近因为选择找工作的原因，在准备春招实习面试的知识，好多东西不太会，之前看过的书有些都忘了（自闭了），希望我能够找到一个好的实习，前段时间粗略的复习了一下 C++，现在准备好好的复习一下 C++ 比较繁琐的方面，写博文记录一下我认为网上写的比较少的点。

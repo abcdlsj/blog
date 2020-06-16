@@ -5,6 +5,9 @@ lastmod = 2018-08-18T14:51:14+08:00
 tags = ["v2ray"]
 categories = ["折腾"]
 draft = false
+
+toc = true
+
 +++
 
 > V2Ray是一个优秀的开源网络代理工具，可以帮助你畅爽体验互联网，目前已经全平台支持Windows、Mac、Android、IOS、Linux等操作系统的使用。相对起Shadowsocks来说属于后起之秀，在混淆能力、兼容性、速度上有着独到的优点。在目前Shadowsocks、ShadowsocksR停止更新的情况下，多掌握一个活跃项目工具的使用是完全有必要的.

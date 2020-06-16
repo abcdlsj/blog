@@ -5,6 +5,9 @@ lastmod = 2020-04-04T19:03:55+08:00
 tags = ["org-page", "org", "emacs"]
 categories = ["blog"]
 draft = false
+
+toc = true
+
 +++
 
 > 最近把 org-page 配置好了，大概今年五月份开始，就迷上了 emacs，期间爱上了配置 emacs，然后现在也开始使用 org-capture 做日常的笔记，我期间也写了挺多 org 笔记，所以才会想拿 org 来搭建 blog，搞了挺长时间，最开始的 EGO，到现在的 org-page，我终于弄好了，因为 org-page 太久没人修了，加上文档写的不全，对于小白不友好，所以我准备简单记录一下怎么搭建成功的

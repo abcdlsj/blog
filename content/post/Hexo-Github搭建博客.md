@@ -5,6 +5,9 @@ lastmod = 2018-07-16T14:51:14+08:00
 tags = ["hexo"]
 categories = ["blog"]
 draft = false
+
+toc = true
+
 +++
 
 > 建立博客有三个阶段
@@ -161,13 +164,13 @@ draft = false
 
 
 
-  [1]: https://res.cloudinary.com/dc15efw34/image/upload/v1531830122/04.png
-  [2]: https://res.cloudinary.com/dc15efw34/image/upload/v1531830125/03.jpg
-  [3]: https://res.cloudinary.com/dc15efw34/image/upload/v1531830122/08.png
-  [4]: https://res.cloudinary.com/dc15efw34/image/upload/v1531830122/05.png
-  [5]: https://res.cloudinary.com/dc15efw34/image/upload/v1531830122/06.png
-  [6]: https://res.cloudinary.com/dc15efw34/image/upload/v1531830123/10.png
-  [7]: https://hexo.io/
-  [8]: https://res.cloudinary.com/dc15efw34/image/upload/v1531830123/12.png
-  [9]: https://res.cloudinary.com/dc15efw34/image/upload/v1531830123/13.png
-  [10]: https://res.cloudinary.com/dc15efw34/image/upload/v1531830123/14.png
+[1]: https://res.cloudinary.com/dc15efw34/image/upload/v1531830122/04.png
+[2]: https://res.cloudinary.com/dc15efw34/image/upload/v1531830125/03.jpg
+[3]: https://res.cloudinary.com/dc15efw34/image/upload/v1531830122/08.png
+[4]: https://res.cloudinary.com/dc15efw34/image/upload/v1531830122/05.png
+[5]: https://res.cloudinary.com/dc15efw34/image/upload/v1531830122/06.png
+[6]: https://res.cloudinary.com/dc15efw34/image/upload/v1531830123/10.png
+[7]: https://hexo.io/
+[8]: https://res.cloudinary.com/dc15efw34/image/upload/v1531830123/12.png
+[9]: https://res.cloudinary.com/dc15efw34/image/upload/v1531830123/13.png
+[10]: https://res.cloudinary.com/dc15efw34/image/upload/v1531830123/14.png

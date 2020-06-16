@@ -1,11 +1,14 @@
 +++
 title = "LeetCode \"乙亥年最有趣的比赛\" 题解"
 date = 2020-01-21T01:07:00+08:00
-lastmod = 2020-05-27T09:29:56+08:00
+lastmod = 2020-06-13T22:20:57+08:00
 tags = ["LeetCode"]
 categories = ["learn"]
 draft = false
 author = "abcdlsj"
+
+toc = true
+
 +++
 
 > 比赛的时候做了一个小时一道都没做出来，1，5有思路但是也没做出来，事后找题解。。。
@@ -26,7 +29,7 @@ class Solution { public String q() { String s = "class Solution { public String 
 这道题是检测你返回的代码和你提交的代码是否一样
 [wiki Quine](https://en.wikipedia.org/wiki/Quine%5F(computing))
 
-下面是 <a id="org4e9aa5d"></a> 中的 java 实现
+下面是 <a id="org7791e5d"></a> 中的 java 实现
 
 ```java
 public class Quine { public static void main(String[] args) { char c=34; System.out.println(s+c+s+c+';'+'}'); } static String s="public class Quine { public static void main(String[] args) { char c=34; System.out.println(s+c+s+c+';'+'}'); } static String s=";}

@@ -1,72 +1,134 @@
-baseURL = "https://abcdlsj.github.io/"
-title = "ABCDLSJ'S WORLD"
-theme = "hugo-notepadium"
-copyright = "©2018-2020 by abcdlsj"
+baseURL = "https://github.abcdlsj.io"
+title = "The Real World"
+# for smart copyright line, leave this blank and check [params.copyright]
+copyright = "abcdlsj"
 
-languageCode = "en"  # for the RSS generation
+theme = "minimo"
+
+disqusShortname = "abcdlsj"
+googleAnalytics = ""
+
+Paginate = 8
+preserveTaxonomyNames = true
+
+enableRobotsTXT = true # generate robots.txt
+
+# Syntax Highlighting ( https://gohugo.io/content-management/syntax-highlighting/ )
+pygmentsCodefences = true
+
+enableEmoji = true
+
+# Missing translations will default to this content language
 defaultContentLanguage = "en"
 
-hasCJKLanguage = true
-
-enableRobotsTXT = true
-
-# Enable Disqus
-#disqusShortname = "XXX"
-
-# Google Analytics
-#googleAnalytics = "UA-123-45"
-
-[markup.highlight]
-codeFences = true
-noClasses = false
-
-[markup.goldmark.renderer]
-unsafe = true  # enable raw HTML in Markdown
-
-[params]
-style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
-dateFormat = "Jan 02, 2006"  # if unset, default is "2006-01-02"
-readingTime = false  # show reading time after article date
-logo = ""
-slogan = "享受专注"
-#license = "<a rel=license href=http://creativecommons.org/licenses/by-nc-sa/4.0/><img alt=Creative Commons License style=border-width:0 src=https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png /></a><br />This work is licensed under a <a rel=license href=http://creativecommons.org/licenses/by-nc-sa/4.0/>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>."
+[params.info]
+description = "Enjoy Concentration"
+title404 = "Nothing's here!"
 
 [params.assets]
-css = ["css/fonts.css"]
+favicon = "favicon.ico"
+customCSS = ["custom.css"]
+customJS = ["js/custom.js"]
+gopher = "" # used in 404 template ( Generator: https://gopherize.me )
+
+[params.copyright]
+prefix = ""
+holder = "abcdlsj"
+startYear = "2018"
+suffix = ""
+
+[params.settings]
+# date & time format: https://golang.org/pkg/time/
+dateFormat = "2006, Jan 02"
+listDateFormat = "2006, Jan 02"
+archiveDateFormat = "Jan 02"
+hideEntryNavigation = ["page"] # boolean / array of sections
+hideEntryMeta = ["page"] # boolean / array of sections
+showReadingTime = true
+showLastmod = true
+taxonomyCloudShuffle = true
+accentColor = "#ffcd00"
+hideMainMenu = false
+
+[params.sidebar]
+enable = true
+
+[params.widgets]
+header = ["breadcrumbs"]
+homepage = ["recent_posts"]
+sidebar = ["about", "sidebar_menu", "taxonomy_cloud"]
+footer = ["social_menu"]
+
+[params.opengraph.facebook]
+admins = [] # array of Facebook IDs
+appID = ""
+pageID = ""
+
+[params.opengraph.twitter]
+page = "" # Twitter page username
+
+[params.seo]
+# Title Separator: - – — · • * ⋆ | ~ « » < >
+titleSeparator = "•"
+
+[params.social]
+email = "lisongjianshuai@gmail.com"
+github = "abcdlsj"
 
 [params.comments]
-enable = false  # En/Disable comments globally, default: false. You can always enable comments on per page.
+enable = false
 
-[params.share]
-enable = false  # En/Disable share globally, default: false. You can always enable share on per page.
-addThisId = ""
-inlineToolId = ""
+# Isso: https://posativ.org/isso/
+[params.comments.isso]
+enable = false
+scriptSrc = "" # "https://isso.example.com/js/embed.min.js"
+dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author='true'"
 
-[params.math]
-enable = true # load math globally, default: false. You can always enable math on per page.
-use = "mathjax"  # builtin: "katex", "mathjax".  default: "katex"
+[params.comments.staticman]
+enable = true
+apiEndpoint = "https://api.staticman.net/v2/entry"
+maxDepth = 2
+username = "MunifTanjim"
+repository = "minimo"
 
-[params.syntax]
-use = "none"  # builtin: "prismjs", "hljs". "none" means Chroma
-theme = "github"
-darkTheme = "dracula"
+# Utterances: https://utteranc.es
+[params.comments.utterances]
+enable = false
+issueTerm = "pathname" # pathname / url / title
 
-[params.profile]
-  enable = false
-  avatar = "https://d33wubrfki0l68.cloudfront.net/ddf49425628d8aec7523db143916b34ae1641e11/b97e8/images/gopher-side_color.svg"
-  name = "gohugo"
-  bio = "Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again."  # support markdown syntax
-  twitter = "GoHugoIO"  # https://twitter.com/XXX
-  github = "gohugoio"  # https://github.com/XXX
+[params.comments.utterances.github]
+username = "MunifTanjim"
+repository = "minimo"
 
-[params.nav]
-showCategories = true       # /categories/
-showTags = true             # /tags/
+[params.search]
+client = "fuse" # algolia / fuse / lunr
 
-[[params.nav.custom]]
-title = "About"
-url = "/about/"
+[params.search.algolia]
+appId = ""
+indexName = ""
+searchApiKey = ""
 
-#[[params.nav.custom]]
-#title = "Hugo"
-#url = "https://gohugo.io/"
+[taxonomies]
+author = "abcdlsj"
+category = "categories"
+series = "series"
+tag = "tags"
+
+[permalinks]
+page = "/:slug/"
+
+[[menu.main]]
+name = "ABOUT ME"
+weight = -10
+identifier = "repository"
+url = "/about"
+
+[blackfriday]
+hrefTargetBlank = true
+
+[languages]
+# edit this block for your own language
+[languages.en]
+lang = "en"
+languageName = "English"
+weight = 1

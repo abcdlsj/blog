@@ -1,11 +1,14 @@
 +++
-title = "ox-hugo 搭建 blog"
+title = "use ox-hugo build blog"
 date = 2020-01-13T13:23:00+08:00
-lastmod = 2020-05-27T09:29:53+08:00
+lastmod = 2020-06-13T22:20:54+08:00
 tags = ["org", "blog", "hugo"]
 categories = ["blog"]
 draft = false
 author = "abcdlsj"
+
+toc = true
+
 +++
 
 > 前段时间换了 org-page，感觉还是不错的，但是 ox-hugo 更好。

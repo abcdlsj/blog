@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>aria2 on Minimo</title>
+    <link>http://www.example.com/tags/aria2/</link>
+    <description>Recent content in aria2 on Minimo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 26 Aug 2018 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://www.example.com/tags/aria2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>VPS搭建aria2下载&amp;使用h5ai实现在线播放</title>
+      <link>http://www.example.com/post/vps-%E5%AE%89%E8%A3%85aria2%E5%92%8Cwebui%E6%90%AD%E5%BB%BA%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD%E7%A5%9E%E5%99%A8/</link>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/vps-%E5%AE%89%E8%A3%85aria2%E5%92%8Cwebui%E6%90%AD%E5%BB%BA%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD%E7%A5%9E%E5%99%A8/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;好久没有更新博客了,原因是最近到了一个&amp;quot;小玩具&amp;rdquo; &amp;ndash; 树莓派,现在正在研究当中&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

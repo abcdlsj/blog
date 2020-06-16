@@ -3,11 +3,10 @@ title: "LeetCode Pattern: BackTracking"
 date: 2020-04-23T21:41:59+08:00
 lastmod: 2020-04-23T21:41:59+08:00
 draft: flase
-keywords: ["BackTracking"]
-description: "LeetCode Pattern BackTracking"
 tags: ["LeetCode", "BackTracking"]
 categories: ["learn"]
 author: "abcdlsj"
+toc: true
 ---
 > LeetCode 刷题总结之：回溯
 

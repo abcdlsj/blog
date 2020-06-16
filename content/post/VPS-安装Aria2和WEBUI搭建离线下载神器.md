@@ -5,6 +5,9 @@ lastmod = 2018-08-26T14:51:14+08:00
 tags = ["aria2","h5ai"]
 categories = ["折腾"]
 draft = false
+
+toc = true
+
 +++
 
 > 好久没有更新博客了,原因是最近到了一个"小玩具" -- 树莓派,现在正在研究当中

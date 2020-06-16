@@ -5,6 +5,9 @@ lastmod = 2018-07-26T14:51:14+08:00
 tags = ["v2ray"]
 categories = ["折腾"]
 draft = false
+
+toc = true
+
 +++
 
 > 前段时间分享了ssr的搭建方法,现在想做一下搭建v2ray的教程.碰巧do开了一台没被墙的新加坡vps.延迟80左右,用来搭v2ray速度应该可以.

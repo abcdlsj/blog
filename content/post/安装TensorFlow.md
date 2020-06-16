@@ -5,6 +5,9 @@ lastmod = 2018-11-10T14:51:14+08:00
 tags = ["Tensorflow"]
 categories = ["learn"]
 draft = false
+
+toc = true
+
 +++
 
 > 安装TensorFlow

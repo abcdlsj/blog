@@ -5,6 +5,9 @@ lastmod = 2020-01-13T23:36:41+08:00
 tags = ["linux", "chmod", "os"]
 categories = ["learn"]
 draft = false
+
+toc = true
+
 +++
 
 > 我看到文件夹里面文件权限不一，所以我就 `chmod 644 *` 然后发现 `cd` 子文件夹没权限

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>elisp on Minimo</title>
+    <link>http://www.example.com/tags/elisp/</link>
+    <description>Recent content in elisp on Minimo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 15 Nov 2019 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://www.example.com/tags/elisp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Learn-elisp-in-sc</title>
+      <link>http://www.example.com/post/learn_emacs_in_sc/</link>
+      <pubDate>Fri, 15 Nov 2019 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/learn_emacs_in_sc/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;这是learn x in minutes 的elisp教程，跟着做一遍&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

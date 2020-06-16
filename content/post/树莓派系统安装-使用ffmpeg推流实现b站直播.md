@@ -5,6 +5,9 @@ lastmod = 2018-09-10T14:51:14+08:00
 tags = ["树莓派","ffmepg"]
 categories = ["learn","折腾"]
 draft = false
+
+toc = true
+
 +++
 
 > 树莓派买回来快半个月了,期间实现了很多好玩的玩法,现在才想起来可以写一篇博客记录一下

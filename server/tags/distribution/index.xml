@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Distribution on Minimo</title>
+    <link>http://www.example.com/tags/distribution/</link>
+    <description>Recent content in Distribution on Minimo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 20 May 2020 23:34:41 +0800</lastBuildDate>
+    
+	<atom:link href="http://www.example.com/tags/distribution/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MIT 6.824 (1): MapReduce</title>
+      <link>http://www.example.com/post/mit-6.824-learning-1mapreduce/</link>
+      <pubDate>Wed, 20 May 2020 23:34:41 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/mit-6.824-learning-1mapreduce/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;MapReduce Paper &amp;amp; Lab&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

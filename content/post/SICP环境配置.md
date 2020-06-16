@@ -5,6 +5,9 @@ lastmod = 2019-01-21T14:51:14+08:00
 tags = ["SICP"]
 categories = ["learn"]
 draft = false
+
+toc = true
+
 +++
 
 > 最近想学习一下<<计算机程序的构造和解释>>，毕竟是“魔法书”

@@ -1,11 +1,14 @@
 +++
-title = "Org-Mode 中的 link 处理"
+title = "Org-Mode link"
 date = 2020-02-05T13:52:00+08:00
-lastmod = 2020-05-27T09:29:56+08:00
+lastmod = 2020-06-13T22:20:57+08:00
 tags = ["org"]
 categories = ["learn"]
 draft = false
 author = "abcdlsj"
+
+toc = true
+
 +++
 
 > Org-Mode link 处理

@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang='en' dir='auto'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='
+Ubuntu（国际音标：/ʊˈbʊntuː/，uu-buun-too)是以桌面应用为主的Linux发行版，Ubuntu由Canonical公司发布，他们提供商业支持。它是基于自由软件，其名称来自非洲南部祖鲁语或科萨语的“ubuntu”一词（译为乌班图），意思是“人性”、“我的存在是因为大家的存在”,是非洲传统的一种价值观。
+
+来源.维基百科'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='ubuntu系统优化&amp;问题解决(内容丰富) • Minimo'>
+<meta property='og:description' content='
+Ubuntu（国际音标：/ʊˈbʊntuː/，uu-buun-too)是以桌面应用为主的Linux发行版，Ubuntu由Canonical公司发布，他们提供商业支持。它是基于自由软件，其名称来自非洲南部祖鲁语或科萨语的“ubuntu”一词（译为乌班图），意思是“人性”、“我的存在是因为大家的存在”,是非洲传统的一种价值观。
+
+来源.维基百科'>
+<meta property='og:url' content='http://www.example.com/post/ubuntu%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96-%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3-%E5%86%85%E5%AE%B9%E4%B8%B0%E5%AF%8C/'>
+<meta property='og:site_name' content='Minimo'>
+<meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='Linux'><meta property='article:published_time' content='2018-07-29T00:00:00&#43;08:00'/><meta property='article:modified_time' content='2018-07-29T14:51:14&#43;08:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.70.0" />
+
+  <title>ubuntu系统优化&amp;问题解决(内容丰富) • Minimo</title>
+  <link rel='canonical' href='http://www.example.com/post/ubuntu%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96-%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3-%E5%86%85%E5%AE%B9%E4%B8%B0%E5%AF%8C/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.ab98e12b.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+  
+
+</head>
+<body class='page type-post has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='/images/logo.png'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+      <a href='/'>
+      Minimo
+      </a>
+    </h2>
+    <div class='desc'>
+    Minimalist theme for Hugo
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'>Search</h4>
+  </header>
+
+  <form action='/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+<section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Tags</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/tags/arch/' style='font-size:1em'>Arch</a>
+      </li><li>
+        <a href='/tags/aria2/' style='font-size:1em'>aria2</a>
+      </li><li>
+        <a href='/tags/backtracking/' style='font-size:1em'>BackTracking</a>
+      </li><li>
+        <a href='/tags/baidu/' style='font-size:1em'>baidu</a>
+      </li><li>
+        <a href='/tags/bigdata/' style='font-size:1em'>BigData</a>
+      </li><li>
+        <a href='/tags/binary-search/' style='font-size:1em'>Binary Search</a>
+      </li><li>
+        <a href='/tags/blog/' style='font-size:1.2em'>blog</a>
+      </li><li>
+        <a href='/tags/chmod/' style='font-size:1em'>chmod</a>
+      </li><li>
+        <a href='/tags/cmder/' style='font-size:1em'>Cmder</a>
+      </li><li>
+        <a href='/tags/conky/' style='font-size:1em'>conky</a>
+      </li><li>
+        <a href='/tags/cpp/' style='font-size:1.2em'>CPP</a>
+      </li><li>
+        <a href='/tags/csapp/' style='font-size:1em'>CSAPP</a>
+      </li><li>
+        <a href='/tags/data-structure/' style='font-size:1em'>Data Structure</a>
+      </li><li>
+        <a href='/tags/distribution/' style='font-size:1em'>Distribution</a>
+      </li><li>
+        <a href='/tags/dynamic-programming/' style='font-size:1em'>Dynamic Programming</a>
+      </li><li>
+        <a href='/tags/elisp/' style='font-size:1em'>elisp</a>
+      </li><li>
+        <a href='/tags/emacs/' style='font-size:1.4em'>Emacs</a>
+      </li><li>
+        <a href='/tags/ffmepg/' style='font-size:1em'>ffmepg</a>
+      </li><li>
+        <a href='/tags/gdb/' style='font-size:1em'>gdb</a>
+      </li><li>
+        <a href='/tags/google-bbr/' style='font-size:1em'>Google bbr</a>
+      </li><li>
+        <a href='/tags/h5ai/' style='font-size:1em'>h5ai</a>
+      </li><li>
+        <a href='/tags/hexo/' style='font-size:1em'>hexo</a>
+      </li><li>
+        <a href='/tags/hugo/' style='font-size:1.2em'>hugo</a>
+      </li><li>
+        <a href='/tags/interview/' style='font-size:1em'>Interview</a>
+      </li><li>
+        <a href='/tags/keyboard/' style='font-size:1em'>KeyBoard</a>
+      </li><li>
+        <a href='/tags/leetcode/' style='font-size:2em'>LeetCode</a>
+      </li><li>
+        <a href='/tags/linux/' style='font-size:1.8em'>linux</a>
+      </li><li>
+        <a href='/tags/mapreduce/' style='font-size:1em'>MapReduce</a>
+      </li><li>
+        <a href='/tags/markdown/' style='font-size:1em'>Markdown</a>
+      </li><li>
+        <a href='/tags/mysql/' style='font-size:1em'>Mysql</a>
+      </li><li>
+        <a href='/tags/nextcloud/' style='font-size:1em'>NextCloud</a>
+      </li><li>
+        <a href='/tags/org/' style='font-size:1.6em'>org</a>
+      </li><li>
+        <a href='/tags/org-page/' style='font-size:1em'>org-page</a>
+      </li><li>
+        <a href='/tags/os/' style='font-size:1.6em'>OS</a>
+      </li><li>
+        <a href='/tags/package/' style='font-size:1em'>package</a>
+      </li><li>
+        <a href='/tags/pip/' style='font-size:1em'>pip</a>
+      </li><li>
+        <a href='/tags/python/' style='font-size:1.6em'>Python</a>
+      </li><li>
+        <a href='/tags/sicp/' style='font-size:1.4em'>SICP</a>
+      </li><li>
+        <a href='/tags/sklearn/' style='font-size:1em'>Sklearn</a>
+      </li><li>
+        <a href='/tags/sliding-window/' style='font-size:1em'>Sliding Window</a>
+      </li><li>
+        <a href='/tags/ssr/' style='font-size:1em'>ssr</a>
+      </li><li>
+        <a href='/tags/tensorflow/' style='font-size:1em'>Tensorflow</a>
+      </li><li>
+        <a href='/tags/tree/' style='font-size:1em'>Tree</a>
+      </li><li>
+        <a href='/tags/v2ray/' style='font-size:1.4em'>v2ray</a>
+      </li><li>
+        <a href='/tags/zsh/' style='font-size:1em'>zsh</a>
+      </li><li>
+        <a href='/tags/%E5%8D%9C%E7%AE%97%E5%AD%90/' style='font-size:1em'>卜算子</a>
+      </li><li>
+        <a href='/tags/%E6%80%9D%E6%83%B3/' style='font-size:1em'>思想</a>
+      </li><li>
+        <a href='/tags/%E6%84%9F%E6%82%9F/' style='font-size:1em'>感悟</a>
+      </li><li>
+        <a href='/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/' style='font-size:1em'>树莓派</a>
+      </li><li>
+        <a href='/tags/%E7%94%9F%E6%B4%BB/' style='font-size:1em'>生活</a>
+      </li><li>
+        <a href='/tags/%E8%BE%93%E5%85%A5%E6%B3%95/' style='font-size:1em'>输入法</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='https://github.com/MunifTanjim/minimo'>Repo</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/'>Minimo</a></li><li><a href='/post/'>Posts</a></li><li><span>ubuntu系统优化&amp;问题解决(内容丰富)</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>Minimo</p><p class='desc site-desc'>Minimalist theme for Hugo</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>ubuntu系统优化&amp;问题解决(内容丰富)</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2018-07-29T00:00:00&#43;08:00'>2018, Jul 29</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+2 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  <blockquote>
+<p>Ubuntu（国际音标：/ʊˈbʊntuː/，uu-buun-too)是以桌面应用为主的Linux发行版，Ubuntu由Canonical公司发布，他们提供商业支持。它是基于自由软件，其名称来自非洲南部祖鲁语或科萨语的“ubuntu”一词（译为乌班图），意思是“人性”、“我的存在是因为大家的存在”,是非洲传统的一种价值观。</p>
+</blockquote>
+<p>来源.维基百科</p>
+<h2 id="安装ubuntu">安装ubuntu</h2>
+<p>网络上很多，不再赘述（其实是我也搞不太明白分区）</p>
+<h2 id="系统优化安装系统后可以从头做一遍">系统优化（安装系统后可以从头做一遍）</h2>
+<p>1.切换软件源
+默认中国服务器，我们把它切换成aliyun的。
+在设置&ndash;软件和更新里&ndash;下载自&ndash;其他站点&ndash;中国&ndash;<a href="http://mirrors.aliyun.com/ubuntu">http://mirrors.aliyun.com/ubuntu</a>
+<img src="https://res.cloudinary.com/dc15efw34/image/upload/v1532859883/%E8%A7%A3%E5%86%B3ubuntu%E4%B8%80%E7%B3%BB%E5%88%97%E9%97%AE%E9%A2%98/%E9%80%89%E5%8C%BA_004.png" alt="选区4">
+2.把所有软件源和软件更新到最新</p>
+<blockquote>
+<p>sudo apt-get update
+sudo apt-get upgrade</p>
+</blockquote>
+<p>3.卸载掉系统自带的不好用或者基本不用的软件</p>
+<ul>
+<li>卸载掉Amazon软件</li>
+</ul>
+<blockquote>
+<p>sudo apt-get remove unity-webapps-common</p>
+</blockquote>
+<ul>
+<li>卸载掉一些基本不使用的软件和游戏</li>
+</ul>
+<pre><code> sudo apt-get remove thunderbird（邮箱）
+ sudo apt-get remove  totem （视频播放器）
+ sudo apt-get remove rhythmbox（音乐播放器）
+ sudo apt-get remove empathy
+ sudo apt-get remove brasero
+ sudo apt-get remove simple-scan
+ sudo apt-get remove gnome-mahjongg
+ sudo apt-get remove aisleriot
+ sudo apt-get remove gnome-mines
+ sudo apt-get remove transmission-common
+ sudo apt-get remove gnome-orca
+ sudo apt-get remove webbrowser-app
+ sudo apt-get remove gnome-sudoku
+</code></pre><ul>
+<li>卸载掉libreoffice软件（有wps）</li>
+</ul>
+<blockquote>
+<p>sudo apt-get remove libreoffice-common</p>
+</blockquote>
+<p>3.安装ubuntu下经常使用的好用的软件</p>
+<ul>
+<li>安装VIM 编辑器</li>
+</ul>
+<blockquote>
+<p>sudo apt-get install vim</p>
+</blockquote>
+<ul>
+<li>
+<p>安装搜狗输入法
+<a href="https://pinyin.sogou.com/linux/">搜狗Linux下载地址</a>
+deb文件包可以直接安装
+或者cd 到安装包目录
+执行<code>sudo dpkg -i +包名</code></p>
+</li>
+<li>
+<p>安装wps
+<a href="http://community.wps.cn/download/">WPS Linux下载地址</a>
+同上</p>
+</li>
+<li>
+<p>安装网易云音乐播放器
+<a href="https://music.163.com/#/download">网易云下载地址</a>
+选择Linux版
+然后同上</p>
+</li>
+<li>
+<p>安装桌面美化工具unity-tweak-tool</p>
+</li>
+</ul>
+<blockquote>
+<p>作为一款美化的辅助工具，ubity-tweak同样提供了很多美化设置，尤其是针对Unity桌面的美化，让我们方便的选择主题、图标、鼠标指针、字体、窗口特征、启动器外观等功能。</p>
+</blockquote>
+<p>直接终端输入<code>sudo apt-get install unity-tweak-tool</code></p>
+<ul>
+<li>安装Sublime Text 3</li>
+</ul>
+<pre><code>sudo add-apt-repository ppa:webupd8team/sublime-text-3
+sudo apt-get update
+sudo apt-get install sublime-text
+</code></pre><p>linux上的sublime是不支持中文显示的，所以我们需要做一些修改
+参考
+<a href="https://blog.csdn.net/oppo62258801/article/details/78996046">解决Ubuntu 16.04下Sublime Text 3无法输入中文的问题</a></p>
+<p>4.美化</p>
+<ul>
+<li>Flatabulous主题＆图标</li>
+</ul>
+<p>扁平化设计，非常漂亮，也是我最喜欢的主题，效果图
+<img src="https://res.cloudinary.com/dc15efw34/image/upload/v1532862219/%E8%A7%A3%E5%86%B3ubuntu%E4%B8%80%E7%B3%BB%E5%88%97%E9%97%AE%E9%A2%98/%E9%80%89%E5%8C%BA_006.png" alt="选区６"></p>
+<p>安装主题</p>
+<pre><code>sudo add-apt-repository ppa:noobslab/themes
+sudo apt-get update
+sudo apt-get install flatabulous-theme
+</code></pre><p>安装图标</p>
+<pre><code>sudo add-apt-repository ppa:noobslab/icons
+sudo apt-get update
+sudo apt-get install ultra-flat-icons
+</code></pre><p>打开Unity Tweak Tool修改（直接终端输入<code>unity-tweak-tool</code>打开）</p>
+<p>修改图标和主题</p>
+<p>再换一张好看高清壁纸即可</p>
+<h2 id="科学上网工具持续更新">科学上网工具(持续更新)</h2>
+<h3 id="安装ss-qt5免费但是需要自己搭建ss或者购买账号">安装SS-qt5（免费但是需要自己搭建ss或者购买账号）</h3>
+<pre><code>sudo add-apt-repository ppa:hzwhuang/ss-qt5
+sudo apt-get update
+sudo apt-get install shadowsocks-qt5
+</code></pre><p>安装过后怎么使用不再多说，可以看看我博客其他几篇搭建ssr/v2ray文章，没有写ss</p>
+<h3 id="安装蓝灯付费但是每月500m高速免费用来查资料还可以">安装蓝灯(付费，但是每月500M高速免费，用来查资料还可以)</h3>
+<p><a href="https://github.com/getlantern/lantern">蓝灯Github项目地址</a></p>
+<h3 id="萤火虫高速付费不付费很慢只能浏览网页">萤火虫（高速付费，不付费很慢，只能浏览网页）</h3>
+<p><a href="https://github.com/yinghuocho/firefly-proxy">firefly项目地址</a></p>
+<h3 id="v2ray使用">V2ray使用</h3>
+<p>请看</p>
+<p><a href="https://octopuspalm.top/2018/08/18/Linux%20%E7%B3%BB%E7%BB%9F%E4%B8%8Bv2ray%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8/">Linux下V2ray客户端使用</a></p>
+<h2 id="使用过程出现问题解决方法持续更新">使用过程出现问题&amp;解决方法（持续更新）</h2>
+<h3 id="开机启动小键盘">开机启动小键盘</h3>
+<p>ubuntu系统有时候不开启小键盘，所以我们想让他开机自动开启
+1.安装软件</p>
+<blockquote>
+<p>sudo apt-get install numlockx</p>
+</blockquote>
+<p>2.编辑  /etc/rc.local 文件，使用vi / vim 命令编辑，如</p>
+<blockquote>
+<p>sudo vim /etc/rc.local</p>
+</blockquote>
+<p>3.在文件看到 exit 0 这行前面加上以下内容</p>
+<blockquote>
+<p>if [-x /usr/bin/numlockx ]; then
+numlockx on</p>
+</blockquote>
+<p>4.重启</p>
+<blockquote>
+<p>sudo shutdown -r now</p>
+</blockquote>
+<p>5.解决啦。。。。</p>
+<h3 id="无法连接网络问题">无法连接网络问题</h3>
+<h4 id="基本判断是否有网卡驱动">基本判断是否有网卡驱动</h4>
+<p>1.输入<code>ifconfig</code>指令，发现只有<code>lo：localhost</code>，并没有eth0网卡
+<img src="https://res.cloudinary.com/dc15efw34/image/upload/v1532842889/%E8%A7%A3%E5%86%B3ubuntu%E4%B8%80%E7%B3%BB%E5%88%97%E9%97%AE%E9%A2%98/%E7%BB%88%E7%AB%AF_001.png" alt="终端1">
+2.尝试激活网卡，输入指令<code>ifconfig eth0 up</code>，发现出现<code>eth0：no such device</code>，代表没有此设备
+3.输入<code>ifconfig a</code>,如果还是没有eth0，代表没有网卡驱动，需要自行安装，请按照下面方法安装</p>
+<h4 id="自己安装网卡驱动">自己安装网卡驱动</h4>
+<p>1.查看自己网卡驱动</p>
+<p>下一个鲁大师，或者去京东搜自己电脑型号然后看评论，一般会有鲁大师截图(手动狗头)
+或者如下命令</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>代码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>查看网卡生产厂家和型号的基本信息</td>
+<td><code>lspci</code></td>
+</tr>
+<tr>
+<td>查看网卡生产厂家和型号的详细信息</td>
+<td><code>lspci -vvv</code></td>
+</tr>
+<tr>
+<td>查看网卡驱动</td>
+<td><code>lspci -vvv</code> or <code>lsmod</code></td>
+</tr>
+<tr>
+<td>查看网卡驱动版本</td>
+<td><code>modinfo/ethool/ethool -i eth3</code></td>
+</tr>
+<tr>
+<td>查看网络接口队列数</td>
+<td><code>ethtool -S eth0</code></td>
+</tr>
+</tbody>
+</table>
+<p>2.bcm网卡
+这个就很简单了
+网上一大堆，因为bcm可以直接两行命令行安装</p>
+<p>3.瑞昱网卡安装
+如果网卡型号是rtl8188ee/rtl8192c/rtl8192ce/rtl8192cu/rtl8192de/rtl8192ee/rtl8192se/rtl8723ae/rtl8723be/rtl8723com/rtl8821ae/rtl8822be可以使用这个方法</p>
+<pre><code>sudo apt update
+sudo apt install git
+git clone https://github.com/rtlwifi-linux/rtlwifi-next
+cd rtlwifi-next
+make
+sudo make install
+sudo modprobe rtl8822be
+</code></pre><p>最后是自己的网卡型号,自行修改
+附上<a href="https://blog.csdn.net/ytusdc/article/details/79675410">内核过低失败解决方案</a>
+详情请看<a href="https://blog.csdn.net/hustcw98/article/details/79118794">参考链接</a></p>
+<p>其他网卡型号</p>
+<p>我的网卡是RTL8111/8168/8411
+只能手动安装,先去官网下载驱动
+<a href="http://www.realtek.com.tw/downloads/downloadsView.aspx?Langid=1&amp;PNid=13&amp;PFid=5&amp;Level=5&amp;Conn=4&amp;DownTypeID=3&amp;GetDown=false#2">网卡RTL8111/8168 官方驱动链接页</a>
+解压，查看readme 文件
+发现可以直接使用安装脚本，所以输入</p>
+<pre><code>sudo su
+./autorun.sh
+</code></pre><p>安装之后，应该就可以了.主要是去看Readme文件（配合翻译使用）
+（官方文档最重要，其次去网上搜别人怎么安装的)
+推荐链接<a href="https://blog.csdn.net/qljessica123/article/details/44957527">安装Realtek RTL8111/RTL8168网卡驱动详解（error~eth0:no such device）</a></p>
+<h3 id="无线上网问题">无线上网问题</h3>
+<p>1.查看无线网卡型号
+终端输入<code>lspci</code>
+找到下面这行
+<img src="https://res.cloudinary.com/dc15efw34/image/upload/v1532856653/%E8%A7%A3%E5%86%B3ubuntu%E4%B8%80%E7%B3%BB%E5%88%97%E9%97%AE%E9%A2%98/%E7%BB%88%E7%AB%AF_002.png" alt="终端2">
+2.如果是Broadcom Corporation&hellip;.系列网卡的话，就很简单了，网上一搜全是这个教程
+推荐<a href="https://www.linuxidc.com/Linux/2017-10/147366.htm">Ubuntu 16.04下无线网卡无法正常连网</a>
+3.Intel网卡
+网上应该有教程，附上<a href="https://wireless.wiki.kernel.org/en/users/drivers/iwlwifi">Linux的intel驱动地址</a>
+3.如果是Intel Corporation Device 24fb网卡的话，请查看你的系统是否在17.10以上，因为是intel这款网卡太新，ubuntun16.04没有集成这款硬件的驱动（我就是这款网卡，好恨自己为啥没看到这个）
+详情查看<a href="http://www.mamicode.com/info-detail-2103508.html">ubuntun16.04不支持intel的最新网卡，升级到17.10后解决</a>
+4.还可以试试这种方法（虽然我没有作用）
+<a href="https://blog.csdn.net/weixin_41762173/article/details/79480609">Ubuntu16.04无法连接Wifi解决方案 </a></p>
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='last-updated'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34" />
+  <polygon points="18 2 22 6 12 16 8 16 8 12 18 2" />
+  
+</svg>
+<span class='screen-reader-text'>Last updated: </span>
+      <time class='entry-date' datetime='2018-07-29T14:51:14&#43;08:00'>2018, Jul 29</time>
+    </div><div class='categories'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+<span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/%E6%8A%98%E8%85%BE/'>折腾</a></div>
+<div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/linux/'>linux</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/post/%E6%90%AD%E5%BB%BAv2ray/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>搭建v2ray</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/post/%E5%85%A8%E7%90%83%E9%A6%96%E5%AF%8C%E8%B4%9D%E4%BD%90%E6%96%AF%E8%BF%99%E6%98%AF%E6%88%91%E6%88%90%E5%8A%9F%E7%9A%84%E5%94%AF%E4%B8%80%E7%A7%98%E8%AF%80/'>
+        <span class='screen-reader-text'>Next post: </span>全球首富贝佐斯：这是我成功的唯一秘诀<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/MunifTanjim' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://facebook.com/MunifTanjim' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Facebook account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://twitter.com/MunifTanjim' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Twitter account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://instagram.com/MunifTanjim' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Instagram account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:contact@example.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://codepen.io/MunifTanjim' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Codepen account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/>
+  <line x1="12" y1="22" x2="12" y2="15.5"/>
+  <polyline points="22 8.5 12 15.5 2 8.5"/>
+  <polyline points="2 15.5 12 8.5 22 15.5"/>
+  <line x1="12" y1="2" x2="12" y2="8.5"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://gitlab.com/MunifTanjim' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Gitlab account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://linkedin.com/in/muniftanjim' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Linkedin account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+  <rect x="2" y="9" width="4" height="12"/>
+  <circle cx="4" cy="4" r="2"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://t.me/MunifTanjim' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Telegram account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="m 22.05,1.577 c -0.393,-0.016 -0.784,0.08 -1.117,0.235 -0.484,0.186 -4.92,1.902 -9.41,3.64 C 9.263,6.325 7.005,7.198 5.267,7.867 3.53,8.537 2.222,9.035 2.153,9.059 c -0.46,0.16 -1.082,0.362 -1.61,0.984 -0.79581202,1.058365 0.21077405,1.964825 1.004,2.499 1.76,0.564 3.58,1.102 5.087,1.608 0.556,1.96 1.09,3.927 1.618,5.89 0.174,0.394 0.553,0.54 0.944,0.544 l -0.002,0.02 c 0,0 0.307,0.03 0.606,-0.042 0.3,-0.07 0.677,-0.244 1.02,-0.565 0.377,-0.354 1.4,-1.36 1.98,-1.928 l 4.37,3.226 0.035,0.02 c 0,0 0.484,0.34 1.192,0.388 0.354,0.024 0.82,-0.044 1.22,-0.337 0.403,-0.294 0.67,-0.767 0.795,-1.307 0.374,-1.63 2.853,-13.427 3.276,-15.38 L 23.676,4.725 C 23.972,3.625 23.863,2.617 23.18,2.02 22.838,1.723 22.444,1.593 22.05,1.576 Z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://scholar.google.com/citations?user=qc6CJjYAAAAJ' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Google_scholar account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21.328 2.002v9.2M8.695 7.85c.014-.787-.11-2.236.28-2.89.623-1.045.856-1.39 1.797-1.989 1.953-.988 4.296.692 4.296.692.803.564 1.672 2.1 1.672 2.1l1.368-1.824-5.444-1.754-3.515 1.34L6.08 7.681m9.109 3.42s.65-.633 1.168-1.085c.461-.402.516-.714.6-.914.18-.426.268-.909.268-1.446 0-.7-.131-1.274-.388-1.735-.031-.053 0 0-.097-.157l4.588-3.762H10.32L3.672 7.85l5.023-.024c.23 1.237.619 1.575 1.019 2.222.744.719 1.13 1.194 2.215 1.194.254 0 2.6-.057 2.842-.09 0 0 .546 1.199-.133 1.71-.41.31.576 1.304.576 1.304s-5.577.831-6.523 1.427a4.13 4.13 0 0 0-1.306 1.277 3.034 3.034 0 0 0-.493 1.665c0 .502.106.955.32 1.357.214.403.493.733.84.99.345.258.744.473 1.194.649.45.174.896.297 1.342.367a8.348 8.348 0 0 0 3.41-.166 7.754 7.754 0 0 0 1.964-.807 4.28 4.28 0 0 0 1.49-1.443c.38-.609.57-1.292.57-2.049 0-.574-.116-1.096-.347-1.57a3.755 3.755 0 0 0-.847-1.164c-.335-.302-2.19-1.837-2.19-1.837"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://www.youtube.com/channel/UCT-U0rNerYxItGcuoPX-WYA' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Youtube account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2017-2020 MunifTanjim </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/assets/js/"</script>
+
+<script src='/assets/js/main.c3bcf2df.js'></script><script src='/js/custom.js'></script>
+
+</body>
+
+</html>
+

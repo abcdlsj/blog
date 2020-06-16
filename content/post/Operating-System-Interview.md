@@ -1,19 +1,11 @@
 +++
-title = "Operating System Interview"
+title = "Operating System Notes"
 date = 2020-06-01T18:43:29+08:00
 lastmod = 2020-06-01T18:43:29+08:00
 tags = ["OS", "Interview"]
 categories = ["learn"]
-imgs = []
-cover = ""  # image show on top
-readingTime = true  # show reading time after article date
 toc = true
-comments = false
-justify = false  # text-align: justify;
-single = false  # display as a single page, hide navigation on bottom, like as about page.
-license = ""  # CC License
 draft = false
-
 +++
 
 > 操作系统知识点总结（WIP）

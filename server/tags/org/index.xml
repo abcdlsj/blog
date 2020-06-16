@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>org on Minimo</title>
+    <link>http://www.example.com/tags/org/</link>
+    <description>Recent content in org on Minimo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 05 Feb 2020 13:52:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://www.example.com/tags/org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Org-Mode 中的 link 处理</title>
+      <link>http://www.example.com/post/org-mode-%E4%B8%AD%E7%9A%84-link-%E5%A4%84%E7%90%86/</link>
+      <pubDate>Wed, 05 Feb 2020 13:52:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/org-mode-%E4%B8%AD%E7%9A%84-link-%E5%A4%84%E7%90%86/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Org-Mode link 处理&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>ox-hugo 搭建 blog</title>
+      <link>http://www.example.com/post/ox-hugo-%E6%90%AD%E5%BB%BA-blog/</link>
+      <pubDate>Mon, 13 Jan 2020 13:23:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/ox-hugo-%E6%90%AD%E5%BB%BA-blog/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;前段时间换了 org-page，感觉还是不错的，但是 ox-hugo 更好。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>conky 显示 todo-list</title>
+      <link>http://www.example.com/post/conky%E6%98%BE%E7%A4%BAtodo-list/</link>
+      <pubDate>Fri, 13 Dec 2019 23:28:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/conky%E6%98%BE%E7%A4%BAtodo-list/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;作为一个 Emacser，使用 org-agenda 来管理日常是很正常的事情，于是想到在桌面显示自己的 todo-list，查阅资料之后发现很简单&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>org-page 搭建 blog</title>
+      <link>http://www.example.com/post/org-page%E6%90%AD%E5%BB%BAblog/</link>
+      <pubDate>Sat, 23 Nov 2019 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/org-page%E6%90%AD%E5%BB%BAblog/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;最近把 org-page 配置好了，大概今年五月份开始，就迷上了 emacs，期间爱上了配置 emacs，然后现在也开始使用 org-capture 做日常的笔记，我期间也写了挺多 org 笔记，所以才会想拿 org 来搭建 blog，搞了挺长时间，最开始的 EGO，到现在的 org-page，我终于弄好了，因为 org-page 太久没人修了，加上文档写的不全，对于小白不友好，所以我准备简单记录一下怎么搭建成功的&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

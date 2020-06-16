@@ -5,6 +5,9 @@ lastmod = 2018-10-26T14:51:14+08:00
 tags = ["Sklearn"]
 categories = ["learn"]
 draft = false
+
+toc = true
+
 +++
 
 > sklearn 基础学习

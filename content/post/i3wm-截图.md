@@ -1,7 +1,7 @@
 +++
-title = "i3wm 截图"
+title = "i3wm screenshot-key"
 date = 2020-02-22T21:04:00+08:00
-lastmod = 2020-05-27T09:29:56+08:00
+lastmod = 2020-06-13T22:20:57+08:00
 tags = ["Linux"]
 categories = ["折腾"]
 draft = false

@@ -5,6 +5,9 @@ lastmod = 2018-08-28T14:51:14+08:00
 tags = ["Google bbr"]
 categories = ["折腾"]
 draft = false
+
+toc = true
+
 +++
 
 > 前天搭建了aria2下载站&h5ai在线播放,虽然在线观看速度不错,但还是不尽人意(我的要求比较高),所以我准备开启BBR加速

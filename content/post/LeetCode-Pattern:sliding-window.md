@@ -3,11 +3,10 @@ title: "LeetCode Pattern: Sliding Window"
 date: 2020-04-21T10:07:14+08:00
 lastmod: 2020-04-21T10:07:14+08:00
 draft: false
-keywords: ["Sliding Window"]
-description: "LeetCode Pattern Sliding Window"
 tags: ["LeetCode", "Sliding Window"]
 categories: ["learn"]
 author: "abcdlsj"
+toc: true
 ---
 > LeetCode 刷题总结之：滑动窗口
 <!--more-->

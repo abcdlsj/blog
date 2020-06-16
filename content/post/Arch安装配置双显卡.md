@@ -5,6 +5,9 @@ lastmod = 2020-03-01T16:05:15+08:00
 tags = ["Arch", "OS"]
 categories = ["折腾"]
 draft = false
+
+toc = true
+
 +++
 
 > ArchLinux 双显卡配置，应该多数 Linux 系统都适用，可能细节不一样。

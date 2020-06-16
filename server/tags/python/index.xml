@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Minimo</title>
+    <link>http://www.example.com/tags/python/</link>
+    <description>Recent content in Python on Minimo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 21 Jan 2019 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://www.example.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>pip not found</title>
+      <link>http://www.example.com/post/pip-not-found/</link>
+      <pubDate>Mon, 21 Jan 2019 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/pip-not-found/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;我在linux环境下执行pip intsall xxx 时报错zsh: command not found:pip，当然这应该是切换shell的问题,其实最好解决办法就是不用on-my-zsh&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>截图&#43;上传&#43;获取链接自动化小工具</title>
+      <link>http://www.example.com/post/%E4%B8%80%E4%B8%AAmarkdown%E5%B0%8F%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/%E4%B8%80%E4%B8%AAmarkdown%E5%B0%8F%E5%B7%A5%E5%85%B7/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;写博客的人都知道,Markdown 格式的插入图片流程比较复杂，截图-&amp;gt;上传-&amp;gt;获取链接,那有没有一个小程序能直接完成这三个步骤？这个项目就随之诞生.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>python爬取大学排名并生成大学关键词词云图</title>
+      <link>http://www.example.com/post/python%E7%88%AC%E5%8F%96%E5%A4%A7%E5%AD%A6%E6%8E%92%E5%90%8D%E5%B9%B6%E7%94%9F%E6%88%90%E5%A4%A7%E5%AD%A6%E5%85%B3%E9%94%AE%E8%AF%8D%E8%AF%8D%E4%BA%91%E5%9B%BE/</link>
+      <pubDate>Sat, 21 Jul 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/python%E7%88%AC%E5%8F%96%E5%A4%A7%E5%AD%A6%E6%8E%92%E5%90%8D%E5%B9%B6%E7%94%9F%E6%88%90%E5%A4%A7%E5%AD%A6%E5%85%B3%E9%94%AE%E8%AF%8D%E8%AF%8D%E4%BA%91%E5%9B%BE/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;不久前,我们布置了python大作业,我写了一个爬取中国大学关键词并生成词云图的程序.主要使用Beautiful soup,requests,wordcloud几个库.以下是代码&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>python jieba 库分析斗破词频</title>
+      <link>http://www.example.com/post/python-jieba%E5%BA%93%E5%88%86%E6%9E%90%E6%96%97%E7%A0%B4%E8%AF%8D%E9%A2%91/</link>
+      <pubDate>Thu, 19 Jul 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/python-jieba%E5%BA%93%E5%88%86%E6%9E%90%E6%96%97%E7%A0%B4%E8%AF%8D%E9%A2%91/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;初学python时,老师介绍了使用jieba库来分析文本,我就想分析一下&amp;quot;世界名著&amp;quot;&amp;laquo;斗破苍穹&amp;raquo;,以下是代码.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

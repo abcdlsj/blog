@@ -5,6 +5,9 @@ lastmod = 2018-07-29T14:51:14+08:00
 tags = ["Linux"]
 categories = ["折腾"]
 draft = false
+
+toc = true
+
 +++
 
 > Ubuntu（国际音标：/ʊˈbʊntuː/，uu-buun-too)是以桌面应用为主的Linux发行版，Ubuntu由Canonical公司发布，他们提供商业支持。它是基于自由软件，其名称来自非洲南部祖鲁语或科萨语的“ubuntu”一词（译为乌班图），意思是“人性”、“我的存在是因为大家的存在”,是非洲传统的一种价值观。
@@ -228,21 +231,21 @@ sudo su
 [Ubuntu16.04无法连接Wifi解决方案 ][18]
 
 
-  [1]: https://res.cloudinary.com/dc15efw34/image/upload/v1532859883/%E8%A7%A3%E5%86%B3ubuntu%E4%B8%80%E7%B3%BB%E5%88%97%E9%97%AE%E9%A2%98/%E9%80%89%E5%8C%BA_004.png
-  [2]: https://pinyin.sogou.com/linux/
-  [3]: http://community.wps.cn/download/
-  [4]: https://music.163.com/#/download
-  [5]: https://blog.csdn.net/oppo62258801/article/details/78996046
-  [6]: https://res.cloudinary.com/dc15efw34/image/upload/v1532862219/%E8%A7%A3%E5%86%B3ubuntu%E4%B8%80%E7%B3%BB%E5%88%97%E9%97%AE%E9%A2%98/%E9%80%89%E5%8C%BA_006.png
-  [7]: https://github.com/getlantern/lantern
-  [8]: https://github.com/yinghuocho/firefly-proxy
-  [9]: https://res.cloudinary.com/dc15efw34/image/upload/v1532842889/%E8%A7%A3%E5%86%B3ubuntu%E4%B8%80%E7%B3%BB%E5%88%97%E9%97%AE%E9%A2%98/%E7%BB%88%E7%AB%AF_001.png
-  [10]: https://blog.csdn.net/ytusdc/article/details/79675410
-  [11]: https://blog.csdn.net/hustcw98/article/details/79118794
-  [12]: http://www.realtek.com.tw/downloads/downloadsView.aspx?Langid=1&PNid=13&PFid=5&Level=5&Conn=4&DownTypeID=3&GetDown=false#2
-  [13]: https://blog.csdn.net/qljessica123/article/details/44957527
-  [14]: https://res.cloudinary.com/dc15efw34/image/upload/v1532856653/%E8%A7%A3%E5%86%B3ubuntu%E4%B8%80%E7%B3%BB%E5%88%97%E9%97%AE%E9%A2%98/%E7%BB%88%E7%AB%AF_002.png
-  [15]: https://www.linuxidc.com/Linux/2017-10/147366.htm
-  [16]: https://wireless.wiki.kernel.org/en/users/drivers/iwlwifi
-  [17]: http://www.mamicode.com/info-detail-2103508.html
-  [18]: https://blog.csdn.net/weixin_41762173/article/details/79480609
+[1]: https://res.cloudinary.com/dc15efw34/image/upload/v1532859883/%E8%A7%A3%E5%86%B3ubuntu%E4%B8%80%E7%B3%BB%E5%88%97%E9%97%AE%E9%A2%98/%E9%80%89%E5%8C%BA_004.png
+[2]: https://pinyin.sogou.com/linux/
+[3]: http://community.wps.cn/download/
+[4]: https://music.163.com/#/download
+[5]: https://blog.csdn.net/oppo62258801/article/details/78996046
+[6]: https://res.cloudinary.com/dc15efw34/image/upload/v1532862219/%E8%A7%A3%E5%86%B3ubuntu%E4%B8%80%E7%B3%BB%E5%88%97%E9%97%AE%E9%A2%98/%E9%80%89%E5%8C%BA_006.png
+[7]: https://github.com/getlantern/lantern
+[8]: https://github.com/yinghuocho/firefly-proxy
+[9]: https://res.cloudinary.com/dc15efw34/image/upload/v1532842889/%E8%A7%A3%E5%86%B3ubuntu%E4%B8%80%E7%B3%BB%E5%88%97%E9%97%AE%E9%A2%98/%E7%BB%88%E7%AB%AF_001.png
+[10]: https://blog.csdn.net/ytusdc/article/details/79675410
+[11]: https://blog.csdn.net/hustcw98/article/details/79118794
+[12]: http://www.realtek.com.tw/downloads/downloadsView.aspx?Langid=1&PNid=13&PFid=5&Level=5&Conn=4&DownTypeID=3&GetDown=false#2
+[13]: https://blog.csdn.net/qljessica123/article/details/44957527
+[14]: https://res.cloudinary.com/dc15efw34/image/upload/v1532856653/%E8%A7%A3%E5%86%B3ubuntu%E4%B8%80%E7%B3%BB%E5%88%97%E9%97%AE%E9%A2%98/%E7%BB%88%E7%AB%AF_002.png
+[15]: https://www.linuxidc.com/Linux/2017-10/147366.htm
+[16]: https://wireless.wiki.kernel.org/en/users/drivers/iwlwifi
+[17]: http://www.mamicode.com/info-detail-2103508.html
+[18]: https://blog.csdn.net/weixin_41762173/article/details/79480609

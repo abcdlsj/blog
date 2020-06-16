@@ -1,11 +1,14 @@
 +++
-title = "std::shared_ptr 循环引用以及检测 C/C++ 内存泄漏"
+title = "std::shared_ptr circular reference and detect memory leaks"
 date = 2020-05-14T16:17:00+08:00
-lastmod = 2020-05-27T09:29:57+08:00
+lastmod = 2020-06-13T22:20:57+08:00
 tags = ["CPP"]
 categories = ["learn"]
 draft = false
 author = "abcdlsj"
+
+toc = true
+
 +++
 
 > std::shared\_ptr 循环引用

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>baidu on Minimo</title>
+    <link>http://www.example.com/tags/baidu/</link>
+    <description>Recent content in baidu on Minimo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 15 Aug 2018 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://www.example.com/tags/baidu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Linux好用的百度网盘客户端</title>
+      <link>http://www.example.com/post/linux%E4%B8%8B%E4%B8%80%E4%B8%AA%E5%A5%BD%E7%94%A8%E7%9A%84%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%AE%A2%E6%88%B7%E7%AB%AF/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/linux%E4%B8%8B%E4%B8%80%E4%B8%AA%E5%A5%BD%E7%94%A8%E7%9A%84%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%AE%A2%E6%88%B7%E7%AB%AF/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;网盘下载每个人都是必不可少的&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

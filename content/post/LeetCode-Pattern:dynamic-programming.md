@@ -3,11 +3,10 @@ title: "LeetCode Pattern: Dynamic Programming"
 date: 2020-05-24T20:49:11+08:00
 lastmod: 2020-05-24T20:49:11+08:00
 draft: flase
-keywords: ["Dynamic Programming"]
-description: "LeetCode Pattern dynamic Programming"
 tags: ["LeetCode", "Dynamic Programming"]
 categories: ["learn"]
 author: "abcdlsj"
+toc: true
 ---
 >  LeetCode 刷题总结之：动态规划（WIP）
 
@@ -176,6 +175,19 @@ public:
 
 ### 买卖股票系列
 
+> 通用转移方程，每一道都可以这样写，但是其实简单的没必要这样写，可以这样分析
+> `dp[i][k][j]`：
+> i：第几天；
+> k：还可以买入的次数；
+> j：1 代表持有股票，0 代表没有；
+>
+> 因为需要自动更新值，所以值一定是前一天同一状态以及前一天不同状态相比
+>
+> ```cpp
+> dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k][1] + prices[i])
+> dp[i][k][1] = max(dp[i-1][k][1], dp[i-1][k-1][0] - prices[i])
+> ```
+
 #### [121. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)
 
 **这里可以讨论一些关于初始值设置的问题**
@@ -245,37 +257,41 @@ public:
 #### [123. 买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/)
 
 > 这道题和上面那道基本一致，但是要求最多买卖两次。
+>
+> cash1：该天第一次卖出股票获得最大收益
+>
+> hlod1：该天第一次买得股票获得最大收益
+>
+> cash2：该天第二次卖出股票获得最大收益
+>
+> hlod2：该天第二次买得股票获得最大收益
 
 ```cpp
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
-        int hold1 = INT_MIN, hold2 = INT_MIN, release1 = 0, release2 = 0;
+        int cash1 = 0, cash2 = 0, hlod1 = INT_MIN, hlod2 = INT_MIN;
 
         for (int i = 0; i < prices.size(); i++) {
-            release1 = max(release1, hold1 + prices[i]);
-            hold1 = max(hold1, -prices[i]);
-            
-            release2 = max(release2, hold2 + prices[i]);
-            hold2 = max(hold2, release1 - prices[i]);
+            cash1 = max(cash1, hlod1 + prices[i]);
+            hlod1 = max(hlod1, -prices[i]);
+
+            cash2 = max(cash2, hlod2 + prices[i]);
+            hlod2 = max(hlod2, cash1 - prices[i]);
         }
 
-        return release2;
+        return cash2;
     }
 };
 ```
 
 #### [188. 买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/)
 
-> 这道题最多完成 k 笔交易，这时可以总结出一种秒杀所有买卖股票问题的转移方程，具体的分析可以看 labuladong 的题解，在参考链接。
+> 这道题最多完成 k 笔交易，这时可以总结出一种秒杀所有买卖股票问题的转移方程，方程在开始处，具体的分析可以看 labuladong 的题解，在参考链接。
 
 ```cpp
 
 ```
-
-
-
-
 
 参考链接：
 

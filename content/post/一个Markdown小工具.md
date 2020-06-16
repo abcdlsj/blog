@@ -5,6 +5,9 @@ lastmod = 2018-08-16T14:51:14+08:00
 tags = ["Markdown","Python"]
 categories = ["learn"]
 draft = false
+
+toc = true
+
 +++
 
 > 写博客的人都知道,Markdown 格式的插入图片流程比较复杂，截图->上传->获取链接,那有没有一个小程序能直接完成这三个步骤？这个项目就随之诞生.

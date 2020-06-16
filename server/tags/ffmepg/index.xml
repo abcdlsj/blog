@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ffmepg on Minimo</title>
+    <link>http://www.example.com/tags/ffmepg/</link>
+    <description>Recent content in ffmepg on Minimo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 10 Sep 2018 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://www.example.com/tags/ffmepg/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>树莓派系统安装&amp;使用ffmpeg推流实现b站直播</title>
+      <link>http://www.example.com/post/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85-%E4%BD%BF%E7%94%A8ffmpeg%E6%8E%A8%E6%B5%81%E5%AE%9E%E7%8E%B0b%E7%AB%99%E7%9B%B4%E6%92%AD/</link>
+      <pubDate>Mon, 10 Sep 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85-%E4%BD%BF%E7%94%A8ffmpeg%E6%8E%A8%E6%B5%81%E5%AE%9E%E7%8E%B0b%E7%AB%99%E7%9B%B4%E6%92%AD/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;树莓派买回来快半个月了,期间实现了很多好玩的玩法,现在才想起来可以写一篇博客记录一下&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

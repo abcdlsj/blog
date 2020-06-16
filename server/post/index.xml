@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Minimo</title>
+    <link>http://www.example.com/post/</link>
+    <description>Recent content in Posts on Minimo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 01 Jun 2020 22:05:26 +0800</lastBuildDate>
+    
+	<atom:link href="http://www.example.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LeetCode Pattern: Binary Search</title>
+      <link>http://www.example.com/post/leetcode-patternbinary-search/</link>
+      <pubDate>Mon, 01 Jun 2020 22:05:26 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/leetcode-patternbinary-search/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;LeetCode 刷题总结之：二分查找（WIP）&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Operating System Interview</title>
+      <link>http://www.example.com/post/operating-system-interview/</link>
+      <pubDate>Mon, 01 Jun 2020 18:43:29 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/operating-system-interview/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;操作系统知识点总结（WIP）&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode Pattern: Dynamic Programming</title>
+      <link>http://www.example.com/post/leetcode-patterndynamic-programming/</link>
+      <pubDate>Sun, 24 May 2020 20:49:11 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/leetcode-patterndynamic-programming/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;LeetCode 刷题总结之：动态规划（WIP）&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>MIT 6.824 (1): MapReduce</title>
+      <link>http://www.example.com/post/mit-6.824-learning-1mapreduce/</link>
+      <pubDate>Wed, 20 May 2020 23:34:41 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/mit-6.824-learning-1mapreduce/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;MapReduce Paper &amp;amp; Lab&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode Data-Structure: Tree</title>
+      <link>http://www.example.com/post/leetcode-data-structuretree/</link>
+      <pubDate>Thu, 14 May 2020 21:52:45 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/leetcode-data-structuretree/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;LeetCode 刷题总结：树&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>std::shared_ptr 循环引用以及检测 C/C&#43;&#43; 内存泄漏</title>
+      <link>http://www.example.com/post/%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8%E4%BB%A5%E5%8F%8A%E6%A3%80%E6%B5%8B-c-c-plus-plus-%E7%A8%8B%E5%BA%8F%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Thu, 14 May 2020 16:17:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8%E4%BB%A5%E5%8F%8A%E6%A3%80%E6%B5%8B-c-c-plus-plus-%E7%A8%8B%E5%BA%8F%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;std::shared_ptr 循环引用
+Linux 检测 C/C++ 内存泄漏两种方法&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode Pattern: BackTracking</title>
+      <link>http://www.example.com/post/leetcode-patternbacktracking/</link>
+      <pubDate>Thu, 23 Apr 2020 21:41:59 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/leetcode-patternbacktracking/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;LeetCode 刷题总结之：回溯&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode Pattern: Sliding Window</title>
+      <link>http://www.example.com/post/leetcode-patternsliding-window/</link>
+      <pubDate>Tue, 21 Apr 2020 10:07:14 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/leetcode-patternsliding-window/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;LeetCode 刷题总结之：滑动窗口&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>use dummy-parameter overload prefix/postfix &#43;&#43;</title>
+      <link>http://www.example.com/post/%E4%BD%BF%E7%94%A8%E5%93%91%E5%85%83%E9%87%8D%E8%BD%BD-prefix-postfix-plus-plus/</link>
+      <pubDate>Sat, 04 Apr 2020 18:57:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/%E4%BD%BF%E7%94%A8%E5%93%91%E5%85%83%E9%87%8D%E8%BD%BD-prefix-postfix-plus-plus/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;最近因为选择找工作的原因，在准备春招实习面试的知识，好多东西不太会，之前看过的书有些都忘了（自闭了），希望我能够找到一个好的实习，前段时间粗略的复习了一下 C++，现在准备好好的复习一下 C++ 比较繁琐的方面，写博文记录一下我认为网上写的比较少的点。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>一次修复 blog 的过程</title>
+      <link>http://www.example.com/post/%E4%B8%80%E6%AC%A1%E4%BF%AE%E5%A4%8Dblog%E7%9A%84%E8%BF%87%E7%A8%8B/</link>
+      <pubDate>Wed, 25 Mar 2020 20:52:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/%E4%B8%80%E6%AC%A1%E4%BF%AE%E5%A4%8Dblog%E7%9A%84%E8%BF%87%E7%A8%8B/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;记一次修复 Blog 的过程&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>i3wm 截图</title>
+      <link>http://www.example.com/post/i3wm-%E6%88%AA%E5%9B%BE/</link>
+      <pubDate>Sat, 22 Feb 2020 21:04:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/i3wm-%E6%88%AA%E5%9B%BE/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;i3wm 截图如果是选中区域截取的话，是没法使用的。。查询官方文档后，发现加入 &amp;ndash;release 即可&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>SICP 2.2.4 一个图形语言</title>
+      <link>http://www.example.com/post/sicp-2-dot-2-dot-4/</link>
+      <pubDate>Wed, 19 Feb 2020 15:27:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/sicp-2-dot-2-dot-4/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;SICP 2.2.4 解决方案&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>SICP 2.42 八皇后谜题</title>
+      <link>http://www.example.com/post/sicp-2-dot-42-%E5%85%AB%E7%9A%87%E5%90%8E%E8%B0%9C%E9%A2%98/</link>
+      <pubDate>Mon, 17 Feb 2020 21:25:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/sicp-2-dot-42-%E5%85%AB%E7%9A%87%E5%90%8E%E8%B0%9C%E9%A2%98/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;去年一月就打算认真读下 SICP 的，但是当时读了第一章就放弃了，因为里面习题太多了！！!所以没坚持下去，今年 2020，刚好学校延迟开学，所以打算专心看一下，我给自己制定了七天 SICP 的任务（打算看完前三章），现在是第三天，第二章也看了一半了，习题真的多，我打算改变策略了，习题跳着做就好了。。。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Org-Mode 中的 link 处理</title>
+      <link>http://www.example.com/post/org-mode-%E4%B8%AD%E7%9A%84-link-%E5%A4%84%E7%90%86/</link>
+      <pubDate>Wed, 05 Feb 2020 13:52:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/org-mode-%E4%B8%AD%E7%9A%84-link-%E5%A4%84%E7%90%86/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Org-Mode link 处理&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>ebuild 初探</title>
+      <link>http://www.example.com/post/ebuild%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Thu, 30 Jan 2020 12:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/ebuild%E4%BD%BF%E7%94%A8/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;ebuild是一套软件组建自动化工具程式，用来让软件套件编译与安装流程可以自动化完成，由一组bash脚本程式构成。这套软件的格式由Gentoo Linux专案研发，是软件包管理系统，Portage，的一部分。工具程式BitBake的设计理念，最早来自于ebuild。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux 定时任务</title>
+      <link>http://www.example.com/post/linux-%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</link>
+      <pubDate>Wed, 29 Jan 2020 19:45:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/linux-%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Linux 上有时候需要定时启动某些任务，运行脚本，或者提交什么东西&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode &#34;乙亥年最有趣的比赛&#34; 题解</title>
+      <link>http://www.example.com/post/leetcode-%E4%B9%99%E4%BA%A5%E5%B9%B4%E6%9C%80%E6%9C%89%E8%B6%A3%E7%9A%84%E6%AF%94%E8%B5%9B-%E9%A2%98%E8%A7%A3/</link>
+      <pubDate>Tue, 21 Jan 2020 01:07:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/leetcode-%E4%B9%99%E4%BA%A5%E5%B9%B4%E6%9C%80%E6%9C%89%E8%B6%A3%E7%9A%84%E6%AF%94%E8%B5%9B-%E9%A2%98%E8%A7%A3/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;比赛的时候做了一个小时一道都没做出来，1，5有思路但是也没做出来，事后找题解。。。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>ox-hugo 搭建 blog</title>
+      <link>http://www.example.com/post/ox-hugo-%E6%90%AD%E5%BB%BA-blog/</link>
+      <pubDate>Mon, 13 Jan 2020 13:23:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/ox-hugo-%E6%90%AD%E5%BB%BA-blog/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;前段时间换了 org-page，感觉还是不错的，但是 ox-hugo 更好。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux 文件夹权限设置</title>
+      <link>http://www.example.com/post/linux%E6%96%87%E4%BB%B6%E5%A4%B9%E6%9D%83%E9%99%90%E8%AE%BE%E7%BD%AE/</link>
+      <pubDate>Mon, 13 Jan 2020 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/linux%E6%96%87%E4%BB%B6%E5%A4%B9%E6%9D%83%E9%99%90%E8%AE%BE%E7%BD%AE/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;我看到文件夹里面文件权限不一，所以我就 &lt;code&gt;chmod 644 *&lt;/code&gt; 然后发现 &lt;code&gt;cd&lt;/code&gt; 子文件夹没权限&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>conky 显示 todo-list</title>
+      <link>http://www.example.com/post/conky%E6%98%BE%E7%A4%BAtodo-list/</link>
+      <pubDate>Fri, 13 Dec 2019 23:28:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/conky%E6%98%BE%E7%A4%BAtodo-list/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;作为一个 Emacser，使用 org-agenda 来管理日常是很正常的事情，于是想到在桌面显示自己的 todo-list，查阅资料之后发现很简单&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>org-page 搭建 blog</title>
+      <link>http://www.example.com/post/org-page%E6%90%AD%E5%BB%BAblog/</link>
+      <pubDate>Sat, 23 Nov 2019 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/org-page%E6%90%AD%E5%BB%BAblog/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;最近把 org-page 配置好了，大概今年五月份开始，就迷上了 emacs，期间爱上了配置 emacs，然后现在也开始使用 org-capture 做日常的笔记，我期间也写了挺多 org 笔记，所以才会想拿 org 来搭建 blog，搞了挺长时间，最开始的 EGO，到现在的 org-page，我终于弄好了，因为 org-page 太久没人修了，加上文档写的不全，对于小白不友好，所以我准备简单记录一下怎么搭建成功的&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Learn-elisp-in-sc</title>
+      <link>http://www.example.com/post/learn_emacs_in_sc/</link>
+      <pubDate>Fri, 15 Nov 2019 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/learn_emacs_in_sc/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;这是learn x in minutes 的elisp教程，跟着做一遍&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>大数据环境搭建示例</title>
+      <link>http://www.example.com/post/bigdata_env/</link>
+      <pubDate>Wed, 13 Nov 2019 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/bigdata_env/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;上学期参加了联想杯大数据比赛的校内选拔，“领阵磨枪”的我竟然拿了第二（选拔三人），开学这几天基本上就是配置环境。感觉没啥意思，应用层面又不会，初赛我们队因为队友都有事，所以就花了半天。。最后果然没进。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Representing-Manipulating-Information</title>
+      <link>http://www.example.com/post/representing-manipulating-information/</link>
+      <pubDate>Sun, 13 Oct 2019 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/representing-manipulating-information/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;CSAPP 第二章阅读笔记&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Arch 配置双显卡</title>
+      <link>http://www.example.com/post/arch%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E5%8F%8C%E6%98%BE%E5%8D%A1/</link>
+      <pubDate>Tue, 08 Oct 2019 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/arch%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E5%8F%8C%E6%98%BE%E5%8D%A1/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;ArchLinux 双显卡配置，应该多数 Linux 系统都适用，可能细节不一样。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Emacs-Operationes</title>
+      <link>http://www.example.com/post/emacs_operation/</link>
+      <pubDate>Mon, 22 Jul 2019 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/emacs_operation/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Emacs 的基本功能&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>mysql查询语句练习</title>
+      <link>http://www.example.com/post/mysql-%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5%E7%BB%83%E4%B9%A0/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/mysql-%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5%E7%BB%83%E4%B9%A0/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;这是mysql 数据库课程的作业题，有些题写法太多了，所以只写一个，可能有错误，如果有，请指出。。。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>gdb调试方法总结(基础)</title>
+      <link>http://www.example.com/post/gdb%E8%B0%83%E8%AF%95%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93-%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Mon, 15 Apr 2019 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/gdb%E8%B0%83%E8%AF%95%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93-%E5%9F%BA%E7%A1%80/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;原本早就准备系统学习linux知识的,但是懒惰的本性让我&amp;hellip;.这个原本一月就要学完的知识结果现在四月了还没学到多少&amp;hellip;.打算这段时间好好学习一下技术知识。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>2-3月日常</title>
+      <link>http://www.example.com/post/2-3%E6%9C%88%E6%97%A5%E5%B8%B8/</link>
+      <pubDate>Tue, 19 Mar 2019 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/2-3%E6%9C%88%E6%97%A5%E5%B8%B8/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;最近没怎么看技术书和写代码,因为迷上了剪线键盘&amp;hellip;现在又想自己去画pcb了,现在应该会把重心放在技术上了&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Macos配置SICP环境</title>
+      <link>http://www.example.com/post/sicp%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Mon, 21 Jan 2019 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/sicp%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;最近想学习一下&amp;laquo;计算机程序的构造和解释&amp;raquo;，毕竟是“魔法书”
+但是安装 Scheme过程还是很复杂，对于我们来说，老的 MIT-Scheme非常不友好，而且在 win上需要修改一下才能安装上，所以还是还是安装新的 Scheme版本吧(逃。。)
+但是有一句话&lt;code&gt;只要思想不滑坡，方法总比困难多&lt;/code&gt;，所以我还是想改造下我的 MIT-Scheme，win上我没装，所以只能在 macOS上演示了(黑苹果就是好)，实际上学习的话还是推荐安装 Racket,毕竟比较新&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>pip not found</title>
+      <link>http://www.example.com/post/pip-not-found/</link>
+      <pubDate>Mon, 21 Jan 2019 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/pip-not-found/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;我在linux环境下执行pip intsall xxx 时报错zsh: command not found:pip，当然这应该是切换shell的问题,其实最好解决办法就是不用on-my-zsh&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>安装TensorFlow</title>
+      <link>http://www.example.com/post/%E5%AE%89%E8%A3%85tensorflow/</link>
+      <pubDate>Sat, 10 Nov 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/%E5%AE%89%E8%A3%85tensorflow/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;安装TensorFlow&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>sklearn通用学习模式</title>
+      <link>http://www.example.com/post/sklearn%E9%80%9A%E7%94%A8%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Fri, 26 Oct 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/sklearn%E9%80%9A%E7%94%A8%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%BC%8F/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;sklearn 基础学习&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>关于不蒜子计数新域名修改</title>
+      <link>http://www.example.com/post/%E5%85%B3%E4%BA%8E%E4%B8%8D%E8%92%9C%E5%AD%90%E8%AE%A1%E6%95%B0%E6%96%B0%E5%9F%9F%E5%90%8D%E4%BF%AE%E6%94%B9/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/%E5%85%B3%E4%BA%8E%E4%B8%8D%E8%92%9C%E5%AD%90%E8%AE%A1%E6%95%B0%E6%96%B0%E5%9F%9F%E5%90%8D%E4%BF%AE%E6%94%B9/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;如下&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>树莓派系统安装&amp;使用ffmpeg推流实现b站直播</title>
+      <link>http://www.example.com/post/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85-%E4%BD%BF%E7%94%A8ffmpeg%E6%8E%A8%E6%B5%81%E5%AE%9E%E7%8E%B0b%E7%AB%99%E7%9B%B4%E6%92%AD/</link>
+      <pubDate>Mon, 10 Sep 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85-%E4%BD%BF%E7%94%A8ffmpeg%E6%8E%A8%E6%B5%81%E5%AE%9E%E7%8E%B0b%E7%AB%99%E7%9B%B4%E6%92%AD/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;树莓派买回来快半个月了,期间实现了很多好玩的玩法,现在才想起来可以写一篇博客记录一下&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Centos开启Google BBR加速</title>
+      <link>http://www.example.com/post/centos-%E5%BC%80%E5%90%AFgoogle-bbr%E5%8A%A0%E9%80%9F/</link>
+      <pubDate>Tue, 28 Aug 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/centos-%E5%BC%80%E5%90%AFgoogle-bbr%E5%8A%A0%E9%80%9F/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;前天搭建了aria2下载站&amp;amp;h5ai在线播放,虽然在线观看速度不错,但还是不尽人意(我的要求比较高),所以我准备开启BBR加速&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>VPS搭建aria2下载&amp;使用h5ai实现在线播放</title>
+      <link>http://www.example.com/post/vps-%E5%AE%89%E8%A3%85aria2%E5%92%8Cwebui%E6%90%AD%E5%BB%BA%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD%E7%A5%9E%E5%99%A8/</link>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/vps-%E5%AE%89%E8%A3%85aria2%E5%92%8Cwebui%E6%90%AD%E5%BB%BA%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD%E7%A5%9E%E5%99%A8/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;好久没有更新博客了,原因是最近到了一个&amp;quot;小玩具&amp;rdquo; &amp;ndash; 树莓派,现在正在研究当中&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>NextCloud私人网盘搭建</title>
+      <link>http://www.example.com/post/nextcloud-%E7%A7%81%E4%BA%BA%E7%BD%91%E7%9B%98%E6%90%AD%E5%BB%BA/</link>
+      <pubDate>Wed, 22 Aug 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/nextcloud-%E7%A7%81%E4%BA%BA%E7%BD%91%E7%9B%98%E6%90%AD%E5%BB%BA/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;NextCloud搭建&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux系统下v2ray客户端使用</title>
+      <link>http://www.example.com/post/linux%E7%B3%BB%E7%BB%9F%E4%B8%8Bv2ray%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Sat, 18 Aug 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/linux%E7%B3%BB%E7%BB%9F%E4%B8%8Bv2ray%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;V2Ray是一个优秀的开源网络代理工具，可以帮助你畅爽体验互联网，目前已经全平台支持Windows、Mac、Android、IOS、Linux等操作系统的使用。相对起Shadowsocks来说属于后起之秀，在混淆能力、兼容性、速度上有着独到的优点。在目前Shadowsocks、ShadowsocksR停止更新的情况下，多掌握一个活跃项目工具的使用是完全有必要的.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux好用的百度网盘客户端</title>
+      <link>http://www.example.com/post/linux%E4%B8%8B%E4%B8%80%E4%B8%AA%E5%A5%BD%E7%94%A8%E7%9A%84%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%AE%A2%E6%88%B7%E7%AB%AF/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/linux%E4%B8%8B%E4%B8%80%E4%B8%AA%E5%A5%BD%E7%94%A8%E7%9A%84%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%AE%A2%E6%88%B7%E7%AB%AF/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;网盘下载每个人都是必不可少的&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>截图&#43;上传&#43;获取链接自动化小工具</title>
+      <link>http://www.example.com/post/%E4%B8%80%E4%B8%AAmarkdown%E5%B0%8F%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/%E4%B8%80%E4%B8%AAmarkdown%E5%B0%8F%E5%B7%A5%E5%85%B7/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;写博客的人都知道,Markdown 格式的插入图片流程比较复杂，截图-&amp;gt;上传-&amp;gt;获取链接,那有没有一个小程序能直接完成这三个步骤？这个项目就随之诞生.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>神级输入法RIME安装&amp;基本配置</title>
+      <link>http://www.example.com/post/%E7%A5%9E%E7%BA%A7%E8%BE%93%E5%85%A5%E6%B3%95rime-%E5%AE%89%E8%A3%85-%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Tue, 14 Aug 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/%E7%A5%9E%E7%BA%A7%E8%BE%93%E5%85%A5%E6%B3%95rime-%E5%AE%89%E8%A3%85-%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;上回说我在我的笔记本上安装了黑苹果，这几天熟悉了一下 OS X系统,但是我发现苹果的自带输入法切换中英文的时候会卡顿(｡í _ ì｡)所以需要选择一个好的输入法。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用heroku免费搭建v2ray</title>
+      <link>http://www.example.com/post/%E4%BD%BF%E7%94%A8heroku%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BAv2ray/</link>
+      <pubDate>Fri, 03 Aug 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/%E4%BD%BF%E7%94%A8heroku%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BAv2ray/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;HeroKu 免费搭建 V2Ray&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>全球首富贝佐斯：这是我成功的唯一秘诀</title>
+      <link>http://www.example.com/post/%E5%85%A8%E7%90%83%E9%A6%96%E5%AF%8C%E8%B4%9D%E4%BD%90%E6%96%AF%E8%BF%99%E6%98%AF%E6%88%91%E6%88%90%E5%8A%9F%E7%9A%84%E5%94%AF%E4%B8%80%E7%A7%98%E8%AF%80/</link>
+      <pubDate>Thu, 02 Aug 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/%E5%85%A8%E7%90%83%E9%A6%96%E5%AF%8C%E8%B4%9D%E4%BD%90%E6%96%AF%E8%BF%99%E6%98%AF%E6%88%91%E6%88%90%E5%8A%9F%E7%9A%84%E5%94%AF%E4%B8%80%E7%A7%98%E8%AF%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu系统优化&amp;问题解决(内容丰富)</title>
+      <link>http://www.example.com/post/ubuntu%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96-%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3-%E5%86%85%E5%AE%B9%E4%B8%B0%E5%AF%8C/</link>
+      <pubDate>Sun, 29 Jul 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/ubuntu%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96-%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3-%E5%86%85%E5%AE%B9%E4%B8%B0%E5%AF%8C/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Ubuntu（国际音标：/ʊˈbʊntuː/，uu-buun-too)是以桌面应用为主的Linux发行版，Ubuntu由Canonical公司发布，他们提供商业支持。它是基于自由软件，其名称来自非洲南部祖鲁语或科萨语的“ubuntu”一词（译为乌班图），意思是“人性”、“我的存在是因为大家的存在”,是非洲传统的一种价值观。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;来源.维基百科&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>搭建v2ray</title>
+      <link>http://www.example.com/post/%E6%90%AD%E5%BB%BAv2ray/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/%E6%90%AD%E5%BB%BAv2ray/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;前段时间分享了ssr的搭建方法,现在想做一下搭建v2ray的教程.碰巧do开了一台没被墙的新加坡vps.延迟80左右,用来搭v2ray速度应该可以.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>python爬取大学排名并生成大学关键词词云图</title>
+      <link>http://www.example.com/post/python%E7%88%AC%E5%8F%96%E5%A4%A7%E5%AD%A6%E6%8E%92%E5%90%8D%E5%B9%B6%E7%94%9F%E6%88%90%E5%A4%A7%E5%AD%A6%E5%85%B3%E9%94%AE%E8%AF%8D%E8%AF%8D%E4%BA%91%E5%9B%BE/</link>
+      <pubDate>Sat, 21 Jul 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/python%E7%88%AC%E5%8F%96%E5%A4%A7%E5%AD%A6%E6%8E%92%E5%90%8D%E5%B9%B6%E7%94%9F%E6%88%90%E5%A4%A7%E5%AD%A6%E5%85%B3%E9%94%AE%E8%AF%8D%E8%AF%8D%E4%BA%91%E5%9B%BE/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;不久前,我们布置了python大作业,我写了一个爬取中国大学关键词并生成词云图的程序.主要使用Beautiful soup,requests,wordcloud几个库.以下是代码&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>酸酸乳搭建</title>
+      <link>http://www.example.com/post/%E9%85%B8%E9%85%B8%E4%B9%B3%E6%90%AD%E5%BB%BA/</link>
+      <pubDate>Sat, 21 Jul 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/%E9%85%B8%E9%85%B8%E4%B9%B3%E6%90%AD%E5%BB%BA/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;现在ssr是主流翻墙代理.类似的还有v2ray,ss.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>python jieba 库分析斗破词频</title>
+      <link>http://www.example.com/post/python-jieba%E5%BA%93%E5%88%86%E6%9E%90%E6%96%97%E7%A0%B4%E8%AF%8D%E9%A2%91/</link>
+      <pubDate>Thu, 19 Jul 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/python-jieba%E5%BA%93%E5%88%86%E6%9E%90%E6%96%97%E7%A0%B4%E8%AF%8D%E9%A2%91/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;初学python时,老师介绍了使用jieba库来分析文本,我就想分析一下&amp;quot;世界名著&amp;quot;&amp;laquo;斗破苍穹&amp;raquo;,以下是代码.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title> Hexo&amp;Github搭建博客</title>
+      <link>http://www.example.com/post/hexo-github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Sun, 15 Jul 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/hexo-github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;建立博客有三个阶段&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cmder 出现MacType 问题解决</title>
+      <link>http://www.example.com/post/cmder-%E5%87%BA%E7%8E%B0mactype-%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</link>
+      <pubDate>Sun, 03 Jun 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/cmder-%E5%87%BA%E7%8E%B0mactype-%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;MacType 出现问题解决&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

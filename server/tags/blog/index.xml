@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog on Minimo</title>
+    <link>http://www.example.com/tags/blog/</link>
+    <description>Recent content in blog on Minimo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 25 Mar 2020 20:52:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://www.example.com/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>一次修复 blog 的过程</title>
+      <link>http://www.example.com/post/%E4%B8%80%E6%AC%A1%E4%BF%AE%E5%A4%8Dblog%E7%9A%84%E8%BF%87%E7%A8%8B/</link>
+      <pubDate>Wed, 25 Mar 2020 20:52:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/%E4%B8%80%E6%AC%A1%E4%BF%AE%E5%A4%8Dblog%E7%9A%84%E8%BF%87%E7%A8%8B/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;记一次修复 Blog 的过程&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>ox-hugo 搭建 blog</title>
+      <link>http://www.example.com/post/ox-hugo-%E6%90%AD%E5%BB%BA-blog/</link>
+      <pubDate>Mon, 13 Jan 2020 13:23:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/ox-hugo-%E6%90%AD%E5%BB%BA-blog/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;前段时间换了 org-page，感觉还是不错的，但是 ox-hugo 更好。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

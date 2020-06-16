@@ -5,6 +5,9 @@ lastmod = 2018-08-03T14:51:14+08:00
 tags = ["v2ray"]
 categories = ["折腾"]
 draft = false
+
+toc = true
+
 +++
 
 > HeroKu 免费搭建 V2Ray

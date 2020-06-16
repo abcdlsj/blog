@@ -1,7 +1,7 @@
 +++
-title = "conky 显示 todo-list"
+title = "use conky display org-agenda todos"
 date = 2019-12-13T23:28:00+08:00
-lastmod = 2020-05-27T09:29:53+08:00
+lastmod = 2020-06-13T22:20:54+08:00
 tags = ["conky", "org"]
 categories = ["learn", "折腾"]
 draft = false

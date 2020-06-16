@@ -1,11 +1,12 @@
 +++
 title = "一次修复 blog 的过程"
 date = 2020-03-25T20:52:00+08:00
-lastmod = 2020-05-27T09:29:56+08:00
+lastmod = 2020-06-13T22:20:57+08:00
 tags = ["hugo", "blog"]
 categories = ["折腾"]
 draft = false
 author = "abcdlsj"
+
 +++
 
 > 记一次修复 Blog 的过程

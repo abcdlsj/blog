@@ -5,6 +5,8 @@ lastmod = 2019-06-13T14:51:14+08:00
 tags = ["Mysql"]
 categories = ["learn"]
 draft = false
+toc = true
+
 +++
 
 > 这是mysql 数据库课程的作业题，有些题写法太多了，所以只写一个，可能有错误，如果有，请指出。。。
@@ -34,6 +36,7 @@ select cno,grade from sc where sno in (select sno from student where sname ="张
 select cname,ccredit from course where cno in (select cno from sc where sno in (select sno from student where sname="苏三"));
 ```
 4.查询每个学生的学号、姓名、选修的课程名及成绩
+
 ```
 select student.sno,sname,cname,grade from (student left join sc on student.sno=sc.sno) left join course on sc.cno=course.cno;
 ```

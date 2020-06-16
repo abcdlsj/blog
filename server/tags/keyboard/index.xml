@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>KeyBoard on Minimo</title>
+    <link>http://www.example.com/tags/keyboard/</link>
+    <description>Recent content in KeyBoard on Minimo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 19 Mar 2019 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://www.example.com/tags/keyboard/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2-3月日常</title>
+      <link>http://www.example.com/post/2-3%E6%9C%88%E6%97%A5%E5%B8%B8/</link>
+      <pubDate>Tue, 19 Mar 2019 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/2-3%E6%9C%88%E6%97%A5%E5%B8%B8/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;最近没怎么看技术书和写代码,因为迷上了剪线键盘&amp;hellip;现在又想自己去画pcb了,现在应该会把重心放在技术上了&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

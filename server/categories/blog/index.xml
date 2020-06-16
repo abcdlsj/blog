@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog on Minimo</title>
+    <link>http://www.example.com/categories/blog/</link>
+    <description>Recent content in blog on Minimo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 13 Jan 2020 13:23:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://www.example.com/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ox-hugo 搭建 blog</title>
+      <link>http://www.example.com/post/ox-hugo-%E6%90%AD%E5%BB%BA-blog/</link>
+      <pubDate>Mon, 13 Jan 2020 13:23:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/ox-hugo-%E6%90%AD%E5%BB%BA-blog/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;前段时间换了 org-page，感觉还是不错的，但是 ox-hugo 更好。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>org-page 搭建 blog</title>
+      <link>http://www.example.com/post/org-page%E6%90%AD%E5%BB%BAblog/</link>
+      <pubDate>Sat, 23 Nov 2019 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/org-page%E6%90%AD%E5%BB%BAblog/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;最近把 org-page 配置好了，大概今年五月份开始，就迷上了 emacs，期间爱上了配置 emacs，然后现在也开始使用 org-capture 做日常的笔记，我期间也写了挺多 org 笔记，所以才会想拿 org 来搭建 blog，搞了挺长时间，最开始的 EGO，到现在的 org-page，我终于弄好了，因为 org-page 太久没人修了，加上文档写的不全，对于小白不友好，所以我准备简单记录一下怎么搭建成功的&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>关于不蒜子计数新域名修改</title>
+      <link>http://www.example.com/post/%E5%85%B3%E4%BA%8E%E4%B8%8D%E8%92%9C%E5%AD%90%E8%AE%A1%E6%95%B0%E6%96%B0%E5%9F%9F%E5%90%8D%E4%BF%AE%E6%94%B9/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/%E5%85%B3%E4%BA%8E%E4%B8%8D%E8%92%9C%E5%AD%90%E8%AE%A1%E6%95%B0%E6%96%B0%E5%9F%9F%E5%90%8D%E4%BF%AE%E6%94%B9/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;如下&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title> Hexo&amp;Github搭建博客</title>
+      <link>http://www.example.com/post/hexo-github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Sun, 15 Jul 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/hexo-github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;建立博客有三个阶段&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

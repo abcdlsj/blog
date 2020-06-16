@@ -1,0 +1,7 @@
+body, button, input, select, textarea {
+	font-size:16px;
+}
+
+.container {
+  max-width: 1100px;
+}

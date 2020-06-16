@@ -5,6 +5,9 @@ lastmod = 2020-02-24T22:36:59+08:00
 tags = ["CSAPP", "OS"]
 categories = ["learn"]
 draft = false
+
+toc = true
+
 +++
 
 > CSAPP 第二章阅读笔记

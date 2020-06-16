@@ -5,6 +5,9 @@ lastmod = 2020-01-13T23:45:56+08:00
 tags = ["Emacs"]
 categories = ["Learn"]
 draft = false
+
+toc = true
+
 +++
 
 > Emacs 的基本功能

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on Minimo</title>
+    <link>http://www.example.com/tags/linux/</link>
+    <description>Recent content in linux on Minimo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 22 Feb 2020 21:04:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://www.example.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>i3wm 截图</title>
+      <link>http://www.example.com/post/i3wm-%E6%88%AA%E5%9B%BE/</link>
+      <pubDate>Sat, 22 Feb 2020 21:04:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/i3wm-%E6%88%AA%E5%9B%BE/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;i3wm 截图如果是选中区域截取的话，是没法使用的。。查询官方文档后，发现加入 &amp;ndash;release 即可&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>ebuild 初探</title>
+      <link>http://www.example.com/post/ebuild%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Thu, 30 Jan 2020 12:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/ebuild%E4%BD%BF%E7%94%A8/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;ebuild是一套软件组建自动化工具程式，用来让软件套件编译与安装流程可以自动化完成，由一组bash脚本程式构成。这套软件的格式由Gentoo Linux专案研发，是软件包管理系统，Portage，的一部分。工具程式BitBake的设计理念，最早来自于ebuild。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux 定时任务</title>
+      <link>http://www.example.com/post/linux-%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</link>
+      <pubDate>Wed, 29 Jan 2020 19:45:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/linux-%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Linux 上有时候需要定时启动某些任务，运行脚本，或者提交什么东西&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux 文件夹权限设置</title>
+      <link>http://www.example.com/post/linux%E6%96%87%E4%BB%B6%E5%A4%B9%E6%9D%83%E9%99%90%E8%AE%BE%E7%BD%AE/</link>
+      <pubDate>Mon, 13 Jan 2020 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/linux%E6%96%87%E4%BB%B6%E5%A4%B9%E6%9D%83%E9%99%90%E8%AE%BE%E7%BD%AE/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;我看到文件夹里面文件权限不一，所以我就 &lt;code&gt;chmod 644 *&lt;/code&gt; 然后发现 &lt;code&gt;cd&lt;/code&gt; 子文件夹没权限&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>ubuntu系统优化&amp;问题解决(内容丰富)</title>
+      <link>http://www.example.com/post/ubuntu%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96-%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3-%E5%86%85%E5%AE%B9%E4%B8%B0%E5%AF%8C/</link>
+      <pubDate>Sun, 29 Jul 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/ubuntu%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96-%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3-%E5%86%85%E5%AE%B9%E4%B8%B0%E5%AF%8C/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Ubuntu（国际音标：/ʊˈbʊntuː/，uu-buun-too)是以桌面应用为主的Linux发行版，Ubuntu由Canonical公司发布，他们提供商业支持。它是基于自由软件，其名称来自非洲南部祖鲁语或科萨语的“ubuntu”一词（译为乌班图），意思是“人性”、“我的存在是因为大家的存在”,是非洲传统的一种价值观。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;来源.维基百科&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LeetCode on Minimo</title>
+    <link>http://www.example.com/tags/leetcode/</link>
+    <description>Recent content in LeetCode on Minimo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 01 Jun 2020 22:05:26 +0800</lastBuildDate>
+    
+	<atom:link href="http://www.example.com/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LeetCode Pattern: Binary Search</title>
+      <link>http://www.example.com/post/leetcode-patternbinary-search/</link>
+      <pubDate>Mon, 01 Jun 2020 22:05:26 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/leetcode-patternbinary-search/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;LeetCode 刷题总结之：二分查找（WIP）&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode Pattern: Dynamic Programming</title>
+      <link>http://www.example.com/post/leetcode-patterndynamic-programming/</link>
+      <pubDate>Sun, 24 May 2020 20:49:11 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/leetcode-patterndynamic-programming/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;LeetCode 刷题总结之：动态规划（WIP）&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode Data-Structure: Tree</title>
+      <link>http://www.example.com/post/leetcode-data-structuretree/</link>
+      <pubDate>Thu, 14 May 2020 21:52:45 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/leetcode-data-structuretree/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;LeetCode 刷题总结：树&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode Pattern: BackTracking</title>
+      <link>http://www.example.com/post/leetcode-patternbacktracking/</link>
+      <pubDate>Thu, 23 Apr 2020 21:41:59 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/leetcode-patternbacktracking/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;LeetCode 刷题总结之：回溯&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode Pattern: Sliding Window</title>
+      <link>http://www.example.com/post/leetcode-patternsliding-window/</link>
+      <pubDate>Tue, 21 Apr 2020 10:07:14 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/leetcode-patternsliding-window/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;LeetCode 刷题总结之：滑动窗口&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode &#34;乙亥年最有趣的比赛&#34; 题解</title>
+      <link>http://www.example.com/post/leetcode-%E4%B9%99%E4%BA%A5%E5%B9%B4%E6%9C%80%E6%9C%89%E8%B6%A3%E7%9A%84%E6%AF%94%E8%B5%9B-%E9%A2%98%E8%A7%A3/</link>
+      <pubDate>Tue, 21 Jan 2020 01:07:00 +0800</pubDate>
+      
+      <guid>http://www.example.com/post/leetcode-%E4%B9%99%E4%BA%A5%E5%B9%B4%E6%9C%80%E6%9C%89%E8%B6%A3%E7%9A%84%E6%AF%94%E8%B5%9B-%E9%A2%98%E8%A7%A3/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;比赛的时候做了一个小时一道都没做出来，1，5有思路但是也没做出来，事后找题解。。。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

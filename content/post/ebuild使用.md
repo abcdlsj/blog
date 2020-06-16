@@ -1,7 +1,7 @@
 +++
 title = "ebuild 初探"
 date = 2020-01-30T12:00:00+08:00
-lastmod = 2020-05-27T09:29:53+08:00
+lastmod = 2020-06-13T22:20:54+08:00
 tags = ["linux", "package"]
 categories = ["learn"]
 draft = false

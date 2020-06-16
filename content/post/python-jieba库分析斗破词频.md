@@ -5,6 +5,7 @@ lastmod = 2018-07-19T14:51:14+08:00
 tags = ["Python"]
 categories = ["learn"]
 draft = false
+
 +++
 
 > 初学python时,老师介绍了使用jieba库来分析文本,我就想分析一下"世界名著"<<斗破苍穹>>,以下是代码.
@@ -36,4 +37,4 @@ draft = false
 这是截图
 ![分析斗破去除后图][1]
 
-  [1]: https://res.cloudinary.com/dc15efw34/image/upload/v1531934521/16.png
+[1]: https://res.cloudinary.com/dc15efw34/image/upload/v1531934521/16.png
