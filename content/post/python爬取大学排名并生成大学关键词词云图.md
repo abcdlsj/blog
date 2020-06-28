@@ -1,5 +1,5 @@
 +++
-title = "python爬取大学排名并生成大学关键词词云图"
+title = "python 爬取大学排名并生成大学关键词词云图"
 date = 2018-07-21
 lastmod = 2018-07-21T14:51:14+08:00
 tags = ["Python"]
@@ -90,4 +90,4 @@ main()
 **由于当时博主也是初学python,所以有些代码看起来比较傻.**
 
 
-  [1]: https://res.cloudinary.com/dc15efw34/image/upload/v1532153680/wordcloud1.jpg
+[1]: https://res.cloudinary.com/dc15efw34/image/upload/v1532153680/wordcloud1.jpg

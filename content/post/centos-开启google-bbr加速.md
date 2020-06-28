@@ -1,5 +1,5 @@
 +++
-title = "Centos开启Google BBR加速"
+title = "Centos 开启 Google BBR 加速"
 date = 2018-08-28
 lastmod = 2018-08-28T14:51:14+08:00
 tags = ["Google bbr"]

@@ -1,7 +1,6 @@
 ---
-title: "LeetCode Pattern: Dynamic Programming"
+title: "LeetCode Pattern: Dynamic Programming (WIP)"
 date: 2020-05-24T20:49:11+08:00
-lastmod: 2020-05-24T20:49:11+08:00
 draft: flase
 tags: ["LeetCode", "Dynamic Programming"]
 categories: ["learn"]
@@ -24,7 +23,11 @@ toc: true
 
 > 咕咕咕
 >
-> -\- 2020-06-01
+> -\- 06-01
+>
+> 我是 fw。。。周末补完这个总结（还需要写部分题目，不过感觉很快了，~~我总结的都是比较简单的动规。~~）
+>
+> -\- 06-18 :timer_clock: 22:09
 
 ### 单串/双串
 

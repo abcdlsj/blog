@@ -1,5 +1,5 @@
 +++
-title = "VPS搭建aria2下载&使用h5ai实现在线播放"
+title = "VPS 搭建 aria2 下载 && 使用 h5ai 实现在线播放"
 date = 2018-08-26
 lastmod = 2018-08-26T14:51:14+08:00
 tags = ["aria2","h5ai"]

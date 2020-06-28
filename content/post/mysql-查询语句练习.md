@@ -1,5 +1,5 @@
 +++
-title = "mysql查询语句练习"
+title = "mysql 查询语句练习"
 date = 2019-06-13
 lastmod = 2019-06-13T14:51:14+08:00
 tags = ["Mysql"]

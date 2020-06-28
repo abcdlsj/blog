@@ -1,5 +1,5 @@
 +++
-title = "Cmder 出现MacType 问题解决"
+title = "Cmder 出现 MacType 问题解决"
 date = 2018-06-03
 lastmod = 2019-06-03T14:45:42+08:00
 tags = ["Cmder"]

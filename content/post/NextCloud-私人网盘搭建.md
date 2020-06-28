@@ -1,5 +1,5 @@
 +++
-title = "NextCloud私人网盘搭建"
+title = "NextCloud 私人网盘搭建"
 date = 2018-08-22
 lastmod = 2018-08-22T14:51:14+08:00
 tags = ["NextCloud"]

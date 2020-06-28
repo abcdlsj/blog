@@ -1,5 +1,5 @@
 +++
-title = "树莓派系统安装&使用ffmpeg推流实现b站直播"
+title = "树莓派系统安装 && 使用 ffmpeg 推流实现 b 站直播"
 date = 2018-09-10
 lastmod = 2018-09-10T14:51:14+08:00
 tags = ["树莓派","ffmepg"]

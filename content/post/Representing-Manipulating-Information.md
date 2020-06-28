@@ -1,13 +1,10 @@
 +++
-title = "Representing-Manipulating-Information"
+title = "CS:APP --- Representing Manipulating Information"
 date = 2019-10-13
-lastmod = 2020-02-24T22:36:59+08:00
+lastmod = 2020-06-20T16:13:30+08:00
 tags = ["CSAPP", "OS"]
 categories = ["learn"]
 draft = false
-
-toc = true
-
 +++
 
 > CSAPP 第二章阅读笔记
@@ -30,10 +27,10 @@ toc = true
 
 #### bitXor {#bitxor}
 
-我的思路是：先找出 x y 共同的 `1` ，然后找出共同的 `0`  ，然后 & 得到有相同字符的位置，最后取～ ，得到答案
+我的思路是：
+先找出 x y 共同的 `1` ，然后找出共同的 `0`  ，然后 & 得到有相同字符的位置，最后取～ ，得到答案
 
 ```cpp
-//1
 /*
  * bitXor - x^y using only ~ and &
  *   Example: bitXor(4, 5) = 1
@@ -41,15 +38,13 @@ toc = true
  *   Max ops: 14
  *   Rating: 1
  */
-int bitXor(int x, int y) {
-  return ~(x&y)&(~(~x&~y));
-}
+int bitXor(int x, int y) { return ~(x & y) & (~(~x & ~y)); }
 ```
 
 
 #### isTmax isTmin {#istmax-istmin}
 
-`Tmin = 10000000 00000000 00000000 00000000`
+Tmin = 10000000 00000000 00000000 00000000
 
 ```cpp
 /*
@@ -58,9 +53,7 @@ int bitXor(int x, int y) {
  *   Max ops: 4
  *   Rating: 1
  */
-int tmin(void) {
-  return 0x01<<31;
-}
+int tmin(void) { return 0x01 << 31; }
 ```
 
 
@@ -88,14 +81,23 @@ int isTmax(int x) {
 
 x & 0xAAAAAAAA = 0xAAAAAAAA
 
-构造0xAAAAAAAA
+构造 0xAAAAAAAA
 
 ```cpp
-int allOddBits(int x){
-    int a = 0xaa|0xaa<<8;
-    a = a|0xaa<<16;
-    a = a|0xaa<<24;
-    return !((a&x)^a);
+/*
+ * allOddBits - return 1 if all odd-numbered bits in word set to 1
+ *   where bits are numbered from 0 (least significant) to 31 (most significant)
+ *   Examples allOddBits(0xFFFFFFFD) = 0, allOddBits(0xAAAAAAAA) = 1
+ *   Legal ops: ! ~ & ^ | + << >>
+ *   Max ops: 12
+ *   Rating: 2
+ */
+int allOddBits(int x) {
+  int a = 0xaa | 0xaa << 8;
+  a = a | 0xaa << 16;
+  a = a | 0xaa << 24;
+  return !((a & x) ^ a);
+  /*return !!((x | (x >> 8) | (x >> 16) | (x >> 24)) & 0xaa);*/
 }
 ```
 
@@ -112,9 +114,7 @@ int allOddBits(int x){
  *   Max ops: 5
  *   Rating: 2
  */
-int negate(int x) {
-  return (~x)+1;
-}
+int negate(int x) { return (~x) + 1; }
 ```
 
 
@@ -128,18 +128,17 @@ int negate(int x) {
 
 ```cpp
 /*
- * isAsciiDigit - return 1 if 0x30 <= x <= 0x39 (ASCII codes for characters '0' to '9')
- *   Example: isAsciiDigit(0x35) = 1.
- *            isAsciiDigit(0x3a) = 0.
+ * isAsciiDigit - return 1 if 0x30 <= x <= 0x39 (ASCII codes for characters '0'
+ * to '9') Example: isAsciiDigit(0x35) = 1. isAsciiDigit(0x3a) = 0.
  *            isAsciiDigit(0x05) = 0.
  *   Legal ops: ! ~ & ^ | + << >>
  *   Max ops: 15
  *   Rating: 3
  */
-int isAsciiDigit(int x){
-	int left = x+~0x30+1;
-	int right = 0x39+~x+1;
-	return !(left>>31)&!(right>>31);
+int isAsciiDigit(int x) {
+  int left = x + ~0x30 + 1;
+  int right = 0x39 + ~x + 1;
+  return !(left >> 31) & !(right >> 31);
 }
 ```
 
@@ -148,7 +147,7 @@ int isAsciiDigit(int x){
 
 看到题目就知道要构造 `0` `1` ，要进行 `!` 运算又要最后返回 y z，于是想到根据 x 构造 0xffffffff
 
-0x00000000^anynum = 0xffffffff&anynum;
+0x00000000 ^ anynum = 0xffffffff & anynum;
 
 ```cpp
 /*
@@ -159,12 +158,12 @@ int isAsciiDigit(int x){
  *   Rating: 3
  */
 int conditional(int x, int y, int z) {
-	/*
-    *if x!=0,mask=0x00000000,so y&~mask==y and z&mask==0
-    *if x==0,mask=0xffffffff,so y&~mask = y&0 =0; z&mask=z
-    */
-	int mask= ~!x+1;
-    return (y & ~mask)|(z & mask);
+  /*
+   *if x!=0,mask=0x00000000,so y&~mask==y and z&mask==0
+   *if x==0,mask=0xffffffff,so y&~mask = y&0 =0; z&mask=z
+   */
+  int mask = ~!x + 1;
+  return (y & ~mask) | (z & mask);
 }
 ```
 
@@ -186,17 +185,17 @@ int conditional(int x, int y, int z) {
  *   Rating: 3
  */
 int isLessOrEqual(int x, int y) {
-	int signx = x>>31 & 0x01;
-	int signy = y>>31 & 0x01;
-	int isSameSign = !(signx^signy); // 相同符号为1
-	return (isSameSign & !((y+~x+1)>>31))|((!isSameSign) & signx);
+  int signx = x >> 31 & 0x01;
+  int signy = y >> 31 & 0x01;
+  int isSameSign = !(signx ^ signy); // 相同符号为1
+  return (isSameSign & !((y + ~x + 1) >> 31)) | ((!isSameSign) & signx);
 }
 ```
 
 
 #### logicalNeg {#logicalneg}
 
-`0` 和 `-0` 的 符号位都为 `0` 所以判断下 `(x|(~x+1))` 符号位就行了
+`0` 和 `-0` 的 符号位都为 `0` 所以判断下 `(x | (~x + 1))` 符号位就行了
 
 ```cpp
 /*
@@ -207,9 +206,7 @@ int isLessOrEqual(int x, int y) {
  *   Max ops: 12
  *   Rating: 4
  */
-int logicalNeg(int x) {
-	return ~((x|(~x+1))>>31)&0x01;
-}
+int logicalNeg(int x) { return ~((x | (~x + 1)) >> 31) & 0x01; }
 ```
 
 
@@ -231,21 +228,21 @@ int logicalNeg(int x) {
  *  Rating: 4
  */
 int howManyBits(int x) {
-	int tmp = x^(x>>31);
-	int isZero = !tmp;
-	int notZeroMark = (!(!tmp)<<31)>>31;
-	int bit_16,bit_8,bit_4,bit_2,bit_1;
-	bit_16 = !(!(tmp>>16))<<4;
-	tmp = tmp >> bit_16;
-	bit_8 = !(!(tmp>>8))<<3;
-	tmp = tmp >> bit_8;
-	bit_4 = !(!(tmp>>4))<<2;
-	tmp = tmp >> bit_4;
-	bit_2 = !(!(tmp>>2))<<1;
-	tmp = tmp >>bit_2;
-	bit_1 = !(!(tmp>>1));
-	tmp = bit_1+bit_2+bit_4+bit_8+bit_16+2;
-	return isZero|(tmp&notZeroMark);
+  int tmp = x ^ (x >> 31);
+  int isZero = !tmp;
+  int notZeroMark = (!(!tmp) << 31) >> 31;
+  int bit_16, bit_8, bit_4, bit_2, bit_1;
+  bit_16 = !(!(tmp >> 16)) << 4;
+  tmp = tmp >> bit_16;
+  bit_8 = !(!(tmp >> 8)) << 3;
+  tmp = tmp >> bit_8;
+  bit_4 = !(!(tmp >> 4)) << 2;
+  tmp = tmp >> bit_4;
+  bit_2 = !(!(tmp >> 2)) << 1;
+  tmp = tmp >> bit_2;
+  bit_1 = !(!(tmp >> 1));
+  tmp = bit_1 + bit_2 + bit_4 + bit_8 + bit_16 + 2;
+  return isZero | (tmp & notZeroMark);
 }
 ```
 
@@ -255,10 +252,13 @@ int howManyBits(int x) {
 
 #### floatScale2 {#floatscale2}
 
-对于浮点数，首先得到其阶码
-`int a = (uf>>23) & 0xff`
+对于浮点数，首先得到其阶码 `int a = (uf >> 23) & 0xff`
 
-如果一个数是特殊值，其阶码为0xff，直接返回其值如果其阶码为0，代表是非规范数，则左移之后带上符号位返回即可如果是规范化数把阶码+1，然后带上符号位返回
+如果一个数是特殊值，其阶码为 0xff，直接返回其值
+
+如果其阶码为 0，代表是非规范数，则左移之后带上符号位返回即可
+
+如果是规范化数把阶码 +1，然后带上符号位返回
 
 ```cpp
 /*
@@ -273,19 +273,19 @@ int howManyBits(int x) {
  *   Rating: 4
  */
 unsigned floatScale2(unsigned uf) {
-	int a = (uf>>23) & 0xff;
-	int flag = uf>>31<<31;
-	int temp = uf;
-	if(a == 0xff)
-		return uf;
-	else if (a == 0){
-		temp = uf << 1;
-		return temp|flag;
-	} else {
-		temp = temp + (0x01<<23);
-		return temp|flag;
-	}
-	return temp;
+  int a = (uf >> 23) & 0xff;
+  int flag = uf >> 31 << 31;
+  int temp = uf;
+  if (a == 0xff)
+	return uf;
+  else if (a == 0) {
+	temp = uf << 1;
+	return temp | flag;
+  } else {
+	temp = temp + (0x01 << 23);
+	return temp | flag;
+  }
+  return temp;
 }
 ```
 
@@ -307,22 +307,22 @@ unsigned floatScale2(unsigned uf) {
  */
 int floatFloat2Int(unsigned uf) {
   int a = ((uf >> 23) & 0xff) - 127;
-	int flag = uf >> 31;
-	if (a >= 32)
-		return 0x80000000u;
-	else if (a < 0)
-		return 0;
-	else {
-		int temp = (uf | 0x800000) & 0xffffff;
-		if (a >= 23) {
-			int e = a - 23;
-			temp = temp << e;
-		} else {
-			int e = 23 - a;
-			temp = temp >> e;
-		}
-		return flag ? -temp : temp;
+  int flag = uf >> 31;
+  if (a >= 32)
+	return 0x80000000u;
+  else if (a < 0)
+	return 0;
+  else {
+	int temp = (uf | 0x800000) & 0xffffff;
+	if (a >= 23) {
+	  int e = a - 23;
+	  temp = temp << e;
+	} else {
+	  int e = 23 - a;
+	  temp = temp >> e;
 	}
+	return flag ? -temp : temp;
+  }
 }
 ```
 
@@ -344,12 +344,12 @@ int floatFloat2Int(unsigned uf) {
  *   Rating: 4
  */
 unsigned floatPower2(int x) {
-	if (x > 127) {
-		return 0x7f800000;
-	} else if (x < -127) {
-		return 0x0;
-	} else {
-		return (x + 127) << 23;
-	}
+  if (x > 127) {
+	return 0x7f800000;
+  } else if (x < -127) {
+	return 0x0;
+  } else {
+	return (x + 127) << 23;
+  }
 }
 ```

@@ -1,5 +1,5 @@
 +++
-title = "Linux好用的百度网盘客户端"
+title = "Linux 好用的百度网盘客户端"
 date = 2018-08-15
 lastmod = 2018-08-15T14:51:14+08:00
 tags = ["baidu"]

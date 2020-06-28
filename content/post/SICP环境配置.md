@@ -1,5 +1,5 @@
 +++
-title = "Macos配置SICP环境"
+title = "Macos 配置 SICP 环境"
 date = 2019-01-21
 lastmod = 2019-01-21T14:51:14+08:00
 tags = ["SICP"]

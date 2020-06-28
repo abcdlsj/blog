@@ -1,5 +1,5 @@
 +++
-title = "LeetCode \"乙亥年最有趣的比赛\" 题解"
+title = "LeetCode 乙亥年最有趣的比赛题解"
 date = 2020-01-21T01:07:00+08:00
 lastmod = 2020-06-13T22:20:57+08:00
 tags = ["LeetCode"]

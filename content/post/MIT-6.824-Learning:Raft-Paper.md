@@ -1,6 +1,6 @@
 ---
 date: "2020-06-14T17:42:58+08:00"
-title: "MIT 6.824 Learning: Raft Paper Reading Notes"
+title: "MIT 6.824 Learning: Raft Paper Reading Notes (WIP)"
 authors: []
 categories:
   - learn

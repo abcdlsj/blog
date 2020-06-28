@@ -1,5 +1,5 @@
 +++
-title = "Emacs-Operationes"
+title = "Emacs Operationes"
 date = 2019-07-22
 lastmod = 2020-01-13T23:45:56+08:00
 tags = ["Emacs"]

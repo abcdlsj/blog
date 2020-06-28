@@ -1,5 +1,5 @@
 +++
-title = "sklearn通用学习模式"
+title = "sklearn 通用学习模式"
 date = 2018-10-26
 lastmod = 2018-10-26T14:51:14+08:00
 tags = ["Sklearn"]

@@ -1,5 +1,5 @@
 +++
-title = " Hexo&Github搭建博客"
+title = " Hexo & Github 搭建博客"
 date = 2018-07-15
 lastmod = 2018-07-16T14:51:14+08:00
 tags = ["hexo"]

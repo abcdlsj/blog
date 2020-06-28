@@ -1,5 +1,5 @@
 +++
-title = "ubuntu系统优化&问题解决(内容丰富)"
+title = "ubuntu 系统优化 && 问题解决(内容丰富)"
 date = 2018-07-29
 lastmod = 2018-07-29T14:51:14+08:00
 tags = ["Linux"]

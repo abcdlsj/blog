@@ -1,5 +1,5 @@
 +++
-title = "使用heroku免费搭建v2ray"
+title = "使用 heroku 免费搭建 v2ray"
 date = 2018-08-03
 lastmod = 2018-08-03T14:51:14+08:00
 tags = ["v2ray"]

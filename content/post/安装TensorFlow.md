@@ -1,5 +1,5 @@
 +++
-title = "安装TensorFlow"
+title = "安装 TensorFlow"
 date = 2018-11-10
 lastmod = 2018-11-10T14:51:14+08:00
 tags = ["Tensorflow"]

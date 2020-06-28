@@ -1,5 +1,5 @@
 +++
-title = "搭建v2ray"
+title = "搭建 v2ray"
 date = 2018-07-26
 lastmod = 2018-07-26T14:51:14+08:00
 tags = ["v2ray"]

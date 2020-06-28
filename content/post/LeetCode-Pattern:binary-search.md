@@ -1,5 +1,5 @@
 +++
-title = "LeetCode Pattern: Binary Search"
+title = "LeetCode Pattern: Binary Search (WIP)"
 date = 2020-06-01T22:05:26+08:00
 lastmod = 2020-06-01T22:05:26+08:00
 tags = ["LeetCode", "Binary Search"]
@@ -21,7 +21,55 @@ draft = false
 
 > 只有 PUSH，才有 POP
 >
-> -\- 沃兹基 · 硕德
+> -\- 沃兹基 · 硕德（06-01）
+>
+> 咕咕！咕咕咕咕（神啊！救救我吧）
+>
+> -\- 06-22 :timer_clock: 09:55
+
+## 搜索旋转数组
+
+> 这个类型的题基本上都会用到二分搜索
+
+#### [剑指 Offer 11. 旋转数组的最小数字](https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/)
+
+
+
+#### [33. 搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)
+
+```cpp
+class Solution {
+public:
+    int search(vector<int>& nums, int target) {
+        int le = 0, ri = nums.size() - 1;
+
+        while (le <= ri) {
+            int mid = le + (ri - le) / 2;
+            if (nums[mid] == target) return mid;
+
+            if (nums[mid] >= nums[le]) {
+                if (nums[le] <= target && target < nums[mid]) {
+                    ri = mid - 1;
+                } else {
+                    le = mid + 1;
+                }
+            } else {
+                if (nums[ri] >= target && target > nums[mid]) {
+                    le = mid + 1;
+                } else {
+                    ri = mid - 1;
+                }
+            }
+        }
+        
+        return -1;
+    }
+};
+```
+
+
+
+## 非常规
 
 #### [287. 寻找重复数](https://leetcode-cn.com/problems/find-the-duplicate-number/)
 

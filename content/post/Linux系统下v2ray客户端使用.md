@@ -1,5 +1,5 @@
 +++
-title = "Linux系统下v2ray客户端使用"
+title = "Linux 系统下 v2ray 客户端使用"
 date = 2018-08-18
 lastmod = 2018-08-18T14:51:14+08:00
 tags = ["v2ray"]

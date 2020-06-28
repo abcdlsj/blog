@@ -1,12 +1,13 @@
 ---
 date: "2020-06-16T10:43:35+08:00"
-title: "MIT 6.828 Lab: Xv6 and Unix utilities"
+title: "MIT 6.828 Lab 1: Xv6 and Unix utilities"
 authors: []
 categories:
   - learn
 tags:
   - 6.828
   - OS
+  - xv6
 draft: false
 toc: true
 typora-root-url: ../../static
@@ -18,9 +19,15 @@ typora-root-url: ../../static
 >
 > -\- 06-16
 >
-> 基本完成实验了，但是一些细节自己还是没处理好，有的地方也不是特别清晰（对，就是 3），明天应该会再看下别人的实现，然后多完善一下 lab1 
+> 基本完成实验了，但是一些细节自己还是没处理好，有的地方也不是特别清晰（对，就是 `primes`），明天应该会再看下别人的实现，然后多完善一下 lab1 
 >
-> -\- 06-17 -\- 01:31
+> -\- 06-17 :timer_clock: 01:30
+>
+> 又看了会并行素数筛，go 版本很好理解，至于实验，嗯，我是 fw。。。
+>
+> 继续看，继续学（今天原本要停电，都做好看一天动漫的准备了。。。然后早上起床发现不停了。。。）
+>
+> -\- 06-17 :timer_clock: 11:30
 
 ## xv6 System Call
 
@@ -87,7 +94,7 @@ Write a program that uses UNIX system calls to `ping-pong` a byte between two pr
 >and one for writing. Writing data to one end of the pipe makes that data available for reading from
 >the other end of the pipe. Pipes provide a way for processes to communicate.
 >
->-\- 「1.3 Pipes」
+>-\-  :books: 1.3 Pipes
 >
 >文件描述符对，从一个写入，另一个可以读取
 
@@ -152,9 +159,13 @@ loop:
         send n to right neighbor
 ```
 
-![官网图](https://swtch.com/~rsc/thread/sieve.gif)
 
-> go 版本的并行素数筛，如果有 go 基础应该能够帮助理解
+
+> go 版本的并行素数筛，比较好理解
+>
+> 然后还有理解图：
+>
+> https://divan.dev/demos/primesieve/
 
 ```go
 // A concurrent prime sieve
@@ -195,7 +206,19 @@ func main() {
 }
 ```
 
-> 代码实现
+> 代码实现（这是看别人的。。。自己写我感觉写不出来。。。）
+>
+> -\- 06-17
+>
+> -------
+>
+> 原来别人也是抄论文的写法（我还以为我书白读了，怎么想不到 redirect）
+>
+> 论文原文：
+>
+> https://www.cs.dartmouth.edu/~doug/sieve/sieve.pdf
+>
+> -\- 06-19 添加
 
 ```c
 #include "kernel/stat.h"
@@ -273,17 +296,15 @@ Optional: support regular expressions in name matching. `grep.c` has some primit
 
 > 支持 `re` 需要复制 `user/grep.c` 中的 `matchhere matchstar match` 
 >
-> 可以看下 `user/ls.c`
+> 可以看下 `user/ls.c` ，只需要修改为递归实现就可以了
 
 ```c
+#include "kernel/types.h"
 #include "kernel/fs.h"
 #include "kernel/stat.h"
-#include "kernel/types.h"
 #include "user/user.h"
 
-// ------ form user/grep.c ------
-// code there
-// ----- find implementation -----
+// ------ form user/ls.c ------
 char *fmtname(char *path) {
   static char buf[DIRSIZ + 1];
   char *p;
@@ -299,6 +320,48 @@ char *fmtname(char *path) {
   memset(buf + strlen(p), ' ', DIRSIZ - strlen(p));
   return buf;
 }
+
+// ------ form user/grep.c ------
+
+// Regexp matcher from Kernighan & Pike,
+// The Practice of Programming, Chapter 9.
+
+int matchhere(char *, char *);
+int matchstar(int, char *, char *);
+
+int match(char *re, char *text) {
+  if (re[0] == '^')
+    return matchhere(re + 1, text);
+  do { // must look at empty string
+    if (matchhere(re, text))
+      return 1;
+  } while (*text++ != '\0');
+  return 0;
+}
+
+// matchhere: search for re at beginning of text
+int matchhere(char *re, char *text) {
+  if (re[0] == '\0')
+    return 1;
+  if (re[1] == '*')
+    return matchstar(re[0], re + 2, text);
+  if (re[0] == '$' && re[1] == '\0')
+    return *text == '\0';
+  if (*text != '\0' && (re[0] == '.' || re[0] == *text))
+    return matchhere(re + 1, text + 1);
+  return 0;
+}
+
+// matchstar: search for c*re at beginning of text
+int matchstar(int c, char *re, char *text) {
+  do { // a * matches zero or more instances
+    if (matchhere(re, text))
+      return 1;
+  } while (*text != '\0' && (*text++ == c || c == '.'));
+  return 0;
+}
+
+// ----- find implementation -----
 
 void find(char *path, char *re) {
   char buf[512], *p;
@@ -341,11 +404,10 @@ void find(char *path, char *re) {
         continue;
       }
 
-      if (strlen(de.name) == 1 && de.name[0] == '.')
-        continue;
-      if (strlen(de.name) == 2 && de.name[0] == '.' && de.name[1] == '.')
+      if (!strcmp(de.name, ".") || !strcmp(de.name, ".."))
         continue;
 
+      // 递归实现
       find(buf, re);
     }
     break;
@@ -431,3 +493,6 @@ int main(int argc, char *argv[]) {
 }
 ```
 
+## End
+
+> 多去尝试，体会不一样的东西！
