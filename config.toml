@@ -128,15 +128,15 @@ page = "/:slug/"
   identifier = "archives"
   url = "/post/"
 [[menu.main]]
-  name = "Tags"
-  weight = 30
-  identifier = "tags"
-  url = "/tags/"
-[[menu.main]]
   name = "Categories"
-  weight = 40
+  weight = 30
   identifier = "categories"
   url = "/categories/"
+[[menu.main]]
+  name = "LeetCode"
+  weight = 40
+  identifier = "leetcode"
+  url = "/tags/LeetCode"
 [[menu.main]]
   name = "About"
   weight = 50

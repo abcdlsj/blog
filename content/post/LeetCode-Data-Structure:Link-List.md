@@ -1,5 +1,5 @@
 ---
-title: "LeetCode Data-Structure: Link List (WIP)"
+title: "LeetCode Data-Structure: Link List"
 date: 2020-06-22T08:52:45+08:00
 draft: false
 keywords: ["LeetCode Data-Structure: Link List"]
@@ -7,6 +7,7 @@ tags: ["Link List", "Data Structure", "LeetCode"]
 categories: ["learn"]
 author: "abcdlsj"
 toc: true
+typora-root-url: ../../static
 ---
 
 > LeetCode 刷题总结：链表
@@ -16,6 +17,25 @@ toc: true
 > 看到我 4 月 29 建的博文，我沉默了，把时间改成了今天（敲了很多，发现并没有任何意义，然后删了）
 >
 > -\- 06-22 :timer_clock: 09:22
+>
+> 再次更新，添加了几个题，也画了反转链表的过程（画得不好看。。。）
+>
+> 等把 LRU 添加之后，就差不多了，其它的东西之后慢慢遇到再添加
+>
+> -\- 06-30 :timer_clock: 14:05
+
+## 浅谈链表的递归
+
+> 用反转链表来举例
+
+![reverse list](/img/reverseList.png)
+
+其实也就是**两个点**：
+
+- 注意好返回值
+- 处理最小情况
+
+## 题目
 
 #### [21. 合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)
 
@@ -88,10 +108,61 @@ public:
 **递归解法**
 
 ```cpp
-
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        if (head == nullptr || head->next == nullptr) return head;
+        ListNode* node = reverseList(head->next);
+        head->next->next = head;
+        head->next = nullptr;
+        return node;
+    }
+};
 ```
 
+#### [234. 回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/)
 
+> 边快慢指针，边逆序前半部分
+>
+> 注意：
+>
+> 如果链表长度为奇数，fast 会停在最后一个元素，slow 会再一半的左边一个位置处
+>
+> 偶数，则停在空的位置，slow 在中间两个元素之中的左边
+
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    bool isPalindrome(ListNode* head) {
+        ListNode* pre = nullptr, *slow = head, *fast = head;
+
+        while(fast && fast->next) {
+            fast = fast->next->next;
+            ListNode* nxt = slow->next;
+            slow->next = pre;
+            pre = slow;
+            slow = nxt;
+        }
+        if (fast && fast->next == nullptr) slow = slow->next;
+
+        while (pre && slow) {
+            if (pre->val != slow->val) return false;
+            pre = pre->next;
+            slow = slow->next;
+        }
+
+        return true;
+    }
+};
+```
 
 #### [24. 两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)
 
@@ -162,4 +233,6 @@ public:
     }
 };
 ```
+
+#### [146. LRU缓存机制](https://leetcode-cn.com/problems/lru-cache/)
 

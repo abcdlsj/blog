@@ -675,6 +675,10 @@ public:
 };
 ```
 
+#### [543. 二叉树的直径](https://leetcode-cn.com/problems/diameter-of-binary-tree/)
+
+#### [124. 二叉树中的最大路径和](https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/)
+
 ## 总结
 
 > 没啥好写的，希望继续努力（少拖延）！
