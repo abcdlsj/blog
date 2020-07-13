@@ -28,8 +28,14 @@ toc: true
 > 我是 fw。。。周末补完这个总结（还需要写部分题目，不过感觉很快了，~~我总结的都是比较简单的动规。~~）
 >
 > -\- 06-18 :timer_clock: 22:09
+>
+> 事实是，这几天都没写
+>
+> 不过，动规的题确实难
+>
+> -\- 07-01 :timer_clock: 18:33
 
-### 单串/双串
+## 单串/双串
 
 #### [300. 最长上升子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)
 
@@ -49,6 +55,25 @@ public:
         }
 
         return maxlen;
+    }
+};
+```
+
+#### [53. 最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)
+
+```cpp
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int ans = nums[0];
+        vector<int> dp(nums);
+        
+        for (int i = 1; i < nums.size(); i++) {
+            dp[i] = max(dp[i], dp[i - 1] + dp[i]);
+            ans = max(ans, dp[i]);
+        }
+
+        return ans;
     }
 };
 ```
@@ -79,20 +104,26 @@ public:
 };
 ```
 
-### 经典题
+## 经典题
 
-#### [53. 最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)
+## 子数组/子序列
+
+#### [718. 最长重复子数组](https://leetcode-cn.com/problems/maximum-length-of-repeated-subarray/)
 
 ```cpp
 class Solution {
 public:
-    int maxSubArray(vector<int>& nums) {
-        int ans = nums[0];
-        vector<int> dp(nums);
-        
-        for (int i = 1; i < nums.size(); i++) {
-            dp[i] = max(dp[i], dp[i - 1] + dp[i]);
-            ans = max(ans, dp[i]);
+    int findLength(vector<int>& A, vector<int>& B) {
+        int ans = 0;
+        vector<vector<int>> dp(A.size() + 1, vector<int> (B.size() + 1));
+
+        for (int i = 1; i <= A.size(); i++) {
+            for (int j = 1; j <= B.size(); j++) {
+                if (A[i - 1] == B[j - 1]) {
+                    dp[i][j] = dp[i - 1][j - 1] + 1;
+                    ans = max(ans, dp[i][j]);
+                }
+            }
         }
 
         return ans;
@@ -257,6 +288,27 @@ public:
 };
 ```
 
+#### [309. 最佳买卖股票时机含冷冻期](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)
+
+```cpp
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        if (prices.size() == 0) return 0;
+        vector<vector<int>> dp(prices.size(), vector<int> (3));
+        dp[0][0] = 0, dp[0][1] = -prices[0], dp[0][2] = 0;
+
+        for (int i = 1; i < prices.size(); i++) {
+            dp[i][0] = max(dp[i - 1][0], dp[i - 1][2]);
+            dp[i][1] = max(dp[i - 1][0] - prices[i], dp[i - 1][1]);
+            dp[i][2] = dp[i - 1][1] + prices[i];
+        }
+
+        return max(dp[prices.size() - 1][0], dp[prices.size() - 1][2]);
+    }
+};
+```
+
 #### [123. 买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/)
 
 > 这道题和上面那道基本一致，但是要求最多买卖两次。
@@ -290,7 +342,8 @@ public:
 
 #### [188. 买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/)
 
-> 这道题最多完成 k 笔交易，这时可以总结出一种秒杀所有买卖股票问题的转移方程，方程在开始处，具体的分析可以看 labuladong 的题解，在参考链接。
+> 这道题最多完成 k 笔交易，这时可以总结出一种秒杀所有买卖股票问题的转移方程，具体的分析可以看 labuladong 的题解，在参考链接
+>
 
 ```cpp
 

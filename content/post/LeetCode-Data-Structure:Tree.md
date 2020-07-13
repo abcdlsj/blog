@@ -23,9 +23,13 @@ toc: true
 >
 > -\- 2020-06-05
 >
-> 写差不多了，除了一些很难的题，唉，接下来还有好多实验报告和课设（06-22 告诉你，不是”好多“。。。）
+> 写差不多了，除了一些很难的题，唉，接下来还有好多实验报告和课设（06-22 告诉你，不是 ”好多“）
 >
 > -\- 2020-06-08
+>
+> 更新了几道题，半个月没摸树，我又不会了。。。
+>
+> -\- 2020-07-01
 
 ## 遍历二叉树
 
@@ -675,10 +679,119 @@ public:
 };
 ```
 
+**还可以**
+
+```cpp
+class Solution {
+public:
+    TreeNode* invertTree(TreeNode* root) {
+        if (root == nullptr) return root;
+
+        TreeNode* rTree = root->right;
+        root->right = invertTree(root->left);
+        root->left = invertTree(rTree);        
+
+        return root;
+    }
+};
+```
+
 #### [543. 二叉树的直径](https://leetcode-cn.com/problems/diameter-of-binary-tree/)
 
+> 其实就是求任意两个节点之间的最大距离
+
+```cpp
+class Solution {
+public:
+    int ans = 0;
+    int diameterOfBinaryTree(TreeNode* root) {
+        helper(root);
+        
+        return ans;
+    }
+    
+    int helper(TreeNode* root) {
+        if (root == nullptr) return 0;
+        
+        int leSize = helper(root->left);
+        int riSize = helper(root->right);
+        
+        ans = max(ans, leSize + riSize);
+
+        return max(leSize, riSize) + 1;
+    }
+};
+```
+
 #### [124. 二叉树中的最大路径和](https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/)
+
+> 和上面那道题基本一样，一个类型，同样的还有 [687. 最长同值路径](https://leetcode-cn.com/problems/longest-univalue-path/)
+>
+> 这道题因为节点值可以使负数，所以求的时候应该用 0 来消除负数
+
+```cpp
+class Solution {
+public:
+    int ans = INT_MIN;
+    int maxPathSum(TreeNode* root) {
+        helper(root);
+
+        return ans;
+    }
+
+    int helper(TreeNode* root) {
+        if (root == nullptr) return 0;
+
+        int leSum = max(0, helper(root->left));
+        int riSum = max(0, helper(root->right));
+
+        ans = max(ans, leSum + riSum + root->val);
+
+        return root->val + max(leSum, riSum);
+    }
+};
+```
+
+#### [687. 最长同值路径](https://leetcode-cn.com/problems/longest-univalue-path/)
+
+> 相对 n124 实际上还要困难一点
+
+```CPP
+class Solution {
+public:
+    int ans = 0;
+    int longestUnivaluePath(TreeNode* root) {
+        helper(root);
+
+        return ans;
+    }
+
+    int helper(TreeNode* root) {
+        if (root == nullptr) return 0;
+        
+        int tmpLeSize = helper(root->left);
+        int tmpRiSize = helper(root->right);
+        int leSize = 0, riSize = 0;
+        if (root->left && root->val == root->left->val) leSize = tmpLeSize + 1;
+        if (root->right && root->val == root->right->val) riSize = tmpRiSize + 1;
+
+        ans = max(ans, leSize + riSize);
+
+        return max(leSize, riSize);
+    }
+};
+```
+
+> 三道题的结构都差不多，其实写法很多，但是思想是一样的，我的习惯是传递全局变量，而且习惯在功能不同的地方打一个空行，这样看着会结构清晰？？？
+>
+> 感觉空行应该写点注释的，唉，还是不喜欢写注释
+>
+> 难度也是差不多，两道 easy，一道 hard （n124 是 hard ......）
+>
+> -\- 07-01
 
 ## 总结
 
 > 没啥好写的，希望继续努力（少拖延）！
+>
+> （07-01 更新：做得到个屁！）

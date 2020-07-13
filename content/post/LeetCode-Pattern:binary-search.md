@@ -31,10 +31,6 @@ draft = false
 
 > 这个类型的题基本上都会用到二分搜索
 
-#### [剑指 Offer 11. 旋转数组的最小数字](https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/)
-
-
-
 #### [33. 搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)
 
 ```cpp
@@ -63,6 +59,31 @@ public:
         }
         
         return -1;
+    }
+};
+```
+
+#### [154. 寻找旋转排序数组中的最小值 II](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/)
+
+```cpp
+class Solution {
+public:
+    int findMin(vector<int>& nums) {
+        int le = 0, ri = nums.size() - 1, mid;
+
+        while (le < ri) {
+            mid = le + (ri - le) / 2;
+
+            if (nums[mid] < nums[ri]) {
+                ri = mid;
+            } else if (nums[mid] > nums[ri]) {
+                le = mid + 1;
+            } else {
+                ri--;
+            }
+        }
+
+        return nums[le];
     }
 };
 ```
@@ -101,3 +122,6 @@ public:
 };
 ```
 
+## References
+
+https://www.liwei.party/2019/06/17/leetcode-solution-new/search-insert-position/#toc-heading-7

@@ -126,9 +126,8 @@ public:
 >
 > 注意：
 >
-> 如果链表长度为奇数，fast 会停在最后一个元素，slow 会再一半的左边一个位置处
+> 如果链表长度为奇数，fast 会停在最后一个元素，slow 会在中点；偶数，则停在空的位置，slow 在中间两个元素之中的左边
 >
-> 偶数，则停在空的位置，slow 在中间两个元素之中的左边
 
 ```cpp
 /**
@@ -235,4 +234,46 @@ public:
 ```
 
 #### [146. LRU缓存机制](https://leetcode-cn.com/problems/lru-cache/)
+
+> 很重要的东西，但是难度比较低
+
+```cpp
+class LRUCache {
+public:
+    int cap;
+    list<pair<int, int>> cache;
+    unordered_map<int, list<pair<int, int>>::iterator> map; 
+    LRUCache(int capacity) : cap(capacity) {}
+    
+    int get(int key) {
+        auto it = map.find(key);
+        if (it != map.end()) {
+            cache.splice(cache.begin(), cache, it->second);
+            return it->second->second;
+        }
+        return -1;
+    }
+    
+    void put(int key, int value) {
+        auto it = map.find(key);
+        if (it != map.end()) {
+            cache.erase(map[key]);
+        } else {
+            if (cap == cache.size()) {
+                auto ele = cache.back();
+                map.erase(ele.first);
+                cache.pop_back();
+            }
+        }
+        cache.push_front(make_pair(key, value));
+        map[key] = cache.begin();
+    }
+};
+```
+
+**带有过期时间的 LRU 算法**
+
+```cpp
+
+```
 
