@@ -277,3 +277,103 @@ public:
 
 ```
 
+#### [138. 复制带随机指针的链表](https://leetcode-cn.com/problems/copy-list-with-random-pointer/)
+
+> 有丝分裂法（？）
+>
+> 复制一份，然后分裂
+
+```cpp
+/*
+// Definition for a Node.
+class Node {
+public:
+    int val;
+    Node* next;
+    Node* random;
+    
+    Node(int _val) {
+        val = _val;
+        next = NULL;
+        random = NULL;
+    }
+};
+*/
+
+class Solution {
+public:
+    Node* copyRandomList(Node* head) {
+        if (head == nullptr) return nullptr;
+        Node* cur = head;
+        while (cur) {
+            Node* n = new Node(cur->val, cur->next, nullptr);
+            Node* c = cur->next;
+            cur->next = n;
+            cur = c;
+        }
+
+        cur = head;
+        while (cur) {
+            if (cur->random) cur->next->random = cur->random->next;
+            cur = cur->next->next;
+        }
+
+        cur = head;
+        Node* ret = cur->next;
+        
+        while (cur->next) {
+            Node* n = cur->next;
+            cur->next = cur->next->next;
+            cur = n;
+        }
+
+        return ret;
+    }
+};
+```
+
+> hashmap 法
+
+```cpp
+/*
+// Definition for a Node.
+class Node {
+public:
+    int val;
+    Node* next;
+    Node* random;
+    
+    Node(int _val) {
+        val = _val;
+        next = NULL;
+        random = NULL;
+    }
+};
+*/
+
+class Solution {
+public:
+    Node* copyRandomList(Node* head) {
+        if (head == nullptr) return nullptr;
+
+        unordered_map<Node*, Node*> map;
+        Node* cur = head;
+        
+        while (cur) {
+            map[cur] = new Node(cur->val);
+            cur = cur->next;
+        }
+
+        cur = head;
+        
+        while (cur) {
+            map[cur]->next = map[cur->next];
+            map[cur]->random = map[cur->random];
+            cur = cur->next;
+        }
+
+        return map[head];
+    }
+};
+```
+

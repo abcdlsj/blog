@@ -164,6 +164,114 @@ public:
 
 
 
+## 抽屉原理达成目的
+
+> 最近在写一些数组的遍历或者计数的时候，抽屉原理遇到很多次
+
+#### [442. 数组中重复的数据](https://leetcode-cn.com/problems/find-all-duplicates-in-an-array/)
+
+```cpp
+class Solution {
+public:
+    vector<int> findDuplicates(vector<int>& nums) {
+        vector<int> res;
+
+        for (int i = 0; i < nums.size(); i++) {
+            while (nums[i] != nums[nums[i] - 1]) {
+                swap(nums[i], nums[nums[i] - 1]);
+            }
+        }
+
+        for (int i = 0; i < nums.size(); i++) {
+            if (nums[i] != i + 1) res.push_back(nums[i]);
+        }
+
+        return res;        
+    }
+};
+```
+
+#### [287. 寻找重复数](https://leetcode-cn.com/problems/find-the-duplicate-number/)
+
+
+
+#### [41. 缺失的第一个正数](https://leetcode-cn.com/problems/first-missing-positive/)
+
+> 也是抽屉原理
+
+```cpp
+class Solution {
+public:
+    int firstMissingPositive(vector<int>& nums) {
+        for (int i = 0; i < nums.size(); i++) {
+            while (nums[i] > 0 && nums[i] <= nums.size() && nums[i] != nums[nums[i] - 1]) {
+                swap(nums[i], nums[nums[i] - 1]);
+            }
+        }
+
+        for (int i = 0; i < nums.size(); i++) {
+            if (i + 1 != nums[i]) return i + 1;
+        }
+        
+        return nums.size() + 1;
+    }
+};
+```
+
+## 前缀和 + 哈希表
+
+> 写了好几道了，应该记录一下
+
+#### [560. 和为K的子数组](https://leetcode-cn.com/problems/subarray-sum-equals-k/)
+
+```cpp
+class Solution {
+public:
+    int subarraySum(vector<int>& nums, int k) {
+        int count = 0, sum = 0;
+        unordered_map<int, int> map;
+
+        map[0] = 1; 
+        for (auto item : nums) {
+            sum += item;
+            if (map.find(sum - k) != map.end()) {
+                count += map[sum - k];
+            }
+
+            map[sum]++;
+        }
+
+        return count;
+    }
+};
+
+```
+
+#### [1248. 统计「优美子数组」](https://leetcode-cn.com/problems/count-number-of-nice-subarrays/)
+
+> 和上面那道完全一样
+
+```cpp
+class Solution {
+public:
+    int numberOfSubarrays(vector<int>& nums, int k) {
+        int sum = 0, ans = 0;
+        unordered_map<int, int> map;
+        map[0] = 1;
+
+        for (auto num : nums) {
+            sum += num % 2;
+            if (map.find(sum - k) != map.end()) {
+                ans += map[sum - k];
+            }
+            map[sum]++;
+        }
+
+        return ans;
+    }
+};
+```
+
 ## No Pattern
 
 #### [5. 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)

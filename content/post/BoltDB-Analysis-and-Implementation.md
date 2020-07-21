@@ -7,7 +7,7 @@ categories:
 tags:
   - BoltDB
   - DataBase
-draft: false
+draft: true
 toc: true
 typora-root-url: ../../static
 ---
@@ -43,6 +43,10 @@ typora-root-url: ../../static
 > Flag 看看就好。。。我是不相信我自己了 :cat: 
 >
 > -\- 07-10 :timer_clock: 19:36
+>
+> 暂时不想将这篇 blog 放出来了，因为自己一而再再而三的拖延已经让我无法面对任何有稍许困难的事情，我只想着安逸
+>
+> -\- 07-15 :timer_clock: 19:47
 
 ## boltDB 介绍
 
@@ -92,7 +96,13 @@ const (
 )
 ```
 
-node
+创建的时候，初始化成 4 个 page
+
+| metaPage | metaPage | freelistPage | leafPage |
+
+
+
+node:
 
 B+ 树单个节点，访问节点首先将 page 的内容转换为内存中的 node，每个 node 对应一个或者多个连续的 page。
 

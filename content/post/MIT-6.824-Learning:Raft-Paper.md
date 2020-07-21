@@ -24,6 +24,10 @@ typora-root-url: ../../static
 > 今天看了差不多 3 小时，就只看了论文，还很多没看。。。
 >
 > -\- 07-02
+>
+> 过了好多天了，又回来继续写 lab 了，学习不能停，一停就停不住了。。
+>
+> -\- 07-16
 
 ## Consensus
 
@@ -87,7 +91,11 @@ Raft 通过随机选举定时器来阻止选举分裂的发生，即使选举分
 
 ![Log entrys](/img/image-20200702153759613.png)
 
+日志的格式如上：
+
 ![Log indexs](/img/image-20200702153519693.png)
+
+![Figure 3](/img/Figure 3.png)
 
 ## Raft
 
@@ -95,9 +103,7 @@ Raft 通过随机选举定时器来阻止选举分裂的发生，即使选举分
 
 ## References
 
-《数据库系统内幕》
-
-https://www.gitbook.com/book/vonng/ddia-cn （ddia-zh）
+https://www.gitbook.com/book/vonng/ddia-cn 
 
 https://thesquareplanet.com/blog/students-guide-to-raft/
 
@@ -105,5 +111,5 @@ http://thesecretlivesofdata.com/raft/ （可视化网站，很有帮助）
 
 https://github.com/maemual/raft-zh_cn/blob/master/raft-zh_cn.md （raft 中文翻译，适合对照着看）
 
-https://time.geekbang.org/column/article/218938 （极客时间课程）
+https://izualzhy.cn/notes-on-raft 
 
