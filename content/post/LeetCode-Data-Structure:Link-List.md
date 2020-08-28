@@ -14,9 +14,9 @@ typora-root-url: ../../static
 
 <!--more-->
 
-> 看到我 4 月 29 建的博文，我沉默了，把时间改成了今天（敲了很多，发现并没有任何意义，然后删了）
+> <!--看到我 4 月 29 建的博文，我沉默了，把时间改成了今天（敲了很多，发现并没有任何意义，然后删了）-->
 >
-> -\- 06-22 :timer_clock: 09:22
+> <!---\- 06-22 :timer_clock: 09:22-->
 >
 > 再次更新，添加了几个题，也画了反转链表的过程（画得不好看。。。）
 >
@@ -167,7 +167,9 @@ public:
 
 > n25 的简单版，这道题我记得两个月前写，思路都不是很清晰，现在非常清晰（没看自己之前的提交，一口气完成了解答，并且答案和之前写的题解相同，PS. 大多数题我都会提交自己认为最简单快捷的实现）
 >
-> 链表的题，一定一定要自己画下过程，和回溯一样，知道流程之后基本大多数题都会有思路
+> 链表的题，一定一定要自己画下过程，知道流程之后基本大多数题都会有思路
+
+**递归和非递归**
 
 ```cpp
 /**
@@ -186,6 +188,27 @@ public:
         head->next = swapPairs(node->next);
         node->next = head;
         return node;
+    }
+};
+```
+
+```cpp
+class Solution {
+public:
+    ListNode* swapPairs(ListNode* head) {
+        if (head == nullptr || head->next == nullptr) return head;
+        ListNode* pre = new ListNode(-1), *cur = head, *nhead = pre;
+
+        while (cur && cur->next) {
+            ListNode* nxt = cur->next;
+            cur->next = nxt->next;
+            nxt->next = cur;
+            pre->next = nxt;
+            pre = cur;
+            cur = cur->next;
+        }
+
+        return nhead->next;
     }
 };
 ```

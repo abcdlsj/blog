@@ -1,7 +1,7 @@
 +++
 title = "pip not found"
-date = 2019-01-21
-lastmod = 2019-01-21T14:51:14+08:00
+date = 2018-09-21
+lastmod = 2018-09-21T14:51:14+08:00
 tags = ["zsh","pip","Python"]
 categories = ["learn"]
 draft = false
@@ -10,7 +10,7 @@ toc = true
 
 +++
 
-> 我在linux环境下执行pip intsall xxx 时报错zsh: command not found:pip，当然这应该是切换shell的问题,其实最好解决办法就是不用on-my-zsh......
+> 我在linux环境下执行pip intsall xxx 时报错 zsh: command not found:pip，当然这应该是切换shell的问题,其实最好解决办法就是不用on-my-zsh ......
 
 <!--more-->
 

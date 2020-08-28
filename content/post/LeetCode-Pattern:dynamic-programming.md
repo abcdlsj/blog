@@ -21,25 +21,101 @@ toc: true
 
 内容来自 [zh-wiki]([https://zh.wikipedia.org/wiki/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92)
 
-> 咕咕咕
+> <!--咕咕咕-->
 >
-> -\- 06-01
+> <!---\- 06-01-->
 >
-> 我是 fw。。。周末补完这个总结（还需要写部分题目，不过感觉很快了，~~我总结的都是比较简单的动规。~~）
+> <!--我是 fw。。。周末补完这个总结（还需要写部分题目，不过感觉很快了，~~我总结的都是比较简单的动规。~~）-->
 >
-> -\- 06-18 :timer_clock: 22:09
+> <!---\- 06-18 :timer_clock: 22:09-->
 >
-> 事实是，这几天都没写
+> <!--事实是，这几天都没写-->
 >
-> 不过，动规的题确实难
+> <!--不过，动规的题确实难-->
 >
-> -\- 07-01 :timer_clock: 18:33
+> <!---\- 07-01 :timer_clock: 18:33-->
 >
-> 佛了，爷又不会了，爷是废物
+> <!--佛了，爷又不会了，爷是废物-->
 >
-> 唉。。。
+> <!--唉。。。-->
 >
-> -\- 07-18 :timer_clock: 00:21
+> <!---\- 07-18 :timer_clock: 00:21-->
+>
+> <!--准备参照 weiwei 的整理来重刷分类一下-->
+>
+> <!---\- 07-24 :timer_clock: 22:26-->
+
+## 经典问题
+
+#### [509. 斐波那契数](https://leetcode-cn.com/problems/fibonacci-number/)
+
+递归自上向下
+
+```cpp
+class Solution {
+public:
+    int fib(int N) {
+        if (N <= 1) return N;
+        return fib(N - 1) + fib(N - 2);
+    }
+};
+```
+
+递归带缓存
+
+```cpp
+class Solution {
+public:
+    int fibMemo(int N, vector<int>& mem) {
+        if (N <= 1) return N;
+        if (mem[N] == 0) {
+            mem[N] = fibMemo(N - 1, mem) + fibMemo(N - 2, mem);
+        }
+
+        return mem[N];
+    }
+    int fib(int N) {
+        vector<int> mem(N + 1, 0);
+
+        return fibMemo(N, mem);
+    }
+};
+```
+
+迭代自底向上
+
+```cpp
+class Solution {
+public:
+    int fib(int N) {
+        if (N <= 1) return N;
+        vector<int> vec(N + 1, 0);
+        vec[0] = 0, vec[1] = 1;
+        
+        for (int i = 2; i <= N; i++) {
+            vec[i] = vec[i - 1] + vec[i - 2];
+        }
+
+        return vec[N];
+    }
+};
+```
+
+#### [70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)
+
+> 和上面一模一样
+
+## 最优子结构
+
+#### [279. 完全平方数](https://leetcode-cn.com/problems/perfect-squares/)
+
+> 尽可能拆分成为 3，数学推导不会，就是式子求导后极点为 e，因为是整数取 3
+
+
+
+#### [322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/)
+
+#### [343. 整数拆分](https://leetcode-cn.com/problems/integer-break/)
 
 ## 单串/双串
 
