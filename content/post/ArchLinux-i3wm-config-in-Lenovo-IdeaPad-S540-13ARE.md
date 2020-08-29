@@ -95,11 +95,11 @@ typora-root-url: ../../static
 >
 > 好了，windows 太难用了，为了图安装快换成 manjaro 了
 >
-> -\- 08-28 :timer_clock: 14:21
+> -\- 08-29 :timer_clock: 14:21
 >
 > 好了，折腾一天，发现一堆问题，还不如重装前。。。
 >
-> -\- 08-28 :timer_clock: 21:03
+> -\- 08-29 :timer_clock: 21:03
 
 <!--more-->
 
