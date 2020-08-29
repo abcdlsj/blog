@@ -88,6 +88,18 @@ typora-root-url: ../../static
 > 看文末就可以了
 >
 > -\- 08-01 :timer_clock: 09:25
+>
+> 好了，现在换成 Windows 的 Linux 子系统，完结撒花
+>
+> -\- 08-28 :timer_clock: 17:15
+>
+> 好了，windows 太难用了，为了图安装快换成 manjaro 了
+>
+> -\- 08-28 :timer_clock: 14:21
+>
+> 好了，折腾一天，发现一堆问题，还不如重装前。。。
+>
+> -\- 08-28 :timer_clock: 21:03
 
 <!--more-->
 
