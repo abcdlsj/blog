@@ -98,6 +98,39 @@ public:
 };
 ```
 
+## 求两个数组的第 K 大问题
+
+#### [4. 寻找两个正序数组的中位数](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)
+
+```cpp
+class Solution {
+public:
+    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+        int m = nums1.size(), n = nums2.size(), len = m + n;
+
+        return (getKthIn2Arr(nums1, nums2, 0, 0, (len + 1) / 2) + getKthIn2Arr(nums1, nums2, 0, 0, (len + 2) / 2)) / 2.0; 
+    }
+
+    int getKthIn2Arr(const vector<int>& nums1, const vector<int> nums2, int i, int j, const int& k) {
+        if (i >= nums1.size()) return nums2[j + k - 1];
+        if (j >= nums2.size()) return nums1[i + k - 1];
+
+        if (k == 1) {
+            return min(nums1[i], nums2[j]);
+        }
+
+        int min1 = i + k / 2 - 1 >= nums1.size() ? INT_MAX : nums1[i + k / 2 - 1];
+        int min2 = j + k / 2 - 1 >= nums2.size() ? INT_MAX : nums2[j + k / 2 - 1];
+
+        if (min1 < min2) {
+            return getKthIn2Arr(nums1, nums2, i + k / 2, j, k - k / 2);
+        } 
+
+        return getKthIn2Arr(nums1, nums2, i, j + k / 2, k - k / 2);
+    }
+};
+```
+
 ## 归并排序求逆序对
 
 #### [剑指 Offer 51. 数组中的逆序对](https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/)
@@ -161,8 +194,6 @@ public:
 #### [315. 计算右侧小于当前元素的个数](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/)
 
 > 和上面一样的题，但是需要返回数组
-
-
 
 ## 抽屉原理达成目的
 
@@ -320,6 +351,87 @@ public:
 
         reverse(s.begin(), s.end());
         return s;
+    }
+};
+```
+
+#### [48. 旋转图像](https://leetcode-cn.com/problems/rotate-image/)
+
+> 一定要保证交换没有相交，`row` 和 `col` 取值需要关注
+>
+> `M x N`  和 `N x N` 修改一下 `row` 和 `col` 取值就可以了 
+
+```cpp
+class Solution {
+public:
+    void rotate(vector<vector<int>>& matrix) {
+        int n = matrix.size();
+        int row = (n - 2) / 2, col = (n - 1) / 2;
+        for (int i = 0; i <= row; i++) {
+            for (int j = 0; j <= col; j++) {
+                swap(matrix[i][j], matrix[j][n - i - 1]);
+                swap(matrix[i][j], matrix[n - i - 1][n - j - 1]);
+                swap(matrix[i][j], matrix[n - j - 1][i]);
+            }
+        }
+    }
+};
+```
+
+还可以直接转置之后翻转每一层
+
+```cpp
+class Solution {
+public:
+    void rotate(vector<vector<int>>& matrix) {
+        int n = matrix.size();
+
+        for (int i = 0; i < n; i++) {
+            for (int j = i; j < n; j++) {
+                swap(matrix[i][j], matrix[j][i]);
+            }
+        }
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n / 2; j++) {
+                swap(matrix[i][j], matrix[i][n - j - 1]);
+            }
+        }
+    }
+}
+```
+
+#### [31. 下一个排列](https://leetcode-cn.com/problems/next-permutation/)
+
+> 去看看题解第二个就明白了
+
+```cpp
+class Solution {
+public:
+    void nextPermutation(vector<int>& nums) {
+        int idx = nums.size() - 1;
+        while (idx > 0 && nums[idx - 1] >= nums[idx]) idx--;
+        sort(nums.begin() + idx, nums.end());
+
+        if (idx == 0) return ;
+        for (int i = idx; i < nums.size(); i++) {
+            if (nums[i] > nums[idx - 1]) {
+                swap(nums[i], nums[idx - 1]);
+                break;
+            }
+        }
+    }
+};
+```
+
+#### [剑指 Offer 64. 求1+2+…+n](https://leetcode-cn.com/problems/qiu-12n-lcof/)
+
+```cpp
+class Solution {
+public:
+    int sumNums(int n) {
+        n && (n += sumNums(n - 1));
+        return n;
     }
 };
 ```

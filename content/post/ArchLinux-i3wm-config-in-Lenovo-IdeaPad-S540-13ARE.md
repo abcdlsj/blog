@@ -28,11 +28,13 @@ typora-root-url: ../../static
 >
 > - 合盖会冻结，具体表现为输入设备没法使用（i3wm 键盘失效，鼠标可以移动，点击失效），换 linux-zen 内核后解决
 >
-> - 缩放问题，最好的还是 144，然后 gtk3.0 缩放 2，字体缩放 0.5，保证字体不变（PS. gtk2.0 没法缩放，但是可以用创建缩放后的主题解决，具体看 wiki，我觉得复杂就没用，144 缩放下，差不多也可以看，也不会太大）
+> - 缩放问题，最好的还是 144
+>
+>   `vim .Xresources` （PS. 实测鼠标这样设置大小会好一点点）
 >
 >   ```sh
->   export GDK_SCALE=2
->   export GDK_DPI_SCALE=0.5
+>   Xft.dpi: 144
+>   Xcursor.size:  32 ! 32, 48 or 64 may also be good values
 >   ```
 >
 > - 触控板设置问题，原来是没有手势，比如单击之类的，只能够用触控板本来的点击，感觉不舒服，如果想要简单的就可以像我一样：
@@ -67,7 +69,25 @@ typora-root-url: ../../static
 >
 > 又使用了两天（还没有需要用到虚拟机和 docker 的地方），个人感觉独显 2G 可能稍稍有点点少，但是也没必要分到 4G，然后暂时也没出现卡死的情况（之前电脑 Chrome 标签开多了会卡死，看来是现在的 CPU 强很多了）
 >
-> -\- 07-19 :timer_clock: 22:43 
+> -\- 07-19 :timer_clock: 22:43
+>
+> i3wm 也可以设置主题的，虽然其实没啥用，和默认比也没啥变化，具体可以 Github 找，我用的是 `base16-google-dark`，之前一直用的 `base16-default-dark`
+>
+> 镜面屏还是适合对自己颜值有自信的人（不适合我。。。hhh，Emacs 被迫放弃暗色主题）
+>
+> Typora 推荐使用 Next 主题，自带的中文字体非常适合 Typora
+>
+> Linux 中文字体渲染真的垃圾，其实有个方法可以适当改善，就是 `lxappearance` 中修改字体为 `Noto Sans CJK SC Medium`，一定是 Medium，这样某些软件界面中文就不会发虚了（也只是某些软件，比如 Typora。。。）
+>
+> -\- 07-24 :timer_clock: 17:22
+>
+> 更新 bios 之后是可以用 fn + 功能键的（有音量加减很方便。。。），但是我的背光调节不可以。。。
+>
+> 经过我的不懈努力，终于找到了究极的字体和 hidpi 配置了
+>
+> 看文末就可以了
+>
+> -\- 08-01 :timer_clock: 09:25
 
 <!--more-->
 
@@ -142,7 +162,7 @@ wiki: [ALSA](https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architect
 
 我基本就配置了一个文件
 
-`.asoundrc`
+`sudo vim ~/.asoundrc`
 
 ```
 defaults.pcm.card 1
@@ -182,13 +202,56 @@ emacs 配置就不说了，我单独有个 repo
 
 问题遇到很少，一般都是版本的问题，比如 hugo 0.73 就会报错，0.72 就不会
 
-现在基本上不想配置什么东西了，原来的就挺好看的 :happy:（事实上，强迫症折腾托盘图标折腾了两天，还没弄好）
+现在基本上不想配置什么东西了，原来的就挺好看的 :happy:（事实上，强迫症折腾托盘图标折腾了两天，还没弄好）（PS. 弄好了，看文末）
 
 截图就不放了，反正分辨率真舒服啊，有点像 Mac 上面一样细腻，但是中文字体还是没找到比较适合的，暂时用的还是 Noto Sans，Ubuntu 字体强烈推荐，Ubuntu Mono 不输 Mac，同时 Ubuntu Regular 也非常好看
 
+## 美化设置（i3wm，主要是字体和缩放）
+
+`i3wm` 配置随意，我用的基本是默认
+
+`vim .Xresources` 设置缩放 144，鼠标大小 32
+
+```sh
+Xft.dpi: 144
+Xcursor.size:  32 ! 32, 48 or 64 may also be good values
+```
+
+`qt5ct` 设置 qt 程序字体和图标，对 qt 程序很有帮助，设置字体之后，系统托盘图标也会缩小，我的设置 `Noto Sans CJK SC Medium 10`，如果要生效 `qt5ct` 设置，还需要配置一行东西，看 wiki 吧
+
+设置 qt 字体之后的 obs 界面，如果你也用 obs，可以看到字体效果好很多，而且看到托盘图标大小非常合适
+
+![obs img](/img/obs-show.png)
+
+`lxappearance` 设置 gtk3 程序，看自己喜好，图标我用 `Papirus`，字体用 `Noto Sans CJK SC Medium 10`
+
+通知用 `dunst`，配置使用自带的，`cp -rf /usr/share/dunst/dunstrc ~/.config/dunst`
+
+`Typora` 主题用的 `Next`，截图（右上角是 `dunst` 通知）：
+
+![Typora img](/img/typora-next-theme-show.png)
+
+`Chrome` 字体设置（PS. 08-07 update -\- 前三个设置 `WenQuanYi Micro Hei` 效果比 `Noto Sans CJK SC` 好点）：
+
+![Chrome Fonts Setting](/img/chrome-fonts.png)
+
+显示效果：
+
+![Fonts-Wiki](/img/chrome-fonts-wiki.png)
+
+等宽
+
+![Blog Fonts](/img/chrome-fonts-blog.png)
+
+`alacritty` 字体设置随意，`MesloLGS NF`  不错，支持很多图标，用 `p10k` 必选
+
+其他的就没啥了，字体其实可以直接配置 `fontconfig`，但是我没配，之后可能会去尝试下
+
+总的来说，很多都可以用默认配置，我也只是修改了一部分经常使用的软件配置
+
 ## End
 
-> 这篇 blog 就是用小新的键盘敲的（发现 fcitx 有时候会没法输入中文，重新部署了 4、5 次，垃圾 fcitx），键盘不舒服，也不算特别差，至少比罗技 k380 强
+> 这篇 blog 就是用小新的键盘敲的（发现 fcitx 有时候会没法输入中文，重新部署了 4、5 次，垃圾 fcitx），键盘不舒服，也不算特别差，至少比罗技 k380  ~~强~~（并没有）
 >
 > 这段时间
 >

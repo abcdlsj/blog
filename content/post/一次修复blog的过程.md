@@ -13,12 +13,10 @@ author = "abcdlsj"
 
 <!--more-->
 
-```text
-博客前两天突然挂了，显示 deploy to github page failing
-网上查了下，当时没解决，我还以为是 Hugo 的版本的问题（按理来说我没更新过应该不会出错的），我于是自己编译了一下 Hugo。发现没用。。。
-于是我删了 Repository，新建，重新部署，还是不行
-然后查到了这个
-```
+> 博客前两天突然挂了，显示 deploy to github page failing
+> 网上查了下，当时没解决，我还以为是 Hugo 的版本的问题（按理来说我没更新过应该不会出错的），我于是自己编译了一下 Hugo。发现没用。。。
+> 于是我删了 Repository，新建，重新部署，还是不行
+> 然后查到了这个
 
 {{< figure src="/ox-hugo/githubPageBuildFaild.png" caption="Figure 1: githubPageBuildFaild" >}}
 
