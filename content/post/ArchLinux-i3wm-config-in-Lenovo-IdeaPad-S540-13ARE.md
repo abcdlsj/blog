@@ -1,6 +1,6 @@
 ---
 date: "2020-07-13T10:38:18+08:00"
-title: "ArchLinux i3wm Config (Lenovo IdeaPad S540 13ARE)"
+title: "ArchLinux i3wm Config (联想小新 pro 13, Lenovo IdeaPad S540 13ARE)"
 authors: []
 categories:
   - 折腾
@@ -12,13 +12,13 @@ toc: true
 typora-root-url: ../../static
 ---
 
-> 上个月末，准备买一台新的笔记本（神船太傻大黑粗），选了好几天，决定从联想小新 13 pro 2020 AMD R7 4800u （代号 Lenovo IdeaPad S540 13ARE）和 yoga14s 4800u 同价版本中挑一个，最后选择了 pro 13（实际上过程还是非常曲折的，大概折腾了快小半个月），昨天货到了，检查了一遍，没发现什么很大的问题，主要问题是华星屏幕有点色差和漏光，不过，对我来说应该不是很严重的问题（毕竟我之前用的神船，可能随便一台就足够满意了），所以没换货，毕竟浪费了挺多时间了，而且换货多半还是华星屏幕。检查之后直接双系统，系统选我最爱的 Arch，搭配上熟悉的 i3wm，太舒服了，之前神舟分辨率（1920x1080）简直瞎眼，gnome 也一样字体总是很糊，现在看着感官完全不一样。16:10 + 2.5k + 4800u，续航也非常可以了（超过 6 个小时），而且也可以调野兽模式、节能模式等等。
+> 上个月末，准备买一台新的笔记本，选了好几天，决定从联想小新 13 pro 2020 AMD R7 4800u （代号 Lenovo IdeaPad S540 13ARE）和 yoga14s 4800u 同价版本中挑一个，最后选择了 pro 13（实际上过程还是非常曲折的，大概折腾了快小半个月），昨天货到了，检查了一遍，没发现什么很大的问题，主要问题是华星屏幕有点色差和漏光，然后放在桌子上有点不平，不过，对我来说应该不是很严重的问题，所以没换货。检查之后直接双系统，系统选我最爱的 Arch，搭配上熟悉的 i3wm，之前神舟分辨率（1920x1080）简直瞎眼，gnome 也一样字体总是很糊，现在看着感官完全不一样。16:10 + 2.5k + 4800u，续航也非常可以了（超过 6 个小时），而且也可以调野兽模式、节能模式等等。
 >
 > 虽然是 AMD CPU，过程还是算比较简单的，wiki 写得很详细，但是比较分散，这里记录一下遇到几个问题，有些是本子特有的，有些是我傻了吧唧的操作导致的。
 >
-> 还有就是，安装的时候进界面会出现亮线，之后把 grub 分辨率改了就好，这种一般是电压不稳定造成的
+> 还有就是，安装的时候进界面会出现亮线，之后把 grub 分辨率改了就好（猜的，不过实测有效），这种一般是电压不稳定造成的
 >
-> 本款 ArchWiki 页面：
+> 13ARE ArchWiki 页面：
 >
 > https://wiki.archlinux.org/index.php/Lenovo_IdeaPad_S540_13ARE
 >
@@ -49,7 +49,7 @@ typora-root-url: ../../static
 >
 >   亲测这样看着会舒服很多，Linux 中文字体渲染没有 Mac 好，设置 Regular 还是会比较虚，Medium 会舒服很多，Ubuntu Regular 就不虚 Mac 了，非常好看
 >   
-> - 如果发现渲染重叠，去配置 compton
+> - 如果发现渲染重叠，去配置 compton（现在叫 picom）
 >
 > -\- 07-14 :timer_clock: 12:55
 >
@@ -63,7 +63,9 @@ typora-root-url: ../../static
 >
 > 实测自己创建 gtk 的缩放主题很麻烦，很不推荐，浪费时间
 >
-> 如果发现 vlc 打开视频闪烁，去配置 compton，wiki 写了解决方案，但是对我没用，因为只有开全屏才会出现，所以我设置 vlc 为浮动了，而且 mpv 不会闪烁
+> 如果发现 vlc 打开视频闪烁，去配置 picom，wiki 写了解决方案，但是对我没用，因为只有开全屏才会出现，所以我设置 vlc 为浮动了，而且 mpv 不会闪烁
+>
+> 如果发现 chrome 滚动撕裂，去配置 picom 垂直同步就好了
 >
 > -\- 07-17 :timer_clock: 19:37
 >
@@ -77,7 +79,7 @@ typora-root-url: ../../static
 >
 > Typora 推荐使用 Next 主题，自带的中文字体非常适合 Typora
 >
-> Linux 中文字体渲染真的垃圾，其实有个方法可以适当改善，就是 `lxappearance` 中修改字体为 `Noto Sans CJK SC Medium`，一定是 Medium，这样某些软件界面中文就不会发虚了（也只是某些软件，比如 Typora。。。）
+> Linux 中文字体渲染真的垃圾，配置 `fontconfig` 可以适当改善
 >
 > -\- 07-24 :timer_clock: 17:22
 >
@@ -100,6 +102,10 @@ typora-root-url: ../../static
 > 好了，折腾一天，发现一堆问题，还不如重装前。。。
 >
 > -\- 08-29 :timer_clock: 21:03
+>
+> 回 Arch 了。。Manjaro 发行版很适合一些日常图安装快速，配置简单的用户，但是不适合想要深度定制的用户，而且小问题非常多，比如各种 `hang on tlp system start/shutdown`，`hang on XXX scheduler` 等等，反而 Arch 装好，小问题就非常非常少！
+>
+> -\- 09-08 :timer_clock: 15:34
 
 <!--more-->
 
@@ -147,6 +153,12 @@ sudo pacman -S python3 python-pip python-setuptools
 ## BackLight
 
 > 屏幕背光调节也是可以的，至于按键背光，因为不需要就没找解决方案（PS. 这键盘真的是垃圾）
+>
+> -\- No
+>
+> acpilight 可以了解下
+>
+> -\- 09-09
 
 和 intel 差不多：
 
@@ -160,7 +172,6 @@ echo 70 > /sys/class/backlight/amdgpu_bl0/brightness
 
 最好还是在 bios 中关闭：
 
-- Fool Proof Fn Ctrl
 - Flip To Boot
 - Hotkey Modes
 
@@ -169,6 +180,10 @@ echo 70 > /sys/class/backlight/amdgpu_bl0/brightness
 ## ALSA
 
 wiki: [ALSA](https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture)
+
+> 第二次安装实测添加这个文件就可以了，不加没声音
+>
+> -\- 09-08
 
 音频是开箱即用的，但是还是需要稍微配置一下，指定一下输出，遇到问题就看官方 wiki 吧，写得不错的
 
@@ -229,11 +244,7 @@ Xft.dpi: 144
 Xcursor.size:  32 ! 32, 48 or 64 may also be good values
 ```
 
-`qt5ct` 设置 qt 程序字体和图标，对 qt 程序很有帮助，设置字体之后，系统托盘图标也会缩小，我的设置 `Noto Sans CJK SC Medium 10`，如果要生效 `qt5ct` 设置，还需要配置一行东西，看 wiki 吧
-
-设置 qt 字体之后的 obs 界面，如果你也用 obs，可以看到字体效果好很多，而且看到托盘图标大小非常合适
-
-![obs img](/img/obs-show.png)
+`qt5ct` 设置 qt 程序字体和图标
 
 `lxappearance` 设置 gtk3 程序，看自己喜好，图标我用 `Papirus`，字体用 `Noto Sans CJK SC Medium 10`
 
@@ -247,19 +258,126 @@ Xcursor.size:  32 ! 32, 48 or 64 may also be good values
 
 ![Chrome Fonts Setting](/img/chrome-fonts.png)
 
-显示效果：
-
-![Fonts-Wiki](/img/chrome-fonts-wiki.png)
-
-等宽
-
-![Blog Fonts](/img/chrome-fonts-blog.png)
-
 `alacritty` 字体设置随意，`MesloLGS NF`  不错，支持很多图标，用 `p10k` 必选
 
 其他的就没啥了，字体其实可以直接配置 `fontconfig`，但是我没配，之后可能会去尝试下
 
 总的来说，很多都可以用默认配置，我也只是修改了一部分经常使用的软件配置
+
+-\- 2020-09-08 更新
+
+`~/.config/fontconfig/fonts.conf`
+
+复制修改的别人的，具体出处找不到了。。
+
+```txt
+<?xml version='1.0'?>
+<!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>
+<fontconfig>
+
+  <match target="font">
+    <edit mode="assign" name="rgba">
+      <const>rgb</const>
+    </edit>
+  </match>
+
+  <match target="font">
+    <edit mode="assign" name="hintstyle">
+      <const>hintslight</const>
+    </edit>
+  </match>
+
+  <match target="font">
+    <edit mode="assign" name="antialias">
+      <bool>true</bool>
+    </edit>
+  </match>
+
+<!-- Default font (no fc-match pattern) -->
+  <match>
+    <edit mode="prepend" name="family">
+      <string>Noto Sans</string>
+    </edit>
+  </match>
+
+<!-- Default font for the zh_CN locale (no fc-match pattern) -->
+  <match>
+    <test compare="contains" name="lang">
+      <string>zh_CN</string>
+    </test>
+    <edit mode="prepend" name="family">
+      <string>Noto Sans CJK SC</string>
+    </edit>
+  </match>
+
+<!-- Default sans-serif font -->
+  <match target="pattern">
+    <test qual="any" name="family">
+      <string>sans-serif</string></test>
+    <edit name="family" mode="prepend" binding="same">
+      <string>Noto Sans</string>
+    </edit>
+  </match>
+
+<!-- Default serif fonts -->
+  <match target="pattern">
+    <test qual="any" name="family">
+      <string>serif</string>
+    </test>
+    <edit name="family" mode="prepend" binding="same">
+      <string>Noto Serif</string>
+    </edit>
+  </match>
+
+<!-- Default monospace fonts -->
+  <match target="pattern">
+    <test qual="any" name="family">
+      <string>monospace</string>
+    </test>
+    <edit name="family" mode="prepend" binding="same">
+      <string>Menlo</string>
+    </edit>
+  </match>
+
+<!-- Fallback fonts preference order -->
+  <alias>
+    <family>sans-serif</family>
+    <prefer>
+      <family>Noto Sans</family>
+      <family>Noto Sans CJK SC</family>
+      <family>Noto Sans CJK TC</family>
+      <family>Noto Sans CJK JP</family>
+      <family>Noto Sans CJK KR</family>
+      <family>Noto Color Emoji</family>
+      <family>Noto Emoji</family>
+    </prefer>
+  </alias>
+  <alias>
+    <family>serif</family>
+    <prefer>
+      <family>Noto Serif</family>
+      <family>Noto Serif CJK SC</family>
+      <family>Noto Serif CJK TC</family>
+      <family>Noto Serif CJK JP</family>
+      <family>Noto Serif CJK KR</family>
+      <family>Noto Color Emoji</family>
+      <family>Noto Emoji</family>
+    </prefer>
+  </alias>
+  <alias>
+    <family>monospace</family>
+    <prefer>
+      <family>Sarasa Term SC</family>
+      <family>Sarasa Term TC</family>
+      <family>Sarasa Term J</family>
+      <family>Noto Color Emoji</family>
+      <family>Noto Emoji</family>
+    </prefer>
+  </alias>
+
+</fontconfig>
+
+```
 
 ## End
 
@@ -271,10 +389,8 @@ Xcursor.size:  32 ! 32, 48 or 64 may also be good values
 >
 > 的过程还是很愉快的，算是放松了一段时间吧（PS. 一直都在放松）
 >
-> 续航也不错，用的时候也基本听不到任何风扇的声音
+> 续航也非常不错，用的时候也基本听不到任何风扇的声音
 
 ArchWiki 页面：
 
 https://wiki.archlinux.org/index.php/Lenovo_IdeaPad_S540_13ARE
-
-有切换模式和启动快速启动的命令
