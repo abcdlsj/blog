@@ -1,8 +1,8 @@
 +++
-title = "use conky display org-agenda todos"
+title = "use conky to display org-agenda todos"
 date = 2019-12-13T23:28:00+08:00
 lastmod = 2020-06-13T22:20:54+08:00
-tags = ["conky", "org"]
+tags = ["conky", "org mode","org-agenda"]
 categories = ["learn", "折腾"]
 draft = false
 author = "abcdlsj"
@@ -54,19 +54,4 @@ cat ~/.config/conky/org-todo.el
 (require 'org)
 (setq org-agenda-files (list "~/Dropbox/org/"))
 (setq org-agenda-file-regexp "\\`[^.].*\\.org\\|.todo\\'")
-(setq org-capture-templates
-      '(
-        ("t" "Task To Do!" entry
-         (file+headline "~/Dropbox/org/task.org" "GTD")
-         "* TODO %^{Task Name:}\n%u\n%a\n" :clock-in t :clock-resume t)
-        ("r" "Book Reading Task" entry
-         (file+headline "~/Dropbox/org/task.org" "Reading")
-         "* TODO %^{Book Name:}\n%u\n%a\n" :clock-in t :clock-resume t)
-        ("j" "Journal!!!" entry
-         (file+olp+datetree "~/Dropbox/org/journal.org")
-         "* %U - %^{heading} %^g\n %?\n" :tree-type week)
-        ("n" "Notes!!!" entry
-         (file+headline "~/Dropbox/org/notes.org" "NOTES")
-         "* %U - %^{heading} %^g\n %?\n")
-        ))
 ```

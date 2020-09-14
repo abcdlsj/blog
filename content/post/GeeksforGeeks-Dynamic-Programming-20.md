@@ -280,13 +280,52 @@ int mininum_partition_dp(vector<int> &arr) {
 
 [Longest Path In Matrix](https://www.geeksforgeeks.org/find-the-longest-path-in-a-matrix-with-given-constraints/)
 
-#### [329. 矩阵中的最长递增路径](https://leetcode-cn.com/problems/longest-increasing-path-in-a-matrix/)
+#### [LeetCode 329. 矩阵中的最长递增路径](https://leetcode-cn.com/problems/longest-increasing-path-in-a-matrix/)
+
+> 排序 + 动态规划
 
 ```cpp
+struct Node{
+    int _x, _y, _v;
+    Node(int x, int y, int v) : _x(x), _y(y), _v(v){};
+};
+class Solution {
+public:
+    int longestIncreasingPath(vector<vector<int>>& matrix) {
+        if (matrix.size() == 0 || matrix[0].size() == 0) return 0; 
+        int m = matrix.size(), n = matrix[0].size();
+        vector<Node> vecNodes;
+        vector<vector<int>> dp(m, vector<int>(n, 1));
+        vector<int> cntx = {0, 1, 0, -1};
+        vector<int> cnty = {1, 0, -1, 0};
 
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                vecNodes.push_back(Node(i, j, matrix[i][j]));
+            }
+        }
+
+        sort(vecNodes.begin(), vecNodes.end(), [](Node a, Node b) {
+            return a._v < b._v;
+        });
+
+        int ans = 1;
+        for (auto& e : vecNodes) {
+            int x = e._x, y = e._y, v = e._v;
+            for (int i = 0; i < 4; i++) {
+                int xx = x + cntx[i], yy = y + cnty[i];
+                if (xx < 0 || xx >= m || yy < 0 || yy >= n) continue;
+                if (matrix[xx][yy] < v) {
+                    dp[x][y] = max(dp[x][y], dp[xx][yy] + 1);
+                }
+            }
+            ans = max(ans, dp[x][y]);
+        }
+
+        return ans;
+    }
+};
 ```
-
-
 
 ### subset Sum Problem
 
@@ -330,5 +369,59 @@ public:
     return dp[n][sum];
   }
 };
+```
+
+### 0-1 Knapsack Problem
+
+#### LintCode 125. 背包问题 II
+
+> https://www.lintcode.com/problem/backpack-ii/description
+
+```cpp
+class Solution {
+public:
+    /**
+     * @param m: An integer m denotes the size of a backpack
+     * @param A: Given n items with size A[i]
+     * @param V: Given n items with value V[i]
+     * @return: The maximum value
+     */
+    int backPackII(int m, vector<int> &A, vector<int> &V) {
+        // write your code here
+        int n = A.size();
+        
+        vector<vector<int>> dp(n + 1, vector<int>(m + 1, 0));
+        
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= m; j++) {
+                if (j < A[i - 1]) {
+                    dp[i][j] = dp[i - 1][j];
+                } else {
+                    dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - A[i - 1]] + V[i - 1]);
+                }
+            }
+        }
+        
+        return dp[n][m];
+    }
+};
+```
+
+### Boolean Parenthesization Problem
+
+[Boolean Parenthesization Problem](https://www.geeksforgeeks.org/dynamic-programming-set-37-boolean-parenthesization-problem/)
+
+```cpp
+
+```
+
+### Shortest Common Supersequence
+
+[Shortest Common Supersequence](https://www.geeksforgeeks.org/shortest-common-supersequence/)
+
+#### [LeetCode 1092. 最短公共超序列](https://leetcode-cn.com/problems/shortest-common-s upersequence/)
+
+```cpp
+
 ```
 
