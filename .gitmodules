@@ -3,4 +3,7 @@
 	url = https://github.com/cntrump/hugo-notepadium.git
 [submodule "themes/minimo"]
 	path = themes/minimo
-	url = https://github.com/MunifTanjim/minimo
+	url = https://github.com/abcdlsj/minimo.git
+[submodule "public"]
+	path = public
+	url = https://github.com/abcdlsj/abcdlsj.github.io.git
