@@ -14,6 +14,8 @@ typora-root-url: ../../static
 
 > MIT 6.828 Lab: Allocator for xv6
 
+<!--more-->
+
 > <!--像我这种懒逼，不知道什么时候才能写完。。。-->
 >
 > <!---\- 06-22 :timer_clock: 00:26-->

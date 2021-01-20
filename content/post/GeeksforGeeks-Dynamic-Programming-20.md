@@ -14,6 +14,8 @@ typora-root-url: ../../static
 
 > https://www.geeksforgeeks.org/top-20-dynamic-programming-interview-questions/
 
+<!--more-->
+
 > 缩进格式可能会不统一。。。不想修改了（有些是 `LeetCode` 网页写的，有些是本地写的，我的本地 `C style` 是 `Google`，所以缩进是 `2`）。。。尽量本地 `format` 之后放上来
 >
 > 直接放的题目链接就是 `GeeksforGeeks` 的链接，`LeetCode` 会在链接的地方加上 `LeetCode`

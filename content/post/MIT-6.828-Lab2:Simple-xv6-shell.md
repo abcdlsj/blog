@@ -15,6 +15,8 @@ typora-root-url: ../../static
 
 >  Lab: Simple xv6 shell
 
+<!--more-->
+
 > <!--希望两天后写完（不可能！明天考试，后天课设答辩，我都还没开始。。。）-->
 >
 > <!---\- 06-17 :timer_clock: 11:50-->

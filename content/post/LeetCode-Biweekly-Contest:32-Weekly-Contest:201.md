@@ -14,6 +14,8 @@ typora-root-url: ../../static
 
 > LeetCode 双周赛 32 + 周赛 201 解题报告
 
+<!--more-->
+
 ## 双周赛
 
 ### K 次操作转变字符串

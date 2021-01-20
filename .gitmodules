@@ -7,3 +7,12 @@
 [submodule "public"]
 	path = public
 	url = https://github.com/abcdlsj/abcdlsj.github.io.git
+[submodule "themes/ghostwriter"]
+	path = themes/ghostwriter
+	url = https://github.com/abcdlsj/ghostwriter.git
+[submodule "themes/ezhil"]
+	path = themes/ezhil
+	url = https://github.com/abcdlsj/ezhil.git
+[submodule "themes/archie"]
+	path = themes/archie
+	url = https://github.com/abcdlsj/archie.git
