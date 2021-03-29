@@ -16,3 +16,12 @@
 [submodule "themes/archie"]
 	path = themes/archie
 	url = https://github.com/abcdlsj/archie.git
+[submodule "themes/etch"]
+	path = themes/etch
+	url = https://github.com/abcdlsj/etch
+[submodule "themes/anubis"]
+	path = themes/anubis
+	url = git@github.com:abcdlsj/hugo-theme-anubis.git
+[submodule "themes/manis"]
+	path = themes/manis
+	url = git@github.com:abcdlsj/manis-hugo-theme.git

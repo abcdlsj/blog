@@ -1,0 +1,53 @@
+baseURL = "https://abcdlsj.github.io/"
+languageCode = "en-us"
+title = "Blog"
+theme="archie"
+copyright = "© Copyright By ABCDLSJ"
+pygmentsstyle = "native"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+paginate=3 # articles per page
+
+[params]
+	mode= "auto" # color-mode → light,dark or auto
+	useCDN= false # don't use CDNs for fonts and icons, instead serve them locally.
+	subtitle = "Enjoy The Focus."
+
+# Social Tags
+
+[[params.social]]
+name = "GitHub"
+icon = "github"
+url = "https://github.com/abcdlsj"
+
+[[params.social]]
+name = "Email"
+icon = "mail"
+url = "lisongjianshuai@gmail.com"
+
+[[menu.main]]
+  name = "Home"
+  weight = 10
+  identifier = "home"
+  url = "/"
+[[menu.main]]
+  name = "Archives"
+  weight = 20
+  identifier = "archives"
+  url = "/post/"
+[[menu.main]]
+  name = "Categories"
+  weight = 30
+  identifier = "categories"
+  url = "/categories/"
+[[menu.main]]
+  name = "LeetCode"
+  weight = 40
+  identifier = "leetcode"
+  url = "/tags/LeetCode"
+[[menu.main]]
+  name = "About"
+  weight = 50
+  identifier = "about"
+  url = "/about/"
