@@ -1,12 +1,7 @@
 ---
-date: "{{ .Date }}"
-title: "{{ replace .TranslationBaseName '-' ' ' | title }}"
-authors: []
-categories:
-  -
-tags:
-  -
+title: "{{ replace .TranslationBaseName "-" " " | title }}"
+date: {{ .Date }}
 draft: true
-toc: true
+tags:
 typora-root-url: ../../static
 ---

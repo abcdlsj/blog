@@ -7,7 +7,7 @@ tags = [
     "hugo",
     "development",
 ]
-date = "2014-04-02"
+date = "2011-11-11"
 +++
 
 ## Step 1. Install Hugo
@@ -69,7 +69,7 @@ are located at the same relative location as the url, in our case
 Change and save this file.. Notice what happened in your terminal.
 
     > Change detected, rebuilding site
-
+    
     > 29 pages created
     > 0 tags index created
     > in 26 ms
