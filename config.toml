@@ -23,10 +23,12 @@ pygmentsUseClasses = true
 	[[menu.main]]
 		name = "Post"
 		url = "/post/"
-	
 	[[menu.main]]
 		name = "About"
-		url = "/about"
+		url = "/about/"
+	[[menu.main]]
+		name = "Tags"
+		url = "/tags/"
 
 [taxonomies]
 	tag = "tags"
@@ -54,7 +56,7 @@ pygmentsUseClasses = true
 	# List of sections that support disqus comments
 	disqusSections = [ "blog" ]
 	# List of sections that support utterances comments
-	utterancesSections = [ "blog" ]
+	# utterancesSections = [ "blog" ]
 	
 	# Utterances Configuration
 	utterancesRepo = ""

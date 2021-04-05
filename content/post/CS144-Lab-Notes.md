@@ -1,9 +1,9 @@
 ---
-date: "2021-04-05T19:42:49+08:00"
+date: "2021-04-04T19:42:49+08:00"
 title: "CS144 Lab Notes"
 tags:
-  - CS144
-  - Network
+  - cs144
+  - network
 draft: false
 typora-root-url: ../../static
 ---
@@ -38,13 +38,13 @@ typora-root-url: ../../static
 
 调试可以看看 https://blog.csdn.net/kangyupl/article/details/108589594
 
+编译遇到  `out_of_range() not found` 的问题，添加 `#include <stdexcept>` 就可以了
+
 ## Lab 0: networking warmup
 
 https://cs144.github.io/assignments/lab0.pdf
 
-Lab 0 环境设置遇到  `out_of_range() not found` 的问题，添加 `#include <stdexcept>` 就可以了
-
-Lab 0 实现有两个任务，`webget` 和 `ByteStreams`
+`Lab 0` 实现有两个任务，`webget` 和 `ByteStreams`
 
 `webget` 实现如下：
 
@@ -74,7 +74,7 @@ bool ByteStream::eof() const { return input_ended() && buffer_empty(); }
 
 https://cs144.github.io/assignments/lab1.pdf
 
-![cs144impl_dataflow_modules](img/cs144impl_dataflow_modules.png)
+![cs144impl_dataflow_modules](/img/cs144impl_dataflow_modules.png)
 
 Lab 1 要求实现一个 `StreamReassembler`，在 Lab 的 TCP 实现图当中（上图）可以看到 `TCPReceiver`  具有一个  `StreamReassembler` 用来重组接收到的 Bytes，`CS144` 目的就是实现一个能够在不可靠数据报传输网络上传输两个 `ByteStreams` 的 TCP 程序。
 
@@ -107,7 +107,7 @@ Lab 1 要求实现一个 `StreamReassembler`，在 Lab 的 TCP 实现图当中�
 其实很多东西都是围绕下面的图来的。
 
 
-![cs144lab1_streamreassembler_capacity](img/cs144lab1_streamreassembler_capacity.png)
+![cs144lab1_streamreassembler_capacity](/img/cs144lab1_streamreassembler_capacity.png)
 
 **代码：**
 
