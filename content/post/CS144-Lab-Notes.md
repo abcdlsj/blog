@@ -243,6 +243,50 @@ bool StreamReassembler::empty() const { return _unassembled_bytes_size == 0; }
 
 https://cs144.github.io/assignments/lab2.pdf
 
+首先需要了解  `seqno`、`absolute seqno`、`stream index` 的区别：
+
+| Sequence Numbers  | Absolute Sequence Numbers |    Stream Indices     |
+| :---------------: | :-----------------------: | :-------------------: |
+| Start at the ISN  |        Start at 0         |      Start at 0       |
+|  Include SYN/FIN  |      Include SYN/FIN      |     Omit SYN/FIN      |
+| 32 bits, wrapping |   64 bits, non-wrapping   | 64 bits, non-wrapping |
+|      “seqno”      |     “absolute seqno”      |    “stream index”     |
+
+`PDF` 上面有一个例子，例如 `byte stream` 中保存的数据为 `string` 为 `cat`，并且 `SYN = 2^32 - 2`，那么三者值如下：  
+
+![image-20210406142034423](/img/cs144lab2_3seq_diff.png)
+
+因为在 `StreamReassembler` 模块中使用的索引值是从 0 开始的，所以 `TCP receiver` 在重组子串之前，需要将从`SYN+1` 开始的 32 位索引还原成从 0 开始的 64 位索引。
+
+第一个任务就是进行 32 位索引值和 64 位索引值的相互转换。
+
+`warp` 是包装 64 位索引到 `WrappingInt32` 中，直接截取后 32 位加上 `ISN` 就可以了。
+
+```c++
+WrappingInt32 wrap(uint64_t n, WrappingInt32 isn) {
+    return WrappingInt32{static_cast<uint32_t>(n) + isn.raw_value()};
+}
+```
+
+`unwrap` 实现（这个算法是看了网上的实现写的）：
+
+```c++
+uint64_t unwrap(WrappingInt32 n, WrappingInt32 isn, uint64_t checkpoint) {
+    uint64_t a = n.raw_value() - isn.raw_value();
+    if (checkpoint <= a)
+        return a;
+    uint64_t d = 1ul << 32, b, c;
+    b = (checkpoint - a) >> 32;
+    c = ((checkpoint - a) << 32) >> 32;
+    if (c < d / 2) {
+        return b * d + a;
+    }
+    return (b + 1) * d + a;
+}
+```
+
+**TCP receiver**
+
 
 
 ## Reference
