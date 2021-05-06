@@ -1,94 +1,47 @@
-baseURL = "https://abcdlsj.github.io/"
-title = "Blog"
-theme = "manis"
-
-# Copyright notice. Note: You can use HTML tag here
-copyright = "&copy; 2018 ABCDLSJ"
-pluralizeListTitles = false
-
-# Minimum number of posts before paginate navigation show up
-paginate = 20
-
-# Your disqus shortname
-disqusShortname = "abcdlsj"
-
-# Edit this if you want to translate your blog
+baseURL = "https://abcdlsj.github.io"
 defaultContentLanguage = "en"
+hasCJKLanguage = true
+languageCode = "en"
+paginate = 5
+theme = "hugo-theme-texify"
+title = "Blog"
 
-# Code Highlighting (Chroma)
-pygmentsCodeFences = true
+disqusShortname = ""
+googleAnalytics = ""
 pygmentsUseClasses = true
 
-[menu]
-	[[menu.main]]
-		name = "Post"
-		url = "/post/"
-	[[menu.main]]
-		name = "About"
-		url = "/about/"
-	[[menu.main]]
-		name = "Tags"
-		url = "/tags/"
+[author]
+name = "abcdlsj"
 
-[taxonomies]
-	tag = "tags"
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[[menu.main]]
+  identifier = "post"
+  name = "Post"
+  url = "/"
+  weight = 1
+[[menu.main]]
+  identifier = "archives"
+  name = "Archives"
+  url = "/post/"
+  weight = 2
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 3
 
 [params]
-	# If false, use minified CSS (ui.min.css)
-	debugCSS = false
-	# Custom CSS
-	customCSS = []
-	
-	# Site meta description
-	description = "abcdlsj's blog."
-	# Site's Tagline (Subtitle or Keyword)
-	tagline = "Enjoy The Focus."
-	# If true give attribution to this theme
-	themeAttrib = true
-	# URL to license file, can be outside of your domain
-	licenseURL = "/about/license"
-
-	# Configure which sections for Latest Posts
-	mainSections = ["post"]
-	# # Configure which sections for Latest Works
-	# workSections = ["work"]
-	
-	# List of sections that support disqus comments
-	disqusSections = [ "blog" ]
-	# List of sections that support utterances comments
-	# utterancesSections = [ "blog" ]
-	
-	# Utterances Configuration
-	utterancesRepo = ""
-	utterancesTheme = "github-light"
-	utterancesLabel = ""
-
-	# 404 Configuration
-	head404 = "Sorry, I can't find what you want."
-	sub404 = "Back to <a href='/'>Home</a>."
-
-	# Color of your website's accent
-	colorTheme = "#A0674B"
-	# colorTheme = "#ff6565"
-	# Maximum number of item in Latest Posts or Works
-	latestCount = 3
-	# Path to site's favicon image
-	faviconImg = ""
-	# Date format in item list
-	dateFmt = "Jan 02, 2006"
-
-	# Code Highlighting (HighlightJS)
-	highlightJs = false
-	highlightJsLanguages = [ "go" ]
-	highlightJsStyle = "ocean"
-
-	# Social Links
-	email = "lisongjianshuai@gmail.com"
-	github = "https://github.com/abcdlsj/"
-
-
-# Language Configuration
-#[languages.in]
-#	lang = "in"
-#	languageName = "Bahasa Indonesia"
-#	weight = 1
+  customCSS = []
+  dateFormat = "2006-01-02"
+  description = "Enjoy The Focus."
+  enableFullRSS = true
+  enableHanEmph = true
+  enableMathjax = true
+  favicon = "/favicon.ico"
+  footnote = "Follow me on <a class=link href=https://github.com/abcdlsj>GitHub</a>"
+  keywords = ["hugo", "latex", "theme"]

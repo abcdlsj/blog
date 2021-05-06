@@ -1,5 +1,5 @@
 ---
-date: "2021-04-04T19:42:49+08:00"
+date: "2021-05-04T19:42:49+08:00"
 title: "CS144 Lab Notes"
 tags:
   - cs144
@@ -9,6 +9,8 @@ typora-root-url: ../../static
 ---
 
 > It’s not always natural what the “right” behavior is.
+
+ <!--more--> 2
 
 ```text
                    -`                    abcdlsj@Lenovo-13ARE
