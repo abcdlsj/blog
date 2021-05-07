@@ -10,7 +10,7 @@ typora-root-url: ../../static
 
 > It’s not always natural what the “right” behavior is.
 
- <!--more--> 2
+ <!--more--> 
 
 ```text
                    -`                    abcdlsj@Lenovo-13ARE
@@ -80,7 +80,7 @@ https://cs144.github.io/assignments/lab1.pdf
 
 Lab 1 要求实现一个 `StreamReassembler`，在 Lab 的 TCP 实现图当中（上图）可以看到 `TCPReceiver`  具有一个  `StreamReassembler` 用来重组接收到的 Bytes，`CS144` 目的就是实现一个能够在不可靠数据报传输网络上传输两个 `ByteStreams` 的 TCP 程序。
 
-**实现细节**
+**实现细节：**
 
 从下图可以看到 `StreamReassembler` 包含 `ByteStreams` 和未被重组的部分。
 
