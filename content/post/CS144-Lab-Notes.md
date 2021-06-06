@@ -4,7 +4,7 @@ title: "CS144 Lab Notes"
 tags:
   - cs144
   - network
-draft: false
+draft: true
 typora-root-url: ../../static
 ---
 
@@ -270,7 +270,7 @@ WrappingInt32 wrap(uint64_t n, WrappingInt32 isn) {
 }
 ```
 
-`unwrap` 实现（这个算法是看了网上的实现写的）：
+`unwrap` 实现（仿照网上实现写的）：
 
 ```c++
 uint64_t unwrap(WrappingInt32 n, WrappingInt32 isn, uint64_t checkpoint) {
